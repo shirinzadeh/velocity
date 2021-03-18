@@ -1,0 +1,93 @@
+.container {
+   width: 1194px;
+   @include small {
+      width: auto;
+   }
+   @include xsmall {
+      padding: 0;
+   }
+}
+
+// SECTION PADDING ON SMALL DEVICES
+.sm-section-pdng {
+   @include xsmall {
+      padding: 32px 16px !important;
+   }
+}
+
+//SPACE B/W SECTIONS
+.vlct-section {
+   margin-bottom: 88px;
+   @include small {
+      margin-bottom: 40px;
+   }
+}
+
+//SECTION STRUCTURE
+.section-structure {
+  background-color: $black-dark-mode-v2 !important;
+  border-radius: $border-radius;
+  box-shadow: 0px 4px 24px rgba(24, 28, 31, 0.2);
+}
+
+//LOGO
+.logo {
+   margin-right: 40.8px;
+   @include medium {
+      margin: auto;
+   }
+}
+
+//STRETCHED COLUMNS FOR SAME HEIGHT COLUMNS
+.stretch-col {
+   @include flex;
+   align-items: stretch;
+   flex: 1;
+}
+
+.form-select {
+   border: none;
+   background-color: transparent;
+   color: $white;
+   opacity: .7;
+ }
+
+//ICON BACKGROUND
+.icon-bg {
+   @extend .icon-bg--outline;
+   @include icon-bgdark;
+   width: -moz-min-content;
+}
+
+//ICON OUTLINE BACKGROUND
+.icon-bg--outline {
+   width: min-content;
+   padding: 18px;
+   border: 1px solid $white-pale;
+   border-radius: $border-radius;
+   @include transition;
+   @include xsmall {
+      padding: 10px;
+   }
+}
+
+/***** JS CLASSES ******/
+.is-tab-active {
+   background-color: $black-dark-mode;
+   box-shadow: 0px 4px 24px rgba(24, 28, 31, 0.2);
+   border-color: transparent !important;
+   border-radius: $border-radius;
+
+   span {
+      color: $brand-color-light !important;
+   }
+}
+
+.has-show {
+   display: block !important;
+   opacity: 1 !important;
+}
+
+.js-tab-content {
+   display: none;
+}

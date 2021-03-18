@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icon/icomoon.eot?s2c7tn');
+  src:  url('../fonts/icon/icomoon.eot?s2c7tn#iefix') format('embedded-opentype'),
+    url('../fonts/icon/icomoon.ttf?s2c7tn') format('truetype'),
+    url('../fonts/icon/icomoon.woff?s2c7tn') format('woff'),
+    url('../fonts/icon/icomoon.svg?s2c7tn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  // speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 36px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close_two_tone:before {
+  content: "\e903";
+}
+.icon-email_two_tone .path1:before {
+  content: "\e900";
+ 
+  opacity: 0.5;
+}
+.icon-email_two_tone .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-email_two_tone .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+ 
+}
+.icon-cart .path1:before {
+  content: "\e927";
+ 
+  opacity: 0.5;
+}
+.icon-cart .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+ 
+}
+.icon-cart .path3:before {
+  content: "\e929";
+  margin-left: -1em;
+ 
+}
+.icon-cart .path4:before {
+  content: "\e92a";
+  margin-left: -1em;
+ 
+}
+.icon-credit-card-stroke:before {
+  content: "\e943";
+}
+.icon-credit-card .path1:before {
+  content: "\e944";
+ 
+  opacity: 0.5;
+}
+.icon-credit-card .path2:before {
+  content: "\e945";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-credit-card .path3:before {
+  content: "\e946";
+  margin-left: -1em;
+ 
+}
+.icon-email .path1:before {
+  content: "\e952";
+ 
+  opacity: 0.5;
+}
+.icon-email .path2:before {
+  content: "\e953";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-email .path3:before {
+  content: "\e954";
+  margin-left: -1em;
+ 
+}
+.icon-facebook:before {
+  content: "\e962";
+}
+.icon-input-down:before {
+  content: "\e973";
+}
+.icon-input-up:before {
+  content: "\e974";
+}
+.icon-instagram:before {
+  content: "\e975";
+}
+.icon-map-marker .path1:before {
+  content: "\e98a";
+ 
+  opacity: 0.5;
+}
+.icon-map-marker .path2:before {
+  content: "\e98b";
+  margin-left: -1em;
+ 
+}
+.icon-map-marker .path3:before {
+  content: "\e98c";
+  margin-left: -1em;
+ 
+}
+.icon-map-outline .path1:before {
+  content: "\e98d";
+ 
+  opacity: 0.5;
+}
+.icon-map-outline .path2:before {
+  content: "\e98e";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-map-outline .path3:before {
+  content: "\e98f";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-map-outline .path4:before {
+  content: "\e990";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-map-outline .path5:before {
+  content: "\e991";
+  margin-left: -1em;
+ 
+}
+.icon-map-outline .path6:before {
+  content: "\e992";
+  margin-left: -1em;
+ 
+}
+.icon-menu:before {
+  content: "\e993";
+}
+.icon-menu-down:before {
+  content: "\e994";
+}
+.icon-menu-up:before {
+  content: "\e995";
+}
+.icon-Package-v2 .path1:before {
+  content: "\e99e";
+ 
+  opacity: 0.5;
+}
+.icon-Package-v2 .path2:before {
+  content: "\e99f";
+  margin-left: -1em;
+ 
+}
+.icon-phone .path1:before {
+  content: "\e9a0";
+ 
+  opacity: 0.5;
+}
+.icon-phone .path2:before {
+  content: "\e9a1";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-phone .path3:before {
+  content: "\e9a2";
+  margin-left: -1em;
+ 
+}
+.icon-user_stroke:before {
+  content: "\e9cf";
+}
+.icon-user_two_tone .path1:before {
+  content: "\e9d0";
+ 
+  opacity: 0.5;
+}
+.icon-user_two_tone .path2:before {
+  content: "\e9d1";
+  margin-left: -1em;
+ 
+  opacity: 0.5;
+}
+.icon-user_two_tone .path3:before {
+  content: "\e9d2";
+  margin-left: -1em;
+ 
+}
+.icon-user_two_tone .path4:before {
+  content: "\e9d3";
+  margin-left: -1em;
+ 
+}
+.icon-whatsapp:before {
+  content: "\e9df";
+}
+.icon-youtube:before {
+  content: "\e9e0";
+}

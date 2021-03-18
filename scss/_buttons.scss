@@ -1,0 +1,143 @@
+/*NAVBAR TOOGLE BUTTON*/
+.toggler-btn {
+   .bar{
+     width: 18px;
+     height: 2px;
+     margin: 3px 0;
+     background-color: $white;
+     @include transition(.5s);/*open duration when click the navbar*/   
+   }
+ }
+
+ /* BUTTON - INSIDE FULL */
+.btn--colored{
+   @include main-btn;
+   background-color: $brand-color-light;
+   color: $black;
+   @include small {
+      width: 100%;
+   }
+
+   &:hover {
+      background-color: transparent;
+      color: $brand-color-light;
+      border-color: $white-pale;
+   }
+}
+
+/* BUTTON OUTLINE*/
+.btn--outline {
+   @include main-btn;
+   background-color: transparent;
+   color: $brand-color-light;
+   border-color: $white-pale;
+
+   &:hover {
+      background-color: $brand-color-light;
+      color: $black;
+   }
+}
+
+/* TABS */
+.tabs {
+   @include flex;
+   align-items: center;
+
+   .btn--tab {
+      @include flex;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid $white-pale;
+      padding: 12px 16px;
+      min-width: 104px;
+      @include xsmall {
+         min-width: auto;
+         padding: 12px;
+      }
+
+      &:not(:first-child) {
+         margin-left: 8px;
+         @include xsmall {
+            margin-left: 16px;
+         }
+      }
+   
+      span {
+         margin-left: 8px;
+         color: $white;
+         font-weight: $fw-medium;
+         @include xsmall {
+            display: none;
+         }
+      }
+   }
+}
+
+/* PACKAGE TAB */
+.tabs-package {
+   border: 1px solid $white-pale;
+   border-radius: $border-radius;
+   @include flex;
+
+   .btn--package-tab {
+      padding: 15px 68px;
+      color: $white;
+      flex: 1 1 auto;
+      @include xlarge {
+         padding-left: 48px;
+         padding-right: 48px;
+      }
+      @include large {
+         padding-left: 28px;
+         padding-right: 28px;
+      }
+      @include xsmall {
+         padding: 16px 12px;
+      }
+
+      &:last-of-type {
+         padding-left: 33px;
+         padding-right: 33px;
+         @include large {
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+         @include xsmall {
+            padding: 16px 12px;
+         }
+      }
+
+      span {
+         line-height: 24px;
+         font-weight: $fw-medium;
+      }
+   }
+}
+
+/* SIDE MENU BUTTONS */
+.btn--side-menu {
+   font-weight: $fw-medium;
+   font-size: 16px;
+   line-height: 24px;
+   color: $white;
+   padding: 15px 11px;
+   border-radius: $border-radius;
+   border: 1px solid $white-pale;
+
+   &:not(:last-child) {
+      margin-right: 8px;
+   }
+
+   > span {
+      color: $white-pale;
+   }
+
+   &:hover {
+      background-color: $black-dark-mode-v2;
+      color: $brand-color-light;
+      border: 1px solid transparent;
+   }
+   &:focus {
+      @extend .btn--side-menu:hover;
+   }
+}

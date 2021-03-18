@@ -1,0 +1,200 @@
+.calculator {
+   padding: 64px 105px 48px;
+   @include medium {
+      padding: 50px;
+   }
+   @include small {
+      padding: 30px;
+   }
+
+   .row > * {
+      padding-right: 16px;
+      padding-left: 16px;
+   }
+
+   .heading {
+      margin-bottom: 48px;
+   }
+
+   :is(h6, p) {
+      color: $white-pale;
+      line-height: 24px;
+   }
+
+   h6 {
+      margin-bottom: 8px;
+      text-transform: capitalize;
+   }
+
+   .tabs {
+      @include medium {
+         margin-bottom: 48px;
+      }
+      @include xsmall {
+         margin-bottom: 24px;
+      }
+   }
+
+   .btn--colored {
+      margin: 56px auto 0;
+      width: 27.3%;
+      @include small {
+         width: 100%;
+      }
+      @include xsmall {
+         margin-top: 40px;
+      }
+   }
+
+   .total-amount {
+      text-align: center;
+      margin-top: 64px;
+      @include xsmall {
+         margin-top: 32px;
+      }
+
+      &__dollar {
+         font-weight: $fw-semibold;
+         font-size: 64px;
+         line-height: 80px;
+         @include xsmall {
+            font-size: 40px;
+            line-height: 56px;
+         }
+      }
+
+      &__manat {
+         font-size: 32px;
+         line-height: 40px;
+         color: $white-pale;
+         @include xsmall {
+            font-size: 24px;
+            line-height: 32px;
+         }
+      }
+   }
+}
+
+.range-content {
+   background-color: $black-dark-mode;
+   border-top-left-radius: $border-radius;
+   border-top-right-radius: $border-radius;
+   // border-bottom: 4px solid $black;
+   padding: 16px;
+   font-weight: $fw-medium;
+   @include flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   margin-bottom: 32px;
+   @include xsmall {
+      margin-bottom: 36px;
+   }
+
+   &:nth-of-type(even) {
+      margin-bottom: 48px;
+      @include xsmall {
+         margin-bottom: 36px;
+      }
+   }
+
+   i.icon-input-down {
+      font-size: 24px
+   }
+
+   .range-article {
+      @include flex;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 16px;
+      border-right: 1px solid $white-pale;
+      @include xsmall {
+         padding-right: 8px;
+      }
+   }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   .range {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      -webkit-appearance: none;
+      height: 4px;
+      // background-color: $brand-color-light;
+      opacity: 0.7;
+      @include transition;
+   
+   }
+   
+   .range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $brand-color-light;
+      border-color: $brand-color-light;
+      box-shadow: 0px 2px 14px rgba(18, 192, 151, 0.2);
+      cursor: pointer;
+    }
+
+    .range::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $brand-color-light;
+      border-color: $brand-color-light;
+      cursor: pointer;
+    }
+   }
+
+
+ /** FF*/
+.range::-moz-range-progress {
+   background-color: $brand-color-light; 
+ }
+ .range::-moz-range-track {  
+   background-color: $black;
+ }
+ /* IE*/
+ .range::-ms-fill-lower {
+   background-color: #43e5f7; 
+ }
+ .range::-ms-fill-upper {  
+   background-color: #9a905d;
+ }
+
+ /*Chrome*/
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+//    input[type='range'] {
+//       position: absolute;
+//       bottom: 0px;
+//       left: 0;
+//       width: 100%;
+//       overflow: hidden;
+//       -webkit-appearance: none;
+//       // height: 4px;
+//       background-color: transparent;
+//       // opacity: 0.7;
+//       @include transition;
+//    }
+   
+//    input[type='range']::-webkit-slider-runnable-track {
+//      height: 4px;
+//      -webkit-appearance: none;
+//      color: red;
+//      margin-top: -1px;
+//    }
+   
+//    input[type='range']::-webkit-slider-thumb {
+//      width: 24px;
+//      -webkit-appearance: none;
+//      height: 24px;
+//      cursor: ew-resize;
+//      background: #434343;
+//      box-shadow: -80px 0 0 80px $brand-color-light;
+//    }
+
+// }

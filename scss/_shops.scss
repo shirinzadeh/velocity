@@ -1,0 +1,55 @@
+.shops {
+   .heading {
+      margin-bottom: 56px;
+   }
+
+   &__images {
+      @include flex;
+      justify-content: space-between;
+      gap: 42px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+      @include medium {
+         gap: 32px;
+      } 
+      @include small {
+         margin-bottom: 24px;
+      }
+      @include xsmall {
+         gap: 16px;
+      }
+      
+      .shop-img {
+         height: 200px;
+         width: 200px;
+         padding: 38.9px;
+         background-color: $white;
+         border-radius: $border-radius;
+         border: 1px solid $black;
+         @include flex;
+         align-items: center;
+         justify-content: center;
+         scroll-snap-align: center;
+         scroll-snap-stop: always;
+
+         &:first-child {
+            margin-left: 16px;
+         }
+      }
+
+      img {
+         height: 122px;
+         width: 122px;
+      }
+   }
+
+   .btn--outline {
+      @include small {
+         margin: auto;
+      }
+      @include xsmall {
+         width: 100%;
+      }
+   }
+}

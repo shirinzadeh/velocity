@@ -1,0 +1,113 @@
+.header {
+   &__top {
+      background-color: $black-dark-mode-v2;
+      @include small {
+         display: none;
+      }
+
+      i {
+         font-size: 24px;
+      }
+
+      &-inner {
+         @include flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 16px 0;
+
+         span {
+            color: $hdr-top-text-clr;
+         }
+      }
+
+      &-link {
+         font-size: 14px;
+         color: $white-pale;
+
+         &:hover {
+            text-decoration: underline;
+         }
+
+         &:not(:last-child) {
+            margin-right: 30px;
+         }
+      }
+
+      &-right {
+         @include flex;
+         a {
+            @include flex;
+         }
+
+         .nice-select {
+            padding: 0;
+         }
+
+         i {
+            color: $hdr-top-text-clr;
+         }
+
+         & > * {
+            margin-left: 36px;
+         }
+      }
+   }
+
+   &__bottom {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      // position: relative;
+      @include small {
+         margin-top: 0;
+         padding: 16px;
+      }
+
+      .navbar {
+         position: relative;
+         padding: 2px 0;
+      }
+      .logo--sm {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         @include transform(translate(-50%, -50%));
+         height: auto;
+      }
+
+      i {
+         font-size: 24px;
+      }
+   }
+
+   &__icon {
+      @include flex;
+      align-items: center;
+      position: relative;
+
+      &:not(:first-child) {
+         margin-left: 32px;
+      }
+
+      span {
+         margin-left: 8px;
+
+         &.cart-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-left: 0;
+            @include transform(translate(70%, -70%));
+            font-family: 'Poppins';
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            width: 100%;
+            background-color: $red;
+            border-radius: 50%;
+            padding: 4px;
+         }
+      }
+   }
+}

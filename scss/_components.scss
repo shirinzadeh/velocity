@@ -1,0 +1,379 @@
+/******* NAVBAR *******/
+.navbar {
+   padding: 0;
+   @include medium {
+      flex: 1;
+   }
+   @include small {
+      flex: 1 1 auto;
+      // justify-content: unset;
+   }
+
+   .navbar-brand {
+      padding: 0;
+      margin-right: 23.8px;
+   }
+
+   .nav-link  {
+      padding: 0 17px !important;
+      @include large {
+         padding:0 12px !important;
+      }
+   }
+   
+   .navbar-toggler {
+      padding: 3px;
+      border: none;
+      @include small {
+         margin-right: 16px;
+      }
+
+      .navbar-toggler-icon {
+         background-color: $white;
+      }
+   }
+}
+
+/********* HEADING *******/
+.heading {
+   @include medium {
+      margin-bottom: 45px !important;
+   }
+   @include xsmall {
+      margin-bottom: 32px !important;
+   }
+   // centered heading
+   &--center {
+      text-align: center;
+   }
+   //apart elements inside heading
+   &--btwn {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__title {
+      font-weight: $fw-bold;
+      font-size: 40px;
+      line-height: 56px;
+      @include small {
+         font-size: 35px;
+      }
+      @include xsmall {
+         font-size: 24px;
+         line-height: 32px;
+      }
+   }
+
+   &__text {
+      color: $white-pale;
+      max-width: 800px;
+      margin: 8px auto 0;
+      @include xsmall {
+         font-size: 14px;
+         line-height: 24px;
+         max-width: none;
+      }
+   }
+}
+
+/******* OWL CAROUSEL ******/
+.owl-theme .owl-nav.disabled+.owl-dots {
+   position: absolute;
+   bottom: -48px;
+   left: 0;
+   width: 100%;
+   height: 8px;
+   margin: 0;
+   @include small {
+      bottom: -16px;
+   }
+}
+
+.owl-theme .owl-dots .owl-dot span {
+   height: 16px;
+   width: 16px;
+   border-radius: 16px;
+   margin: 0 8px;
+   background-color: rgba($color: $brand-color-light, $alpha: .2);
+   @include xsmall {
+      height: 8px;
+      border-radius: 41px;
+   }
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+   width: 32px;
+   background-color: $brand-color-light;
+}
+
+/****** BOXES *****/
+.box {
+   @include flex;
+   flex-direction: column;
+   padding: 32px;
+   background-color: $black-dark-mode-v2;
+   border-radius: $border-radius;
+   border: 1px solid transparent;
+   @include transition;
+   @include xsmall {
+      padding: 24px 16px 32px;
+      width: 280px;
+      max-width: 280px;
+   }
+
+   &:hover {
+      box-shadow: 0px 4px 24px rgba(24, 28, 31, 0.2);
+      border: 1px solid $brand-color-light;
+      @include transition;
+
+      .icon-bg--outline {
+         @include icon-bgdark;
+         color: $brand-color-light;
+      }
+
+      .btn {
+         @extend .btn--outline:hover;
+      }
+   }
+
+   &-body {
+      @include flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+   }
+
+   &-title {
+      font-weight: $fw-semibold;
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 8px;
+      @include medium {
+         font-size: 22px;
+      }
+   }
+
+   &-text {
+      font-weight: $fw-regular;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba($color: $white, $alpha: .5);
+      padding: 20px 0;
+      @include xsmall {
+         font-size: 14px;
+         line-height: 24px;
+         padding: 0;
+         margin-bottom: 56px;
+      }
+   }
+
+   .btn {
+      margin-top: auto;
+   }
+}
+
+/********** CARD *******/ 
+.v-card {
+   @include flex;
+   align-items: center;
+   position: relative;
+   @include medium {
+      flex-direction: column;
+      border: 1px solid $white-pale;
+      border-radius: $border-radius;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+   }
+
+   &:not(:last-child) {
+      margin-bottom: 32px;
+      @include medium {
+         margin-bottom: 0;
+      }
+      // line between cards
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -16px;
+         right: 0;
+         height: 1px;
+         width: calc(100% - 32px - 200px);
+         background-color: $line-color;
+         @include medium {
+            display: none;
+         }
+      }
+   }
+
+   img {
+      @include small {
+         width: 280px;
+      }
+   }
+
+   &-body {
+      @include flex;
+      flex-direction: column;
+      padding: 24px 0;
+      margin-left: 32px;
+      flex: 1 1 auto;
+      @include medium {
+         margin-left: 0;
+         padding: 20px 16px 24px;
+      }
+   }
+
+   &-title {
+      font-weight: $fw-bold;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0;
+   }
+
+   &-text {
+      font-size: 14px;
+      line-height: 22px;
+      color: $white-pale;
+      @include medium {
+         margin-bottom: 24px;
+      }
+   }
+
+   &-button {
+      color: $brand-color-light;
+      line-height: 24px;
+      display: inline-block;
+      margin-top: auto;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+
+/****** NICE SELECT PLUGIN CLASSES *******/
+.nice-select {
+   background-color: transparent;
+   color: $white;
+   font-size: inherit;
+   line-height: 24px;
+   height: auto;
+   padding-left: 16px;
+   padding-right: 56px;
+   border: none;
+   @include xsmall {
+      padding-right: 8px;
+      padding-left: 8px;
+   }
+
+   &::after {
+      display: none;
+   }
+
+   .list {
+      background-color: $black-dark-mode;
+   }
+}
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+   background-color: rgba($color: $gray, $alpha: .05);
+}
+
+.form-control {
+   padding-top: 0;
+   padding-bottom: 0;
+
+   &:focus {
+      background-color: transparent;
+      color: $white;
+   }
+}
+
+
+/******* SIDE MENU ********/
+.side-menu {
+   margin: auto;
+   //only in medium devices
+   @include medium {
+     position: fixed;
+     left: -100%;
+     top: 0px;
+     height: 100%;
+     background-color: $black-dark-mode;
+     width: 70%;
+     max-width: 100%;
+      padding: 16px 16px 22px;
+     z-index: 2;
+     @include transition(.7s);
+
+      &__head {
+         position: relative;
+         @include flex;
+         margin-bottom: 16px;
+
+         .close-icon {
+            margin-left: auto;
+            line-height: 32px;
+            align-self: flex-end;
+         }
+      }
+
+      &__footer {
+         @include flex;
+         justify-content: space-between;
+         align-items: center;
+
+         > .btn {
+            padding-left: 7px;
+            padding-left: 7px;
+         }
+      }
+
+      .navbar-nav {
+         margin-top: 16px;
+         margin-bottom: 36px;
+      }
+
+      .nav-item {
+         background-color: $black-dark-mode-v2;
+         border-radius: $border-radius;
+         &:not(:last-child) {
+               margin-bottom: 8px;
+         }
+
+         .nav-link {
+            font-weight: $fw-semibold;
+            font-size: 18px;
+            line-height: 28px;
+            padding: 14px 16px !important;
+         }
+      }
+   }
+}
+
+ // OPENED SIDE MENU
+.js-side-menu-open {
+   //disable scrolling on body
+   overflow: hidden;
+   height:100%;
+   
+   //background overlay
+   &::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: $black;
+     opacity: .3;
+   }
+   
+   .side-menu {
+      left: 0;
+      width: 70%;
+      @include small {
+         width: 100%;
+      }
+   }
+}
