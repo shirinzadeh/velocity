@@ -22,6 +22,10 @@ ul{
   list-style: none;
 }
 
+ol {
+  margin: 0;
+}
+
 blockquote, q{
   quotes: none;
 }
@@ -41,9 +45,28 @@ input{
   border-radius: 0;
 }
 
+// Remove scrollbars from textarea
+textarea {
+  resize: none;
+  overflow: hidden;
+  height: auto !important;
+}
+
 //all placeholders in Firefox have an opacity value. to fix this
 ::-moz-placeholder {
-  opacity: 1;
+  // opacity: 1;
+}
+
+//Hide Arrows From Input Number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 summary:focus{
@@ -59,13 +82,5 @@ body{
   min-height: 100vh;
   background-color: $black-dark-mode;
   font-family: 'Yolk';
-  color: $white;
-}
-
-a {
-  color: $white;
-  text-decoration: none;
-  &:hover {
-    color: $brand-color-light;
-  }
+  color: $white-pale;
 }

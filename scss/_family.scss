@@ -1,0 +1,22 @@
+.tabs-adjacent--family {
+  .btn--adjacent-tab {
+   width: 224px;
+   padding: 15px !important;
+   @include small {
+      width: auto ;
+   }
+  }
+}
+
+.order--family {
+   .order {
+      .btn-w144 {
+         margin-top: 32px;
+      }
+   }
+   .order-row {
+      &:last-child {
+         padding-bottom: 0;
+      }
+   }
+}

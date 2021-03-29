@@ -1,0 +1,100 @@
+.balance-current {
+   padding: 24px;
+   margin-bottom: 40px;
+
+   &__info {
+      @include flex;
+      align-items: center;
+      @include large {
+         margin-bottom: 32px;
+      }
+      @include xsmall {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+
+      .icon-bg {
+         padding: 15px;
+         margin-right: 15px;
+         @include xsmall {
+            margin-bottom: 16px;
+         }
+      }
+
+      .currency-lg{
+         @include large {
+            width: 24px;
+            height: 24px;
+         }
+      }
+   
+      .title {
+         color: $brand-color-light;
+      }
+   
+      .balance {
+         font-weight: $fw-semibold;
+         font-size: 28px;
+         line-height: 40px;
+         color: $white;
+      }
+   }
+
+   .input-number-group {
+      position: relative;
+      @include xsmall {
+         @include flex;
+         justify-content: space-between;
+         margin-bottom: 16px;
+      }
+
+      .input-number {
+         max-width: 80px;
+         // margin-left: 5px;
+         margin-right: auto;
+         text-align: right;
+         @include large {
+            margin-left: 50px;
+            max-width: 200px;
+         }
+         @include medium {
+            max-width: 150px;
+            // margin-left: 30px;
+         }
+         @include small {
+            margin: 0;
+         }
+      }
+
+      .btn--colored {
+         width: auto;
+         padding: 16px 22px;
+         position: absolute;
+         right: 0;
+         top: 0;
+         @include xsmall {
+            display: none;
+         }
+      }
+   }
+
+   &--delivery {
+      .title {
+         color: $blue;
+      }
+   }
+}
+
+.balance-history {
+   h2 {
+      font-weight: $fw-medium;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 16px;
+      color: $white;
+   }
+
+   .history:not(:last-child) {
+      margin-bottom: 8px;
+   }
+}

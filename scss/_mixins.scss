@@ -96,10 +96,12 @@
 // Placeholder Mixins
 @mixin placeholder {
   &.placeholder { @content; }
-  &:-moz-placeholder { @content; }
-  &::-moz-placeholder { @content; }
-  &::-webkit-input-placeholder { @content; }
-  }
+  &:-moz-placeholder { @content; }/* Mozilla Firefox 4 to 18 */
+  &::-moz-placeholder { @content; }  /* Mozilla Firefox 19+ */
+  &:-ms-input-placeholder { @content; } /* Internet Explorer 10-11 */
+  &::-ms-input-placeholder { @content; } /* Microsoft Edge */
+  &::-webkit-input-placeholder { @content; } /* WebKit, Blink, Edge */
+}
 
 @mixin calc ( $property, $expression ) {
     #{$property}: -webkit-calc(#{$expression});
@@ -166,7 +168,7 @@
 
 // for iPhone 5S, Galaxy Fold
 @mixin extra-xsmall {
-  @media (max-width: 358.98px) {
+  @media (max-width: 398.98px) {
     @content;
   }
 }

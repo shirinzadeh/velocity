@@ -37,8 +37,11 @@
       padding: 31px 55px 31px 31px;
       border: 1px solid $white-pale;
       border-radius: $border-radius;
+      background-color: $black-dark-mode-v2;
       @include medium {
          padding: 24px;
+      }
+      @include small {
          flex-direction: column;
          align-items: start;
       }
@@ -83,6 +86,8 @@
          line-height: 28px;
          margin-left: 32px;
          margin-right: 14px;
+         font-weight: $fw-semibold  ;
+         color: $white;
          @include small {
             font-size: 18px;
             margin-left: 16px;
@@ -97,7 +102,6 @@
       }
 
       &-tail {
-         color: $white-pale;
          font-size: 14px;
          line-height: 24px;
          @include medium {
@@ -113,7 +117,7 @@
 
       &-category {
          @include flex;
-         @include medium {
+         @include small {
             justify-content: space-between;
             width: 100%;
             margin-top: 8px;
@@ -127,6 +131,9 @@
                margin-left: 80px;
             }
             @include medium {
+               margin-left: 35px;
+            }
+            @include small {
                margin-left: 0;
             }
          }
@@ -141,12 +148,24 @@
          .amount {
             font-weight: $fw-bold;
             line-height: 24px;
+            color: $white;
          }
 
          .amount-old {
-            color: $white-pale;
             font-size: 14px;
             line-height: 24px;
+         }
+      }
+   }
+}
+
+body.tariffs-page {
+   .calculator {
+      padding: 48px;
+
+      .tabs {
+         @include large{
+            margin-bottom: 48px;
          }
       }
    }

@@ -1,0 +1,76 @@
+.faq {
+   .collaps {
+      margin-bottom: 8px;
+
+      &[open] .collapsible {
+         .icon-menu-up_two_tone {
+            display: block;
+         }
+         .icon-menu-down_two_tone {
+            display: none;
+         }
+      }
+   }
+
+   .collapsible {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: $border-radius;
+      background-color: $black-dark-mode-v2;
+      color: $white;
+      padding: 20px 24px;
+      margin-bottom: 8px;
+      outline-color: $white;
+      position: relative;
+      @include small {
+         padding-left: 24px 20px;
+      }
+
+      i {
+         font-size: 24px;
+      }
+
+      .icon-menu-up_two_tone {
+         display: none;
+      }
+
+      &:hover {
+         color: $brand-color-light;
+      }
+      &:focus {
+         color: $brand-color-light;
+      }
+   }
+   .collapse-content {
+      padding: 20px 24px 58px;
+      line-height: 26px;
+      margin-top: 8px   ;
+      background-color: $black-dark-mode-v2;
+      border-radius: $border-radius;
+      border: 1px solid $brand-color-light;
+      @include small  {
+         padding: 20px 16px 32px;
+         line-height: 28px;
+      }
+
+      h6 {
+         color: $brand-color-light;
+         margin-bottom: 44px;
+      }
+
+      ol {
+         margin-bottom: 20px;
+         margin-top: 20px;
+      }
+   }
+}
+
+// Disable summary tag default arrow for Chrome
+summary::-webkit-details-marker {
+   display: none;
+}
+// Disable summary tag default arrow for Firefox
+details > summary:first-of-type {
+   list-style-type: none;
+}

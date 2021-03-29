@@ -1,0 +1,53 @@
+.settings-customer {
+   @include flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 8px;
+   @include xsmall {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .title {
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   .customer-name {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 40px;
+      color: $white;
+   }
+
+   .customer-id {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $brand-color-light;
+   }
+
+   .customer-image-wrapper {
+      @include flex;
+      flex-direction: column;
+      @include xsmall {
+         margin-bottom: 40px;
+      }
+
+      .customer-image {
+         width: 152px;
+         height: 152px;
+         background: #DFDFDF;
+         box-shadow: $shadow;
+         border-radius: 32px;
+         overflow: hidden;
+      }
+   
+      .change-image {
+         text-align: center;
+         color: $brand-color-light;
+         font-weight: $fw-medium;
+         margin-top: 8px;
+      }
+   }
+}

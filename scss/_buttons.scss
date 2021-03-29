@@ -19,9 +19,11 @@
    }
 
    &:hover {
-      background-color: transparent;
-      color: $brand-color-light;
+      background-color: darken($brand-color-light, 7);
       border-color: $white-pale;
+   }   
+   &:focus {
+      @extend .btn--colored:hover;
    }
 }
 
@@ -31,10 +33,78 @@
    background-color: transparent;
    color: $brand-color-light;
    border-color: $white-pale;
+   @include small {
+      width: 100%;
+   }
 
    &:hover {
-      background-color: $brand-color-light;
-      color: $black;
+      background-color: lighten($black, 7);
+      color: $brand-color-light;
+   }
+   &:focus {
+      @extend .btn--outline:hover;
+   }
+}
+
+/* SUCCESS BUTTON */
+.btn--success {
+   color: $pure-green;
+   background-color: transparent;
+   @include small {
+      width: 100%;
+   }
+   &:hover {
+      color: $brand-color-light;
+   }
+   &:focus {
+      @extend .btn--success:hover;
+   }
+}
+
+.btn--instruction {
+   @include flex;
+   align-items: center;
+   color: $white;
+   &:hover {
+      color: darken($white, 7);
+   }
+   &:focus {
+      @extend .btn--instruction:hover;
+   }
+}
+
+/* ICON BUTTON */
+.btn--icon {
+   padding: 0;
+   border: 0;
+   line-height: 24px;
+
+   &:not(:last-of-type) {
+      margin-right: 20px;
+      @include small {
+         margin-right: 8px;
+      }
+   }
+   //change info icon color on hover
+   i {
+      &:hover {
+         color: $brand-color-light;
+      }
+   }
+   &:focus {
+      i {
+         color: $brand-color-light;
+      }
+   }
+
+   //change warning icon color on hover
+   i.warning {
+      &:hover {
+         color: $warning;
+      }
+      &:focus {
+         @extend i.warning:hover;
+      }
    }
 }
 
@@ -44,11 +114,10 @@
    align-items: center;
 
    .btn--tab {
-      @include flex;
-      align-items: center;
+      @include flex-center;
       border-radius: 8px;
       border: 1px solid $white-pale;
-      padding: 12px 16px;
+      padding: 12px 15px;
       min-width: 104px;
       @include xsmall {
          min-width: auto;
@@ -73,16 +142,100 @@
    }
 }
 
-/* PACKAGE TAB */
-.tabs-package {
+/* PAGES COUNTRY TAB */
+.tabs--pages {
+   margin-bottom: 40px;
+   @include small {
+      justify-content: center;
+      margin-bottom: 24px;
+   }
+
+   .is-tab-active {
+      background-color: $black-dark-mode-v2;
+   }
+}
+
+.btn--tab-pages {
+   padding: 15px 27px !important;
+   color: $white;
+   border-radius: $border-radius;
+   width: 152px;
+
+   &.active {
+      background-color: $black-dark-mode-v2;
+      color: $brand-color-light;
+   }
+
+   &:hover {
+      color: $brand-color-light;
+   }
+   &:focus {
+      @extend .btn--tab-pages:hover;
+   }
+}
+
+/* ADJACENT TABS */
+.tabs-adjacent {
    border: 1px solid $white-pale;
    border-radius: $border-radius;
    @include flex;
+   @include medium {
+      border: 0;
+   }
+   @include small {
+      overflow-x: auto;
+   }
 
-   .btn--package-tab {
+   .btn:not(:first-child) {
+      margin-left: 8px;
+   }
+
+   .btn--adjacent-tab {
       padding: 15px 68px;
       color: $white;
       flex: 1 1 auto;
+      white-space: nowrap;
+
+      @include xlarge {
+         padding-left: 48px;
+         padding-right: 48px;
+      }
+      @include large {
+         padding-left: 28px;
+         padding-right: 28px;
+      }
+      @include medium {
+         border: 1px solid $line-color;
+         border-radius: $border-radius;
+      }
+      @include xsmall {
+         padding: 15px 11px;
+      }
+
+      &:last-of-type {
+         padding-left: 33px;
+         padding-right: 33px;
+         // margin: 0;
+         @include large {
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+         @include xsmall {
+            padding: 15px 11px;
+         }
+      }
+
+      span {
+         line-height: 24px;
+         font-weight: $fw-medium;
+      }
+   }
+}
+
+body.tariffs-page {
+   .btn--adjacent-tab {
+      padding: 15px 30px;
+
       @include xlarge {
          padding-left: 48px;
          padding-right: 48px;
@@ -92,24 +245,19 @@
          padding-right: 28px;
       }
       @include xsmall {
-         padding: 16px 12px;
+         padding: 15px 11px;
       }
 
       &:last-of-type {
-         padding-left: 33px;
-         padding-right: 33px;
+         padding-left: 20px;
+         padding-right: 20px;
          @include large {
             padding-left: 20px;
             padding-right: 20px;
          }
          @include xsmall {
-            padding: 16px 12px;
+            padding: 15px 11px;
          }
-      }
-
-      span {
-         line-height: 24px;
-         font-weight: $fw-medium;
       }
    }
 }

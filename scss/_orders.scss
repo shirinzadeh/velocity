@@ -1,0 +1,97 @@
+.orders {
+   .order {
+      &:not(:last-of-type) {
+         margin-bottom: 8px;
+      }
+
+      &-row {
+         padding-bottom: 16px;
+
+         &:not(:first-child) {
+            border-top: 1px solid $line-color;
+            padding-top: 16px;
+         }
+      }
+
+      &-bottom {
+         @include flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-top: 34px;
+         @include small {
+            flex-direction: column;
+         }
+
+         .product-link {
+            @include small {
+               width: 100%;
+            }
+            .link {
+               @include large {
+                  max-width: 300px;
+               }
+               @include medium {
+                  max-width: 200px;
+               }
+               @include xsmall {
+                  max-width: 100px;
+               }
+            }
+         }
+
+         //select delete icon
+         > .btn--icon {
+            margin-right: 12px;
+            @include small {
+               margin-top: 24px;
+               margin-right: 0;
+               width: 100%;
+               border: 1px solid $line-color;
+               border-radius: $border-radius;
+               padding: 16px 0;
+            }
+         }
+      }
+
+   }
+
+   &.carts {
+      .order {
+         padding-left: 16px;
+      }
+
+      .form-check {
+         @include flex;
+         align-items: normal;
+         @include small {
+            flex-direction: column;
+            padding-left: 0;
+         }    
+         
+         &-input {
+            margin-right: 16px;
+            @include small {
+               margin-left: 0px;
+               margin-bottom: 24px;
+            }
+         }
+      }
+
+      .final-amount {
+         margin: 16px 0;
+      }
+
+      .orders-notice {
+         font-weight: $fw-medium;
+         color: $white;
+         @include xsmall {
+            margin-top: 40px;
+            text-align: center;
+         }
+
+         span {
+            color: $brand-color-light;
+         }
+      }
+   }
+}

@@ -1,0 +1,51 @@
+.total-debt {
+   text-align: right;
+   @include small {
+      text-align: left;
+   }
+   p {
+      font-size: 14px;
+      line-height: 28px;
+   }
+   h4 {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 32px;
+   }
+}
+
+.debts {
+   .order-bottom {
+      margin-top: 0;
+      margin-bottom: 24px;
+   }
+
+   .order-row {
+      border-top: none !important;
+   }
+   .product-link {
+      .link {
+         @include medium {
+            max-width: 300px;
+         }
+         @include xsmall {
+            max-width: 200px;
+         }
+         @include extra-xsmall {
+            max-width: 100px;
+         }
+      }
+   }
+}
+
+
+.final-debt {
+   margin-top: 16px;
+   &__buttons {
+      @include flex;
+
+      .btn:not(:first-child) {
+         margin-left: 24px;
+      }
+   }
+}

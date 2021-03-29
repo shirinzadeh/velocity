@@ -1,0 +1,65 @@
+.pckg-selectbox {
+   padding: 16px;
+   border: 1px solid $black-dark-mode;
+   background-color: $black-dark-mode;
+   border-radius: $border-radius;
+
+   .nice-select {
+      padding-right: 60px;
+   }
+}
+
+.packages {
+   .package {
+      &:not(:last-of-type) {
+         margin-bottom: 8px;
+      }
+
+      &-top {
+         margin-bottom: 40px;
+         @include small {
+            margin-bottom: 32px;
+         }
+
+         .row:first-child {
+            margin-bottom: 24px;
+            @include small {
+               margin-bottom: 0;
+            }
+         }
+      }
+
+      &__info {
+         > :first-child {
+            margin-bottom: 24px;
+         }
+      }
+
+      &-bottom {
+         @include flex;
+         align-items: center;
+         justify-content: space-between;
+         @include small {
+            flex-direction: column;
+         }
+
+         &__buttons {
+            @include flex;
+            @include small {
+               width: 100%;
+               margin-top: 16px;
+            }
+            @include xsmall {
+               flex-direction: column;
+            }
+
+            > :not(:last-of-type) {
+               margin-right: 16px;
+               @include xsmall {
+                  margin-bottom: 16px;
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Velocity</title>
+   <!-- Bootstrap 5 cdn -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <!-- Poppins font  -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <!-- Owl carousel  -->
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
+   <!-- Nice select  -->
+   <link rel="stylesheet" href="plugins/nice-select/css/nice-select.css">
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+   <header class="header header-b-72">
+      <div class="header__top">
+         <div class="container">
+            <div class="header__top-inner">
+               <div class="d-flex align-items-center">
+                  <a href="banned-products.html" class="header__top-link"><span>Daşınması qadağan olunan məhsullar</span></a>
+                  <a href="faq.html" class="header__top-link"><span>Tez-tez verilən suallar</span></a>
+               </div>
+               <div class="header__top-right">
+                  <a href="tel:*9878">
+                     <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <span>*9878</span>
+                  </a>
+                  <div>
+                     <select aria-label="Default select example">
+                        <option selected>AZE</option>
+                        <option value="RUS">RUS</option>
+                        <option value="EN">EN</option>
+                     </select>
+                     <i class="icon-menu-down_two_tone"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="header__bottom">
+            <nav class="navbar navbar-expand-lg ">
+               <a href="index.html" class="logo order-3 d-none d-sm-block"><img src="img/logo.svg" alt="Logo" class="d-block"></a>
+               <a href="index.html" class="logo logo--sm order-3 d-sm-none"><img src="img/logo-sm.svg" alt="Logo" class="d-block"></a>
+               <div>
+                  <button class="navbar-toggler order-1" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                     <div class="toggler-btn">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar3"></div>
+                     </div>
+                  </button>
+                  <i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+               </div>
+               <i class="icon-user_two_tone d-md-none order-last"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+
+               <div class="side-menu order-last">
+                  <div class="side-menu__head d-lg-none">
+                     <a href="index.html" class="logo logo--sm order-3 d-lg-none"><img src="img/logo-sm.svg" alt="Logo"></a>
+                     <i class="icon-close_two_tone close-icon" id="closeIcon"></i>
+                  </div>
+                  <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">Haqqımızda</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tariffs.html">Tariflər</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="services.html">Xidmətlər</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="shops.html">Mağazalar</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="innovations.html">Yeniliklər</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Əlaqə</a>
+                     </li>
+                  </ul>
+                  <div class="side-menu__footer d-lg-none">
+                     <div>
+                        <button class="btn btn--side-menu">AZE</button>
+                        <button class="btn btn--side-menu">RUS</button>
+                        <button class="btn btn--side-menu">ENG</button>
+                     </div>
+                     <button class="btn btn--side-menu d-flex align-items-center">
+                        <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                        <span>*9878</span>
+                     </button>
+                  </div>
+               </div>
+            </nav>
+            <!-- Header icons  -->
+            <div class="d-none d-md-flex">
+               <a href="#" class="header__icon">
+                  <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <span class="d-none d-xl-block">Hesabım</span>
+               </a>
+               <a href="#" class="header__icon header__icon--cart">
+                  <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <span class="cart-count">0</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <section class="privacy">
+      <div class="heading heading--center heading--line">
+         <h2 class="heading__title">Gizlilik</h2>
+         <p class="heading__text">Velocity Cargo müştərilərinin şəxsi məlumatlarının qorunmasına cavabdehdir.</p>
+      </div>
+      <div class="container-pages">
+         <div class="privacy__content text-font sm-section-pdng section-structure vlct-section">
+            Müştərilərin Velocity şirkətinin xidmətlərindən istifadəsi zamanı təqdim etdikləri bütün məlumatlar gizli saxlanılır və qorunur.
+
+            <br><br> Velocity şirkəti sifarişçilərin şəxsi məlumatlarını ancaq bu hallarda istifadə edə və aydınlada bilər:
+
+            <ol type="a">
+               <li>Sifarişçilərin xidmət seçimlərini dəqiqləşdirmək üçün.</li>
+               <li>Məhsul, xidmətlərimiz haqqında məlumatları, xüsusi informasiyaları və reklam materiallarını sifarişçiylə bölüşmək üçün.</li>
+               <li>Şirkətinin maraqlarının qorunması üçün.</li>
+               <li>Ədalət prinsiplərini mühakimə etmək lazım olduğunda.</li>
+            </ol>
+
+            <br>Velocity şirkəti qeydiyyat formasında sizdən alınan şəxsi məlumatları Azərbaycan Respublikası Dövlət Komitəsi tələblərinə görə və sifarişçilərə daha üstün keyfiyyətli xidmət göstərmək üçün əldə edir.
+            <br><br>Velocity şirkəti müştərilərinin şəxsi məlumatlarının daha güvənli qorunması üçün hər zaman texniki, təşkilati tədbirlər görür. Məlumatların güvənli saxlanılmağını təmin edir və cavabdehlik daşıyır.
+            <br><br>Qeydiyyat formasında olan məlumatlar tam şəkildə müştərilər tərəfindən cavablandırılmalıdır. Əks təqdirdə, həmin müştərilərə qarşı xidmət dayandırılır və ya bütünlükdə başa çatdırılır.
+         </div>
+      </div>
+   </section>
+
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

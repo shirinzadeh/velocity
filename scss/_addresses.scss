@@ -1,0 +1,34 @@
+.details-info {
+   padding: 32px;
+   position: relative;
+   
+   .data {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 23px; 
+      margin-bottom: 24px;
+      background-color: $black-dark-mode;
+      border-radius: $border-radius;
+      border: 1px solid transparent;
+      @include transition;
+
+      &:hover {
+         color: $brand-color-light;
+         background-color: rgba($brand-color-light, .1);
+         border-color: $brand-color-light;
+         @include transition;
+      }
+
+      &__title {
+         font-size: 14px;
+         line-height: 24px;
+      }
+
+      &__name {
+         color: $white;
+         background-color: transparent;
+         border: none;
+      }
+   }
+}

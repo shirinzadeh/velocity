@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="UI/icons/shield">
+<g id="&#226;&#134;&#179; Dark Color">
+<path id="Mask" fill-rule="evenodd" clip-rule="evenodd" d="M3 5L12 1L21 5V11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5ZM12 20.93C16.02 19.69 19 15.52 19 11V6.3L12 3.19L5 6.3V11C5 15.52 7.98 19.69 12 20.93Z" fill="#181C1F"/>
+</g>
+<g id="&#226;&#134;&#179; Dark Color_2">
+<path id="Mask_2" d="M7.41 11.59L6 13L10 17L18 8.99999L16.59 7.57999L10 14.17L7.41 11.59Z" fill="#181C1F"/>
+</g>
+<g id="&#226;&#134;&#179; Light Color">
+<path id="Mask_3" opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M5 11V6.3L12 3.19L19 6.3V11C19 15.52 16.02 19.7 12 20.93C7.98 19.69 5 15.52 5 11ZM10 17L18 9L16.59 7.58L10 14.17L7.41 11.59L6 13L10 17Z" fill="#181C1F"/>
+</g>
+</g>
+</svg>

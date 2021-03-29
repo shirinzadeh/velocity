@@ -1,0 +1,63 @@
+.innovations {
+   &__tabs {
+      @include flex;
+      justify-content: center;
+      margin: 0 auto 40px;
+      overflow-x: auto;
+
+      ul.nav {
+         border: 1px solid $white-pale;
+         border-radius: $border-radius;
+         @include inline-flex;
+
+         li {
+            @include box-shadow($shadow);
+         }
+      }
+   }
+
+   // INNOVATION CARDS
+   .v-card--innovation {
+      background-color: $black-dark-mode-v2;
+      padding: 24px;
+      margin-bottom: 16px;
+      border: 1px solid transparent;
+      @include medium {
+         flex-direction: row;
+      }
+      @include xsmall {
+         flex-direction: column;
+         padding: 0;
+         border-top-left-radius: 16px;
+         border-top-right-radius: 16px;
+      }
+
+      &:not(:last-child)::after {
+         display: none;
+      }
+
+      &:hover {
+         border: 1px solid $brand-color-light;
+      }
+
+      img {
+         @include small {
+            width: auto;
+         }
+         @include xsmall {
+            width: 100%;
+         }
+      }
+
+      .v-card-body {
+         @include xsmall {
+            width: 100%;
+            padding-top: 16px;
+         }
+      }
+
+      .v-card-text {
+         margin-bottom: 24px;
+      }
+   }
+}

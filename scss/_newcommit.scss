@@ -1,0 +1,55 @@
+.newcommit-input {
+   @include flex;
+   align-items: center;
+   position: relative;
+
+   .nice-select {
+      &:hover {
+         padding-right: 0;
+      }
+   }
+
+   .input-select {
+      padding-left: 15px;
+   }
+
+   i{
+      color: $white-pale ;
+
+      &.caret-down {
+         padding: 0 16px;
+         border-right: 1px solid $line-color;
+         color: $white;
+      }
+
+      &.icon-calendar_two_tone {
+         position: absolute;
+         right: 20px;
+         top: 50%;
+         @include transform(translateY(-50%));
+      }
+   }
+}
+
+.newcommit-buttons {
+   @include flex;
+   justify-content: flex-end;
+   margin-top: 40px;
+   @include xsmall {
+      flex-direction: column;
+   }
+
+   .btn {
+      width: auto;
+      @include small {
+         width: 100%;
+      }
+      &:not(:last-child) {
+         margin-right: 16px;
+         @include xsmall {
+            margin-right: 0;
+            margin-bottom: 16px;
+         }
+      }
+   }
+}

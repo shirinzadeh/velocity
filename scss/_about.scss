@@ -1,0 +1,202 @@
+.about {
+   .header {
+      margin-bottom: 0;
+   }
+   .info {
+      .sm-section-pdng {
+         @include medium {
+            border-radius: 0;
+         }
+      }
+   
+      &__content {
+         background: url(../img/Vector-v3.svg) -130px no-repeat;
+         // background-position: -130px;
+         padding: 48px 48px 84px;
+         position: relative; //position the content block on top of the image. 
+         @include small {
+            padding: 36px 36px 63px;
+            background-position: -275px;
+         }
+   
+         .heading {
+            @include medium {
+               margin-bottom: 0 !important;
+            }
+
+            &__title {
+               margin-bottom: 32px;
+            }
+         }
+         &-text {
+            // font-size: 18px;
+            // line-height: 32px;
+            margin: 32px 0 0;
+            // white-space: pre-line;
+            @include xsmall {
+               line-height: 28px;
+               font-size: 16px;
+            }
+         }
+      }
+   
+      &__image {
+         margin-left: auto;
+         margin-top: -256px;
+         @include large {
+            margin-top: -156px;
+         }
+         @include medium {
+            margin-top: 0;
+         }
+   
+         img {
+            border-radius: $border-radius;
+            @include medium {
+               border-top-left-radius: 0;
+               border-top-right-radius: 0;
+            }
+         }
+      }
+   }
+
+   h4 {
+      font-weight: $fw-bold;
+      font-size: 28px;
+      color: $white;
+   }
+
+   /** WORK **/
+   .box {
+      &-title {
+         margin-bottom: 16px !important;
+         @include xsmall {
+            margin-bottom: 8px !important;
+         }
+      }
+   }
+
+   /** SERVICES **/
+   .services {
+      padding: 48px 32px 34px;
+      
+      &__content {
+         margin-top: 56px;
+
+         .box {
+            padding-bottom: 40px;
+            border-color: $white-pale;
+
+            &-text {
+               margin-bottom: 0;
+            }
+         }
+
+         .stretch-col {
+            flex: auto; //for bootstrap column working correctly 
+         }
+      }
+   }
+
+   /** CONTACT **/
+
+   .contact {
+      .heading__text {
+         margin-bottom: 37px;
+      }
+
+      .contact__content {
+         @include flex;
+         gap: 32px;
+         @include medium {
+            flex-direction: column;
+         }
+
+         h4 {
+            font-weight: $fw-semibold;
+            margin-bottom: 40px;
+         }
+
+         ul {
+            margin-bottom: 55px;
+         }
+
+         li {
+            @include flex;
+            align-items: center;
+            margin-bottom: 40px;
+   
+            i {
+               margin-right: 24px;
+            }
+   
+            h5 {
+               font-weight: $fw-bold;
+               line-height: 28px;
+               color: $white;
+            }
+   
+            p {
+               font-size: 18px;
+               line-height: 28px;
+            }
+   
+            &:first-of-type {
+              i {
+               color: $warning;
+              }
+            }
+            &:nth-of-type(2) {
+               i {
+                  color: $pink;
+               }
+            }
+            &:nth-of-type(2) {
+               i {
+                  color: $brand-color-light;
+               }
+            }
+            &:last-of-type {
+               margin-bottom: 0;
+               i {
+                  color: #FFBC7E;
+               }
+            }
+         }
+         
+         .social-icons {
+            a {
+               margin-right: 32px;
+            }
+            i {
+               font-size: 32px;
+            }
+         }
+      }
+
+      &__column {
+         padding: 31px 31px 47px;
+         flex: 1;
+
+         &--input {
+            h4 {
+               margin-bottom: 8px !important;
+            }
+            p {
+               margin-bottom: 38px;
+               @include xsmall {
+                  margin-bottom: 32px;
+               }
+            }
+
+            .contact-input {
+               color: $white-pale;
+            }
+
+            .btn {
+               margin-left: auto;
+            }
+         }
+      }
+   }
+}

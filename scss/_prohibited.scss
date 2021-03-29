@@ -1,0 +1,38 @@
+.prohibited {
+   ul {
+      margin-bottom: 24px;
+   }
+
+   &__list {
+      @include flex;
+      align-items: center;
+      padding: 20px 24px;
+      margin-bottom: 4px;
+      background-color: $black-dark-mode-v2;
+      border-radius: $border-radius;
+
+      i {
+         color: $brand-color-light;
+         margin-right: 26px;
+         font-size: 24px;
+      }
+
+      p {
+         color: $white;
+      }
+   }
+
+   .notes {
+      padding: 20px 24px 32px;
+      background-color: $black-dark-mode-v2;
+      border-radius: $border-radius;
+
+      &__title {
+         color: $brand-color-light;
+         font-weight: $fw-bold;
+         font-size: 20px;
+         line-height: 32px;
+         margin-bottom: 8px;
+      }
+   }
+}

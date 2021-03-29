@@ -36,6 +36,7 @@
 
    &__nav {
       margin-top: 24px;
+      margin-bottom: 32px;
       @include small {
          margin-top: 48px;
          margin-bottom: 48px;
@@ -55,7 +56,7 @@
       justify-content: space-between;
       padding-top: 40px;
       padding-bottom: 64px;
-      border-top: 1px solid rgba($color: $white, $alpha: .2);
+      border-top: 1px solid $line-color;
       @include small {
          padding-top: 24px;
          padding-bottom: 46px;
@@ -69,20 +70,24 @@
       }
    }
 
-   .social-icons {
-      @include small {
-         margin-bottom: 24px;
+   .social-icons__link {
+      margin-right: 40px;
+   }
+}
+
+.social-icons {
+   @include small {
+      margin-bottom: 24px;
+   }
+   &__link {
+      &:not(:last-child) {
+         margin-right: 32px;
       }
-      a {
-         &:not(:first-child) {
-            margin-left: 40px;
-         }
-      }
-      i {
-         font-size: 24px;
-         &:hover {
-            color: $brand-color-light;
-         }
+   }
+   i {
+      font-size: 24px;
+      &:hover {
+         color: $brand-color-light;
       }
    }
 }

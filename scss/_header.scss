@@ -22,7 +22,6 @@
 
       &-link {
          font-size: 14px;
-         color: $white-pale;
 
          &:hover {
             text-decoration: underline;
@@ -88,18 +87,20 @@
 
       &:not(:first-child) {
          margin-left: 32px;
+         margin-right: 20px;
       }
 
-      span {
+      > span {
          margin-left: 8px;
 
          &.cart-count {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: -19px;
+            right: -15px;
             margin-left: 0;
-            @include transform(translate(70%, -70%));
-            font-family: 'Poppins';
+            // @include transform(translate(70%, -70%));
+            font-family: 'Poppins', sans-serif;
+            font-weight: $fw-medium;
             font-size: 12px;
             line-height: 16px;
             text-align: center;
@@ -109,5 +110,22 @@
             padding: 4px;
          }
       }
+   }
+}
+
+.header-pages {
+   margin-bottom: 64px;
+   .user-image {
+      margin-right: 0;
+
+      & + i {
+         align-self: center;
+         color: $white-pale;
+      }
+   }
+
+   .header__icon>span.cart-count {
+      top: -5px;
+      right: -15px;
    }
 }

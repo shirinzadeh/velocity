@@ -67,6 +67,7 @@
       
       &-title {
          font-weight: $fw-bold;
+         color: $white;
          font-size: 48px;
          line-height: 150%;
          @include medium {
@@ -85,6 +86,7 @@
          margin-top: 24px;
          margin-bottom: 58px;
          line-height: 28px;
+         color: $white;
          @include small {
             margin-bottom: 0;
          }

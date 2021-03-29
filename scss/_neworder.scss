@@ -1,0 +1,148 @@
+.neworder {
+   &:not(:last-child) {
+      margin-bottom: 8px;
+   }
+
+   &__head {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      h6 {
+         font-weight: $fw-semibold;
+         font-size: 16px;
+         line-height: 32px;
+         border: 1px solid $line-color;
+         border-radius: $border-radius;
+         padding: 11px 15px;
+         color: $white;
+
+         span {
+            color: $brand-color-light;
+            margin-right: 8px;
+         }
+      }
+
+      i {
+         padding: 15px;
+         border: 1px solid $line-color;
+         border-radius: $border-radius;
+      }
+   }
+
+   &-row {
+      @include flex;
+      gap: 16px;
+      @include medium {
+         flex-direction: column;
+         gap: 32px;
+      }
+      
+      &:not(:last-child) {
+         margin-bottom: 32px;
+      }
+
+      .product-link {
+         width: 100%;
+
+         .form-control {
+            color: $brand-color-light !important;
+         }
+      }
+
+      .form-floating {
+         padding: 16px;
+      }
+
+      .range-content {
+         margin-bottom: 0;
+         max-width: 218px;
+         width: 218px;
+         @include medium {
+            width: 100%;
+            max-width: 100%;
+         }
+      }
+         
+      .neworder-input {
+         flex: 1;
+         height: 56px;
+
+         .range-article {
+            padding: 0;
+            border: 0;
+         }
+
+         .input-number-group {
+            padding-right: 16px;
+            border-right:  1px solid rgba($white, .1);
+            @include flex;
+            flex: 1;
+            justify-content: space-between;
+            
+            .input-number {
+               max-width: 70px;
+               text-align: right;
+               margin-left: auto;
+            }
+         }
+      
+         .symbol {
+            color: $white;
+            padding-left: 16px;
+         }
+
+         small {
+            font-size: 12px;
+            margin-left: 16px;
+            @include medium {
+               margin-left: 0;
+            }
+         }
+
+         &.bg-input {
+            @include flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+         }
+      }
+   
+      textarea {
+         width: 100%;
+         border: none;
+         @include placeholder {
+            color: $white;
+         }
+      }
+
+      .total-price {
+         @include flex-center;
+         text-align: center;
+      }
+   }
+}
+
+.total-price {
+   p {
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   h4 {
+      font-weight: $fw-bold;
+      font-size: 20px;
+      line-height: 32px;
+      color: $white;
+   }
+}
+
+.add-neworder {
+   width: auto;
+   margin: 24px auto;
+
+   i {
+      color: $brand-color-light;
+   }
+}
