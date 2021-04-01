@@ -169,4 +169,32 @@ body.tariffs-page {
          }
       }
    }
+
+   .btn--adjacent-tab {
+      padding: 15px 30px;
+
+      @include xlarge {
+         padding-left: 48px;
+         padding-right: 48px;
+      }
+      @include large {
+         padding-left: 28px;
+         padding-right: 28px;
+      }
+      @include xsmall {
+         padding: 15px 11px;
+      }
+
+      &:last-of-type {
+         padding-left: 20px;
+         padding-right: 20px;
+         @include large {
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+         @include xsmall {
+            padding: 15px 11px;
+         }
+      }
+   }
 }

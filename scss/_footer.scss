@@ -1,17 +1,26 @@
 .footer {
    background-color: $black;
+   padding-top: 56px;
+   padding-bottom: 64px;
+   @include small {
+      padding-bottom: 46px;
+      padding-top: 40px;
+   }
+   @include xsmall {
+      padding-left: 16px;
+      padding-right: 16px;
+   }
 
    .row {
-      padding-top: 56px;
       padding-bottom: 5px; //footer nav has 43px margin bottom
-      @include small {
-         padding-top: 8px; //sm-section-pdng class has 32px top padding
-      }
    }
 
    .heading__title {
       font-weight: $fw-semibold;
-      margin-bottom: 40px
+      margin-bottom: 40px;
+      @include small {
+         margin-bottom: 32px;
+      }
    }
 
    &__contact {
@@ -22,6 +31,11 @@
 
          i {
             color: $brand-color-light;
+         }
+
+         a {
+            font-weight: $fw-medium;
+            line-height: 24px;
          }
 
          &:not(:last-child) {
@@ -42,8 +56,9 @@
          margin-bottom: 48px;
       }
       li{
-            line-height: 56px;
-
+         line-height: 56px;
+         font-weight: $fw-medium;
+         
          @include small {
             line-height: 48px;
          }
@@ -55,11 +70,9 @@
       align-items: center;
       justify-content: space-between;
       padding-top: 40px;
-      padding-bottom: 64px;
       border-top: 1px solid $line-color;
       @include small {
          padding-top: 24px;
-         padding-bottom: 46px;
       }
 
       .copyright {
@@ -70,24 +83,10 @@
       }
    }
 
-   .social-icons__link {
-      margin-right: 40px;
-   }
-}
-
-.social-icons {
-   @include small {
-      margin-bottom: 24px;
-   }
-   &__link {
-      &:not(:last-child) {
-         margin-right: 32px;
-      }
-   }
-   i {
-      font-size: 24px;
-      &:hover {
-         color: $brand-color-light;
+   .social-icons {
+      height: 24px;
+      &__link {
+         margin-right: 40px !important;
       }
    }
 }

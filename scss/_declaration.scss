@@ -1,3 +1,22 @@
+.declaration {
+   padding: 32px 32px 24px;
+   @include small {
+      padding: 32px 16px 24px;
+   }
+
+   .neworder-row .neworder-input {
+      @include xsmall {
+         margin-bottom: 0;
+      }
+   }
+
+   .newcommit-buttons {
+      @include xsmall {
+         margin-top: 32px;
+      }
+   }
+}
+
 .browse-file {
    border: 1px dashed $line-color ;
    margin-top: 32px;
@@ -8,8 +27,8 @@
    @include xsmall {
       flex-direction: column;
       text-align: center;
-      padding-top: 44px;
-      padding-bottom: 44px;
+      padding-top: 43px;
+      padding-bottom: 43px;
    }
 
    i {
@@ -25,6 +44,7 @@
       h6 {
          font-weight: $fw-medium;
          color: $white;
+         line-height: 24px;
       }
    
       p {

@@ -10,7 +10,7 @@
  }
 
  /* BUTTON - INSIDE FULL */
-.btn--colored{
+.btn--primary{
    @include main-btn;
    background-color: $brand-color-light;
    color: $black;
@@ -19,30 +19,30 @@
    }
 
    &:hover {
-      background-color: darken($brand-color-light, 7);
-      border-color: $white-pale;
+      background-color: rgba($brand-color-light, .2);
    }   
    &:focus {
-      @extend .btn--colored:hover;
+      @extend .btn--primary:hover;
    }
 }
 
-/* BUTTON OUTLINE*/
-.btn--outline {
+/* BUTTON SECONDARY*/
+.btn--secondary {
    @include main-btn;
    background-color: transparent;
    color: $brand-color-light;
-   border-color: $white-pale;
+   border-color: $line-color;
    @include small {
       width: 100%;
    }
 
    &:hover {
-      background-color: lighten($black, 7);
+      border-color: $brand-color-light;
+      background-color: rgba($white, .2);
       color: $brand-color-light;
    }
    &:focus {
-      @extend .btn--outline:hover;
+      @extend .btn--secondary:hover;
    }
 }
 
@@ -61,12 +61,18 @@
    }
 }
 
+.btn--disabled {
+   @include main-btn;
+   background-color: rgba($white, .1);
+   color: rgba($white, .4);
+}
+
 .btn--instruction {
    @include flex;
    align-items: center;
    color: $white;
    &:hover {
-      color: darken($white, 7);
+      color: $brand-color-light !important;
    }
    &:focus {
       @extend .btn--instruction:hover;
@@ -80,7 +86,7 @@
    line-height: 24px;
 
    &:not(:last-of-type) {
-      margin-right: 20px;
+      margin-right: 24px;
       @include small {
          margin-right: 8px;
       }
@@ -116,7 +122,7 @@
    .btn--tab {
       @include flex-center;
       border-radius: 8px;
-      border: 1px solid $white-pale;
+      border: 1px solid $line-color;
       padding: 12px 15px;
       min-width: 104px;
       @include xsmall {
@@ -176,7 +182,7 @@
 
 /* ADJACENT TABS */
 .tabs-adjacent {
-   border: 1px solid $white-pale;
+   border: 1px solid $line-color;
    border-radius: $border-radius;
    @include flex;
    @include medium {
@@ -187,7 +193,9 @@
    }
 
    .btn:not(:first-child) {
-      margin-left: 8px;
+      @include medium {
+         margin-left: 16px !important;
+      }
    }
 
    .btn--adjacent-tab {
@@ -228,36 +236,6 @@
       span {
          line-height: 24px;
          font-weight: $fw-medium;
-      }
-   }
-}
-
-body.tariffs-page {
-   .btn--adjacent-tab {
-      padding: 15px 30px;
-
-      @include xlarge {
-         padding-left: 48px;
-         padding-right: 48px;
-      }
-      @include large {
-         padding-left: 28px;
-         padding-right: 28px;
-      }
-      @include xsmall {
-         padding: 15px 11px;
-      }
-
-      &:last-of-type {
-         padding-left: 20px;
-         padding-right: 20px;
-         @include large {
-            padding-left: 20px;
-            padding-right: 20px;
-         }
-         @include xsmall {
-            padding: 15px 11px;
-         }
       }
    }
 }

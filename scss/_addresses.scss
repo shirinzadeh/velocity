@@ -1,13 +1,31 @@
+.addresses {
+   .details-headline {
+      padding-top: 24px;
+      padding-bottom: 24px;
+   }
+
+   .tabs .btn--tab {
+      @include cmq(992px, 1199px) {
+         min-width: auto;
+         padding: 12px;
+      }
+   }
+}
+
 .details-info {
    padding: 32px;
    position: relative;
+
+   @include small {
+      padding: 40px 16px;
+   }
    
    .data {
       @include flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 23px; 
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       background-color: $black-dark-mode;
       border-radius: $border-radius;
       border: 1px solid transparent;

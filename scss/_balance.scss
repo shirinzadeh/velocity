@@ -1,3 +1,24 @@
+.balance-page {
+   .details-headline {
+      padding-bottom: 24px;
+
+      h4 {
+         @include small {
+            margin-bottom: 0;
+         }
+      }
+
+      .btn--adjacent-tab {
+         width: 200px;
+         @include medium {
+            width: 176px ;
+            flex: 0;
+            padding: 15px !important;
+         }
+      }
+   }
+}
+
 .balance-current {
    padding: 24px;
    margin-bottom: 40px;
@@ -58,7 +79,7 @@
             max-width: 200px;
          }
          @include medium {
-            max-width: 150px;
+            max-width: 120px;
             // margin-left: 30px;
          }
          @include small {
@@ -66,7 +87,7 @@
          }
       }
 
-      .btn--colored {
+      .btn--primary {
          width: auto;
          padding: 16px 22px;
          position: absolute;
@@ -92,6 +113,11 @@
       line-height: 32px;
       margin-bottom: 16px;
       color: $white;
+      @include xsmall {
+         font-size: 18px;
+         line-height: 28px;
+         margin-left: 16px;
+      }
    }
 
    .history:not(:last-child) {

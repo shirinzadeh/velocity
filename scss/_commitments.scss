@@ -1,0 +1,7 @@
+.commit {
+   .details-headline h4 {
+      @include xsmall {
+         margin-bottom: 32px;
+      }
+   }
+}

@@ -17,6 +17,7 @@
 
          span {
             color: $hdr-top-text-clr;
+            @include transition;
          }
       }
 
@@ -24,7 +25,12 @@
          font-size: 14px;
 
          &:hover {
-            text-decoration: underline;
+           span {
+              color: $white;
+           }
+         }
+         &:focus {
+            @extend .header__top-link:hover;
          }
 
          &:not(:last-child) {
@@ -36,10 +42,33 @@
          @include flex;
          a {
             @include flex;
+            &:hover {
+               :is(i, span) {
+                  color: $brand-color-light;
+               }
+            }
+            &:focus {
+               :is(i, span) {
+                  color: $brand-color-light;
+               }
+            }
          }
 
          .nice-select {
-            padding: 0;
+            padding-right: 28px;
+
+            &::after {
+               border: none;
+               border-bottom: 2px solid $white-pale !important;
+               border-right: 2px solid $white-pale !important;
+               height: 8px !important;
+               width: 8px !important;
+               @include transform(translateY(-50%) rotate(45deg));
+            }
+
+            .option {
+               padding: 6px;
+            }
          }
 
          i {
@@ -61,22 +90,21 @@
       @include small {
          margin-top: 0;
          padding: 16px;
+         height: 64px;
       }
 
       .navbar {
          position: relative;
          padding: 2px 0;
       }
-      .logo--sm {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         @include transform(translate(-50%, -50%));
-         height: auto;
-      }
-
-      i {
-         font-size: 24px;
+      .logo {
+         @include medium {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            height: auto;
+         }
       }
    }
 
@@ -88,6 +116,17 @@
       &:not(:first-child) {
          margin-left: 32px;
          margin-right: 20px;
+      }
+
+      &:hover {
+         color: $brand-color-light;
+      }
+      &:focus {
+         @extend .header__icon:hover;
+      }
+
+      i {
+         font-size: 24px;
       }
 
       > span {
@@ -115,6 +154,9 @@
 
 .header-pages {
    margin-bottom: 64px;
+   @include small {
+      margin-bottom: 24px;
+   }
    .user-image {
       margin-right: 0;
 

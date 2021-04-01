@@ -1,12 +1,21 @@
 .login {
-   padding: 25px 88px 24px 24px;
+   // padding: 25px 88px 24px 24px;
    @include medium {
       padding-right: 24px;
+      flex-direction: column-reverse;
+   }
+   @include small {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
    }
 
    .side-colored {
-      margin-right: 64px;
+      height: auto;
       padding: 0 64px;
+      width: 497px;
+      @include large {
+         width: 328px;
+      }
 
       .heading__title {
          margin-bottom: 40px;
@@ -14,18 +23,20 @@
    }
 
    .signin-content {
-      padding-top: 23px;
-      padding-left: 64px;
-      padding-bottom: 32px;
+      margin-left: 48px;
+      padding: 24px 64px 32px 64px;
+      width: calc(100% - 497px);
       @include large {
          padding-left: 0;
+         width: calc(100% - 328px);
+         padding-right: 0;
       }
       @include medium {
          padding-top: 0;
       }
 
       .heading {
-         margin-bottom: 64px;
+         margin-bottom: 63px;
       }
 
       .btn {
@@ -44,6 +55,9 @@
 
          &:hover {
             color: $white;
+            i {
+               color: $white;
+            }
          }
          &:focus {
             @extend .forgot:hover;

@@ -7,7 +7,7 @@
 
    &__inner {
       border-radius: $border-radius;
-      background-image: url(../img/bg-shape.svg), url(../img/Vector.svg);
+      background-image: url(../img/bg-shape.svg), url(../img/Vector-slider.svg);
       background-position: right, left;
       background-repeat: no-repeat;
       position: relative;
@@ -46,22 +46,23 @@
       z-index: -1;
    }
 
+   .slider-wrapper {
+      position: relative;
+   }
+
    &__content {
       padding-top: 80px;
       padding-left: 72px;
       padding-bottom: 142px;
-      width: 520px;
       max-width: 520px;
       @include medium {
          padding-top: 50px;
          padding-left: 50px;
          padding-bottom: 100px;
-         width: 450px;
          max-width: 450px;
       }
       @include small {
          padding: 30px 30px 50px;
-         width: auto;
          max-width: none;
       }
       
@@ -100,6 +101,9 @@
       position: absolute;
       right: 0;
       bottom: 0;
+      width: auto !important;
+      fill: blue;
+
       @include medium {
          width: 350px;
          max-width: 350px;

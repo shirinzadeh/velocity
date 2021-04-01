@@ -1,6 +1,9 @@
 .about {
    .header {
-      margin-bottom: 0;
+      margin-bottom: 64px;
+      @include medium {
+         margin-bottom: 0;
+      }
    }
    .info {
       .sm-section-pdng {

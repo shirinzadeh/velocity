@@ -7,6 +7,10 @@
    color: $pure-green !important;
 }
 
+.light-green {
+   color: $brand-color-light;
+}
+
 .border-warning {
    border: 1px solid $warning;
 }
@@ -26,6 +30,9 @@ a {
          color: $brand-color-light;
       }
    }
+   &:focus {
+      @extend a:hover;
+   }
 }
 
 //PADDING CLASSES
@@ -38,20 +45,21 @@ a {
 }
 
 //MARGIN CLASSES
+.mb-14 {
+   margin-bottom: 14px !important;
+}
 .mb-16 {
    margin-bottom: 16px;
 }
+.mb-32 {
+   margin-bottom: 32px !important;
+}
 
-.header-b-64 {
+//Header 64px button margin
+.hdr-mb-64 {
    margin-bottom: 64px;
    @include small {
       margin-bottom: 0;
-   }
-}
-
-.header-b-sm-24 {
-   @include small {
-      margin-bottom: 24px;
    }
 }
 
@@ -113,13 +121,6 @@ a {
    }
 }
 
-// SECTION PADDING ON SMALL DEVICES
-.sm-section-pdng {
-   @include xsmall {
-      padding: 32px 16px 40px !important;
-   }
-}
-
 //SPACE B/W SECTIONS
 .vlct-section {
    margin-bottom: 88px;
@@ -138,6 +139,9 @@ a {
    @include medium {
       margin-left: 10px;
    }
+   @include extra-xsmall {
+      position: static;
+   }
 }
 
 //SECTION STRUCTURE
@@ -148,8 +152,21 @@ a {
  }
 
  .section-pdng {
-    padding: 24px 32px;
+    padding: 24px 32px !important;
  }
+
+ // SECTION PADDING ON SMALL DEVICES
+.sm-section-pdng {
+   @include xsmall {
+      padding: 32px 16px 40px !important;
+   }
+}
+
+.sm-pages-pdng {
+   @include xsmall {
+      padding: 24px 16px !important;
+   }
+}
 
 
 //STRETCHED COLUMNS FOR SAME HEIGHT COLUMNS
@@ -171,10 +188,29 @@ input[type="file"] {
 input[type="file"] + label {
    color: $white  ;
 }
-input,textarea {
+
+input[type="number"],
+textarea {
    background-color: transparent !important;
    color: $white;
    border: none;
+}
+
+textarea {
+   height: 96px !important;
+   color: $white !important;
+   @include placeholder {
+      color: $white-pale !important;
+   }
+}
+
+.input-width {
+   width: 381px;
+   max-width: 381px;
+   @include medium {
+      width: 100%;
+      max-width: 100%
+   }
 }
 
 .input-flex {
@@ -189,11 +225,105 @@ input,textarea {
          padding-left: 0;
       }
    }
+
+   .form-control {
+      padding-left: 0 !important;
+   }
+
+   i{
+      color: $white-pale;
+   }
 }
+
+.input-btw {
+   @include flex;
+   justify-content: space-between;
+   gap: 32px;
+   flex-grow: 1;
+   @include medium {
+      flex-direction: column;
+   }
+
+   .input-select {
+      @include cmq(992px, 1199px) {
+         width: 150px;
+      }
+   }
+}
+/*********** SELECT 2 ********/
+.select2-container--default .select2-selection--multiple {
+   background-color: transparent;
+   border: none;
+   padding-bottom: 10px;
+   height: 56px;
+}
+
+//focus
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+   border: none;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+   margin-bottom: 10px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+   background-color: $black-dark-mode-v2;
+   color: $brand-color-light;
+   border: none;
+   // margin-bottom: 10px;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 16px;
+   padding: 2px 6px 2px 15px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+   border-right: none;
+   font-size: 16px;
+
+   &:hover {
+      background-color: transparent;
+      color: $white;
+   }
+}
+
+.select2-container--open .select2-dropdown--below {
+   background: $black-dark-mode;
+   border-radius: $border-radius;
+   margin-top: 2px;
+
+}
+
+.select2-results__option {
+   padding: 16px;
+}
+
+.select2-dropdown {
+   border: none;
+   box-shadow: $shadow;
+}
+
+
+.select2-container--default .select2-results>.select2-results__options {
+   background: $black-dark-mode;
+   border-radius: $border-radius;
+}
+
+.select2-container--default .select2-results__option--selected {
+   background-color: $black-dark-mode
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+   background-color: rgba($white, .05);
+}
+
+
 
 .form-check {
    @include flex;
    align-items: flex-end;
+   height: 24px;
 
    .form-check-input {
       height: 24px;
@@ -224,25 +354,30 @@ input,textarea {
 
 .form-control {
    background-color: transparent !important;
-   border: 0;
+   border: 1px solid $black-dark-mode;
+
+   &:focus {
+      border-color: $black-dark-mode;
+   }
 }
 
-.form-floating {
-   padding: 0;
-}
+// .form-floating {
+//    padding: 0;
+// }
 
 .form-floating>label {
-   padding: 13px 0 0 16px;
+   padding: 16px;
 }
 
 .form-floating>.form-control, .form-floating>.form-select {
-   height: auto;
-   padding: 0 !important;
+   height: 56px;
+   padding: 16px;
    color: $white;
+   // @extend .bg-input;
 }
-
+//floating label
 .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
-   @include transform(scale(.85) translateY(-1.1rem) translateX(0rem))
+   @include transform(scale(.85) translateY(-.7rem) translateX(.15rem))
 }
 
  /**** ICONS ****/
@@ -251,7 +386,7 @@ input,textarea {
 .icon-outline {
    width: min-content;
    padding: 17px;
-   border: 1px solid $white-pale;
+   border: 1px solid $line-color;
    border-radius: $border-radius;
    display: inline-block;
    @include transition;
@@ -274,10 +409,11 @@ input,textarea {
 
 //UPDATE, DOWNLOAD, EDIT BUTTONS
 .action-icons {
-   padding: 15px;
+   padding: 14px;
    border-radius: $border-radius;
-   border: 1px solid $white-pale;
+   border: 1px solid $line-color;
    line-height: 24px;
+   height: 56px;
    @include small {
       @include flex;
       justify-content: space-evenly;
@@ -311,8 +447,13 @@ input,textarea {
    border-radius: $border-radius;
    padding: 16px;
    font-weight: $fw-medium;
+   border: 1px solid $black-dark-mode;
 }
 
+input[type="date"] {
+   background-color: transparent;
+   border: none;
+}
 
 //change input date default placeholder
 input[type="date"]::before { 
@@ -323,11 +464,19 @@ input[type="date"]::before {
 
 //make input date default calendar hidden but clickable
 ::-webkit-calendar-picker-indicator {
-   opacity: 0;
-   width: 24px;
-   height: 24px;
-   z-index: 1;
+   opacity: 1;
+   width: 30px;
+   height: 30px;
+   margin-top: 7px;
+   z-index: 222;
+   @include filter(invert(.5)); //change calendar color
 }
+
+input[type="date"]::-webkit-inner-spin-button {
+   /* display: none; <- Crashes Chrome on hover */
+   -webkit-appearance: none;
+   margin: 0;
+ }
 
 /***** JS CLASSES ******/
 .is-tab-active {
@@ -351,9 +500,9 @@ input[type="date"]::before {
    display: none;
 }
 
-.js-sidebar-user {
+.js-animate-icon {
    @include transform(rotate(180deg));
-   @include transition();
+   @include transition;
 }
 
 .js-animation {

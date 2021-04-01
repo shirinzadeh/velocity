@@ -1,3 +1,10 @@
+.debts-page {
+   .details-headline {
+      padding-top: 22px;
+      padding-bottom: 22px;
+   }
+}
+
 .total-debt {
    text-align: right;
    @include small {
@@ -7,10 +14,11 @@
       font-size: 14px;
       line-height: 28px;
    }
-   h4 {
+   h5 {
       font-weight: bold;
       font-size: 20px;
       line-height: 32px;
+      color: $white;
    }
 }
 
@@ -22,6 +30,7 @@
 
    .order-row {
       border-top: none !important;
+      padding-top: 24px;
    }
    .product-link {
       .link {
@@ -41,11 +50,19 @@
 
 .final-debt {
    margin-top: 16px;
-   &__buttons {
+   @include xsmall {
+      padding: 40px 16px 32px !important;
+   }
+   .final-amount__buttons {
       @include flex;
 
       .btn:not(:first-child) {
          margin-left: 24px;
+         @include xsmall {
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-top: 16px;
+         }
       }
    }
 }

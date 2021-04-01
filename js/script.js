@@ -9,26 +9,83 @@
       dots: true,
       loop: true,
    });   
+
+//  $("select").bsMultiSelect();
+
    
    /* NICE-SELECT LIBRARY FOR SELECT */
    $('select').niceSelect();
+   // $('.must').selectpicker();
+   // $(".selectpicker").selectpicker();
+   // $(".bootstrap-select").click(function () {
+   //      $(this).addClass("open");
+   // });
 
    // ADD CLASS TO BODY WHEN CLICK THE MENU BUTTON ON MOBILE 
    $('.navbar-toggler').click(function() {
       $('body').toggleClass('js-side-menu-open');
+      // $('body').toggleClass('js-side-dashboard-open');
    });
    // CLOSE SIDE MENU
    $('#closeIcon').click(function() {
       $('body').removeClass('js-side-menu-open');
    });
+   $('#closeDasboardIcon').click(function() {
+      $('body').removeClass('js-side-dashboard-open');
+   });
+
+   $('.js-toggle-dashboard').click(function() {
+      $('body').toggleClass('js-side-dashboard-open');
+   })
+
+   $('.sidebar__user').click(function() {
+      let userOptions = $('.sidebar__user-options');
+      let iconDown =  $('.user-info .icon-menu-down_two_tone');
+      //Show hide sidebar user options
+      userOptions.toggle();
+      //Rotate icon when user options is visible
+      iconDown.toggleClass('js-animate-icon', userOptions.css('display') == 'block')
+   })
+
+   //Toggle menu links when click the account image
+   let user = $('.user-image-dsk');
+   user.click(function() {
+      $('.user-image-dsk .sidebar').toggle();
+   })
+   //Hide menu links when click outside account image
+   $(document).mouseup(function (e) {
+      if ($(e.target).closest(user).length === 0) {
+         $(".user-image-dsk .sidebar").hide();
+         // $('.sidebar__user-options').hide();
+      }
+   });
+
+   $('.js-user').click(function() {
+      $('body').addClass('js-side-dashboard-open');
+   })
+
+   /** Selectbox floating label */
+   $('.form-control-category').on('focus blur change', function (e) {
+      var $currEl = $(this);
+     
+     if($currEl) {
+      if($currEl.is('select')) {
+         if($currEl.val() === $("option:first", $currEl).val()) {
+           $('.control-label', $currEl.parent()).animate({opacity: 0, top: '50%',},140);
+          $currEl.parent().removeClass('focused'); 
+          $('.form-control-category > .current').css("color", "rgba(255,255,255,0.5)");
+        } else {
+           $('.control-label', $currEl.parent()).css({top: '-1px', opacity: 1},140);
+          // $('.form-control-category > .current').css("color", "#fff");
+ 
+           $currEl.parents('.form-group').toggleClass('focused', ((e.type === 'focus' || this.value.length > 0) && ($currEl.val() !== $("option:first", $currEl).val())));
+        }
+      } else {
+         $currEl.parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+      }
+     }
+   }).trigger('blur');
 })();
-
-
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
 
 /** CHANGE TAB CONTENT WHEN CLICK THE TAB */
 
@@ -37,8 +94,6 @@ const tabContent = document.querySelectorAll(".js-tab-content");
 
 const tabsModal = document.querySelectorAll(".js-modal-tab");
 const tabModalContent = document.querySelectorAll(".js-modal-tab-content");
-
-
 
 const tabsCalculator = document.querySelectorAll(".js-calculator-tab"); 
 const tabsCalcCountry = document.querySelectorAll(".js-calculator-tab-c"); //Country tabs in calculator sect.
@@ -110,40 +165,57 @@ copyIcons.forEach((icon) => {
    })
 })
 
-// TOOLTIP PACKAGE
-// const tooltipBtn = document.querySelectorAll('.vlct-tooltip i');
-// const tooltipInfo = document.querySelectorAll('.tooltip--info');
-// const tooltipWarning = document.querySelectorAll('.tooltip--warning');
+// DİSPLAY TOOLTIP
+const tooltipInfo = document.querySelectorAll('.tooltip--info');
+const tooltipWarning = document.querySelectorAll('.tooltip--warning');
+const tooltipInfoArrow = document.querySelectorAll('.tooltip--info + .tooltip-arrow');
+const tooltipWarningArrow = document.querySelectorAll('.tooltip--warning + .tooltip-arrow');
+const infoIcons = document.querySelectorAll('.js-icon-info')
+const warningIcons = document.querySelectorAll('.js-icon-warning')
 
-// tooltipBtn.forEach((tooltip, i) => {
-//    //Show tooltip when hover icon
-//    tooltip.addEventListener('mouseover', () => {   
-//       //If icon is warning icon, show warning icon tooltip. If not, show info icon tooltip
-//       tooltip.classList.contains('warning') ? tooltipWarning[0].style.opacity = "1" : tooltipInfo[i].style.opacity = "1";
-//    })
-//    //Hide tooltip when leave the icon
-//    tooltip.addEventListener('mouseleave', () => {
-//       tooltip.classList.contains('warning') ? tooltipWarning[0].style.opacity = "0" : tooltipInfo[i].style.opacity = "0";
-//    })
-// });
+function tooltipMouseover(elements, content, contentArrow) {
+   elements.forEach((el, i) => {
+      el.addEventListener('mouseover', () => {
+         content[i].style.opacity = "1";
+         contentArrow[i].style.opacity = "1"
+      })
+   })
+}
+function tooltipMouseleave(elements, content, contentArrow) {
+   elements.forEach((el, i) => {
+      el.addEventListener('mouseleave', () => {
+         content[i].style.opacity = "0";
+         contentArrow[i].style.opacity = "0"
+      })
+   })
+}
+
+tooltipMouseover(infoIcons, tooltipInfo, tooltipInfoArrow);
+tooltipMouseover(warningIcons, tooltipWarning, tooltipWarningArrow);
+tooltipMouseleave(infoIcons, tooltipInfo, tooltipInfoArrow);
+tooltipMouseleave(warningIcons, tooltipWarning, tooltipWarningArrow);
 
 //SIDEBAR
-const sideUser = document.querySelector('.sidebar__user');
-const sideUserOptions = document.querySelector('.sidebar__user-options');
-const iconDown = document.querySelector('.user-info .icon-menu-down_two_tone');
+// const sideUser = document.querySelector('.sidebar__user');
+// const sideUserOptions = document.querySelector('.sidebar__user-options');
+// const iconDown = document.querySelector('.user-info .icon-menu-down_two_tone');
 
-if(sideUser) {
-   sideUser.addEventListener('mouseover', () => {
-      sideUserOptions.style.display = "block";
-      //change icon when hover
-      iconDown.style.transform = "rotate(180deg)";
-      iconDown.style.transition = "all .3s ease";
-   });
-   sideUser.addEventListener('mouseleave', () => {
-      sideUserOptions.style.display = "none";
-      iconDown.style.transform = "rotate(0deg)";
-   });
-}
+// if(sideUser) {
+//    sideUser.addEventListener('click', () => {
+//       sideUserOptions.style.display = "block";
+//       //change icon when hover
+//       iconDown.style.transform = "rotate(180deg)";
+//       iconDown.style.transition = "all .3s ease";
+//    });
+
+//    let hideUserOptions =  function() {
+//       sideUserOptions.style.display = "none";
+//       iconDown.style.transform = "rotate(0deg)";
+//    }
+
+//    // sideUser.addEventListener('mouseleave', hideUserOptions);
+//    sideUser.addEventListener('click', hideUserOptions);
+// }
 
 
 /** TOGGLE PASSWORD VISIBILITY */
@@ -160,4 +232,18 @@ togglePassword.forEach((pw, i) => {
                      `<span class="path1"></span><span class="path2"></span><span class="path3"></span>`;
 
    })
-})
+});
+
+onclick="this.setAttribute('value', document.querySelector('.nice-select .current').innerHTML); console.log(this)"
+
+// const selects = document.querySelectorAll('.nice-select.floating-select');
+// const selectValue = document.querySelector('.nice-select.floating-select .current');
+// const listitem = document.querySelector('.nice-select.floating-select li[data-value]')
+// selects.forEach((select, i) => {
+//    select.addEventListener('click', () => {
+//       console.log(selectValue)
+//       if(selectValue.length >= 1) {
+//          console.log('fg')
+//       }
+//    })
+// })

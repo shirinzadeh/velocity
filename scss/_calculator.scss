@@ -25,6 +25,7 @@
    .nice-select {
       padding-left: 16px;
       padding-right: 56px;
+      color: $white;
       @include xsmall {
          padding-right: 8px;
          padding-left: 8px;
@@ -40,9 +41,29 @@
       }
    }
 
-   .btn--colored {
+   /* ADJACENT TABS */
+.tabs-adjacent {
+   border: 1px solid $line-color!important;
+   border-radius: $border-radius;
+   @include flex;
+   @include small {
+      overflow-x: auto;
+   }
+
+   .btn:not(:first-child) {
+      @include medium {
+         margin-left: 0 !important;
+      }
+   }
+
+   .btn--adjacent-tab {
+      border: none !important;
+   }
+}
+
+   .btn--primary {
       margin: 56px auto 0;
-      width: 27.3%;
+      width: 320px;
       @include small {
          width: 100%;
       }

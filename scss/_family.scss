@@ -1,3 +1,9 @@
+.family-page {
+   .details-headline {
+      padding-bottom: 24px;
+   }
+}
+
 .tabs-adjacent--family {
   .btn--adjacent-tab {
    width: 224px;
@@ -10,8 +16,10 @@
 
 .order--family {
    .order {
-      .btn-w144 {
-         margin-top: 32px;
+      @include small {
+         .btn-w144 {
+            margin-top: 32px;
+         }
       }
    }
    .order-row {

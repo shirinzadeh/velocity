@@ -1,54 +1,53 @@
-.newcommit-input {
-   @include flex;
-   align-items: center;
-   position: relative;
-
-   .nice-select {
-      &:hover {
-         padding-right: 0;
-      }
+.newcommit {
+   @include small {
+      padding: 32px 16px 24px;
    }
 
-   .input-select {
-      padding-left: 15px;
-   }
-
-   i{
-      color: $white-pale ;
-
-      &.caret-down {
-         padding: 0 16px;
-         border-right: 1px solid $line-color;
-         color: $white;
+   &-input {
+      @include flex;
+      align-items: center;
+      position: relative;
+   
+      .input-select {
+         padding-left: 15px;
       }
-
-      &.icon-calendar_two_tone {
+   
+      i.icon-calendar_two_tone {
          position: absolute;
          right: 20px;
          top: 50%;
          @include transform(translateY(-50%));
       }
    }
-}
 
-.newcommit-buttons {
-   @include flex;
-   justify-content: flex-end;
-   margin-top: 40px;
-   @include xsmall {
-      flex-direction: column;
-   }
-
-   .btn {
-      width: auto;
-      @include small {
-         width: 100%;
+   &-buttons {
+      @include flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+      @include xsmall {
+         flex-direction: column;
       }
-      &:not(:last-child) {
-         margin-right: 16px;
-         @include xsmall {
-            margin-right: 0;
-            margin-bottom: 16px;
+   
+      .btn {
+         padding-left: 24px;
+         padding-right: 24px;
+         @include small {
+            width: 100% !important;
+         }
+         &:not(:last-child) {
+            margin-right: 16px;
+            @include xsmall {
+               margin-right: 0;
+               margin-bottom: 16px;
+            }
+         }
+   
+         &--secondary {
+            width: 144px;
+         }
+   
+         &--primary {
+            width: 194px;
          }
       }
    }
