@@ -1,0 +1,103 @@
+   /** CONTACT **/
+
+   .contact {
+      .heading__text {
+         margin-bottom: 37px;
+      }
+
+      .contact__content {
+         @include flex;
+         gap: 32px;
+         @include medium {
+            flex-direction: column;
+         }
+
+         h4 {
+            font-weight: $fw-semibold;
+            margin-bottom: 40px;
+         }
+
+         ul {
+            margin-bottom: 55px;
+         }
+
+         li {
+            @include flex;
+            align-items: center;
+            margin-bottom: 40px;
+   
+            i {
+               margin-right: 24px;
+            }
+   
+            h5 {
+               font-weight: $fw-bold;
+               line-height: 28px;
+               color: $white;
+            }
+   
+            p {
+               font-size: 18px;
+               line-height: 28px;
+            }
+   
+            &:first-of-type {
+              i {
+               color: $warning;
+              }
+            }
+            &:nth-of-type(2) {
+               i {
+                  color: $pink;
+               }
+            }
+            &:nth-of-type(2) {
+               i {
+                  color: $brand-color-light;
+               }
+            }
+            &:last-of-type {
+               margin-bottom: 0;
+               i {
+                  color: #FFBC7E;
+               }
+            }
+         }
+         
+         .social-icons {
+            a {
+               margin-right: 32px;
+            }
+            i {
+               font-size: 32px;
+            }
+         }
+      }
+
+      &__column {
+         padding: 31px 31px 47px;
+         flex: 1;
+
+         .contact-form {
+            textarea {
+               height: 186px;
+            }
+         }
+
+         &--input {
+            h4 {
+               margin-bottom: 8px !important;
+            }
+            p {
+               margin-bottom: 38px;
+               @include xsmall {
+                  margin-bottom: 32px;
+               }
+            }
+
+            .btn {
+               margin-left: auto;
+            }
+         }
+      }
+   }

@@ -48,6 +48,25 @@
          color: $brand-color-light;
          font-weight: $fw-medium;
          margin-top: 8px;
+
+         &:hover {
+            color: $white;
+         }
+         &:focus {
+            @extend .change-image:hover;
+         }
       }
    }
+}
+
+.settings {
+   padding: 32px 32px 24px;
+
+   .nice-select {
+      color: $white-pale;
+   }
+}
+
+input:focus {
+   color: $white;
 }

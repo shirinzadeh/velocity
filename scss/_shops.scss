@@ -4,33 +4,44 @@
       margin-bottom: 56px;
    }
 
-   &__images {
-      @include flex;
-      justify-content: center;
-      gap: 42px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch; /* Important for iOS devices */
-      @include medium {
-         gap: 32px;
-      } 
-      @include small {
-         margin-bottom: 24px;
-      }
-      @include xsmall {
-         gap: 16px;
-      }
+   // &__images {
+   //    @include flex;
+   //    justify-content: center;
+   //    gap: 42px;
+   //    overflow-x: auto;
+   //    scroll-snap-type: x mandatory;
+   //    -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+   //    @include medium {
+   //       gap: 32px;
+   //    } 
+   //    @include small {
+   //       margin-bottom: 24px;
+   //    }
+   //    @include xsmall {
+   //       gap: 16px;
+   //    }
+   // }
+   
+   .swiper-container {
+      margin-left: 16px;
    }
 
+   .swiper-slide {
+      width: 200px !important;
+
+      &:last-child {
+         margin-right: 0 !important;
+      }
+   }
    .shop-img {
+      width: 200px !important;
+      height: 200px !important;
       background-color: $white;
       border-radius: $border-radius;
       border: 1px solid $black;
       @include flex;
       align-items: center;
       justify-content: center;
-      scroll-snap-align: center;
-      scroll-snap-stop: always;
 
       img {
          height: 170px;

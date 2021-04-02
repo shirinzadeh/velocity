@@ -6,12 +6,29 @@
       overflow-x: auto;
 
       ul.nav {
-         border: 1px solid $white-pale;
+         border: 1px solid $line-color;
          border-radius: $border-radius;
-         @include inline-flex;
+         overflow-x: auto;
+         flex-wrap: nowrap;
+         @include small {
+            border: none;
+         }
 
          li {
             @include box-shadow($shadow);
+            @include small {
+               &:not(:first-child) {
+                  margin-left: 8px;
+               }
+            }
+         }
+      }
+
+      .btn--tab-pages {
+         @include small {
+            width: 112px;
+            border: 1px solid $line-color;
+            border-radius: $border-radius;
          }
       }
    }

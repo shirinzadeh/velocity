@@ -1,14 +1,3 @@
-.pckg-selectbox {
-   padding: 15px;
-   border: 1px solid $black-dark-mode;
-   background-color: $black-dark-mode;
-   border-radius: $border-radius;
-
-   .nice-select {
-      padding-right: 60px;
-   }
-}
-
 .packages {
    .package {
       &:not(:last-of-type) {

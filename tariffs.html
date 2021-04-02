@@ -8,9 +8,9 @@
    <title>Velocity</title>
    <!-- Bootstrap 5 cdn -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-   <!-- Poppins font  -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <!-- Swiper css  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
@@ -34,13 +34,12 @@
                      <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                      <span>*9878</span>
                   </a>
-                  <div>
+                  <div class="select-lang">
                      <select aria-label="Default select example">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
                      </select>
-                     <i class="icon-menu-down_two_tone"></i>
                   </div>
                </div>
             </div>
@@ -59,9 +58,9 @@
                         <div class="bar bar3"></div>
                      </div>
                   </button>
-                  <i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <a href="orders.html"><i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
                </div>
-               <i class="icon-user_two_tone d-md-none order-last"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+               <a href="login.html"><i class="icon-user_two_tone d-md-none order-last"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
 
                <div class="side-menu order-last">
                   <div class="side-menu__head d-lg-none">
@@ -103,11 +102,11 @@
             </nav>
             <!-- Header icons  -->
             <div class="d-none d-md-flex">
-               <a href="#" class="header__icon">
+               <a href="login.html" class="header__icon">
                   <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="d-none d-xl-block">Hesabım</span>
                </a>
-               <a href="#" class="header__icon header__icon--cart">
+               <a href="orders.html" class="header__icon header__icon--cart">
                   <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="cart-count">0</span>
                </a>
@@ -140,7 +139,7 @@
          <div class="tab1-content js-tab-content has-show">
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-lg icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.001 kq’dan 0.10 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -158,7 +157,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.10 kq’dan 0.25 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -176,7 +175,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.25 kq’dan 0.50 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -194,7 +193,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.50 kq’dan 0.75 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -212,7 +211,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.75 kq’dan 1.00 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -230,7 +229,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <div class="tariff-head__tail">
                      <h5 class="tariff-title">1.00 kq’dan 5.00 kq’a qədər</h5>
                      <span class="tariff-tail">(Hər kiloqram üçün)</span>
@@ -251,7 +250,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <div class="tariff-head__tail">
                      <h5 class="tariff-title">5.00 kq’dan çox</h5>
                      <span class="tariff-tail">(Hər kiloqram üçün)</span>
@@ -276,7 +275,7 @@
          <div class="tab2-content js-tab-content">
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.001 kq’dan 0.10 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -294,7 +293,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.10 kq’dan 0.25 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -312,7 +311,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.25 kq’dan 0.50 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -334,7 +333,7 @@
          <div class="tab3-content js-tab-content">
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.001 kq’dan 0.10 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -352,7 +351,7 @@
             </div>
             <div class="tariff">
                <div class="tariff-head">
-                  <i class="icon-Package-v2_two_tone icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                  <i class="icon-Package-v2_two_tone icon-outline icon-lg"><span class="path1"></span><span class="path2"></span></i>
                   <h5 class="tariff-title">0.25 kq’dan 0.50 kq’a qədər</h5>
                </div>
                <div class="tariff-category">
@@ -374,37 +373,35 @@
 
    <div class="container-pages">
       <section class="calculator vlct-section section-structure sm-section-pdng">
-         <div class="heading heading--center">
+         <div class=" heading heading--center">
             <h2 class="heading__title">Kalkulyator</h2>
             <p class="heading__text heading__text--home">Bağlamanın hər hansı bir tərəfinin ölçüsü 60 sm və daha çox olarsa, bağlamanın həm həcm, həm də fiziki çəkisi hesablanır. Hansı çəki yüksək olarsa, daşınma haqqı ona əsasən hesablanır.</p>
          </div>
          <div class="calculator__content">
             <div class="row">
                <div class="col-lg-6 col-px-16">
-                  <div class="range-content newoffer-input bg-input">
+                  <div class="range-content bg-input">
                      <div class="range-article">
                         <p>En</p>
-                        <span id="rangeValue">32</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="1" max="100" value="32">
                      </div>
-                     <select name="" id="" class="form-control ">
+                     <select name="" id="" class="form-control selectpicker">
                         <option value="">sm</option>
                         <option value="">mm</option>
                         <option value="">m</option>
                      </select>
-                     <i class="icon-input-down_two_tone"></i>
                      <input type="range" min="1" max="100" value="32" class="range" id="rangeSlider">
                   </div>
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>Hündürlük</p>
-                        <span id="rangeValue">32</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="1" max="100" value="32">
                      </div>
                      <select name="" id="" class="form-control ">
                         <option value="">sm</option>
                         <option value="">mm</option>
                         <option value="">m</option>
                      </select>
-                     <i class="icon-input-down_two_tone"></i>
                      <input type="range" min="1" max="100" value="32" class="range" id="rangeSlider">
                   </div>
 
@@ -432,32 +429,32 @@
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>Uzunluq</p>
-                        <span id="rangeValue">0</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="0" max="100" value="0">
                      </div>
                      <select name="" id="" class="form-control ">
                         <option value="">sm</option>
                         <option value="">mm</option>
                         <option value="">m</option>
                      </select>
-                     <i class="icon-input-down_two_tone"></i>
-                     <input type="range" min="0" max="100" value="32" class="range" id="rangeSlider">
+
+                     <input type="range" min="0" max="100" value="0" class="range" id="rangeSlider">
                   </div>
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>Bağlamanın çəkisi</p>
-                        <span id="rangeValue">5</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="0" max="100" value="5">
                      </div>
                      <div>
                         <select name="" id="" class="form-control ">
                            <option value="">kq</option>
                            <option value="">q</option>
                         </select>
-                        <i class="icon-input-down_two_tone"></i>
+
                      </div>
                      <input type="range" min="0" max="100" value="5" class="range" id="rangeSlider">
                   </div>
 
-                  <!-- HIDED COUNTRY TABS  ON LARGE DEVICES -->
+                  <!-- HIDE COUNTRY TABS  ON LARGE DEVICES -->
                   <div class="d-lg-none">
                      <h6>Ölkə seçin</h6>
                      <!-- Tabs for country option  -->
@@ -477,16 +474,14 @@
                      </div>
                   </div>
                   <!-- Tabs for package option  -->
-                  <div>
-                     <h6>Bağlamanın növü</h6>
-                     <div class="tabs-adjacent">
-                        <button class="btn btn--adjacent-tab js-adjacent-tab is-tab-active">
-                           <span>Adi məhsul</span>
-                        </button>
-                        <button class="btn btn--adjacent-tab js-adjacent-tab">
-                           <span>Maye və kosmetika</span>
-                        </button>
-                     </div>
+                  <h6>Bağlamanın növü</h6>
+                  <div class="tabs-adjacent">
+                     <button class="btn btn--adjacent-tab js-adjacent-tab is-tab-active">
+                        <span>Adi məhsul</span>
+                     </button>
+                     <button class="btn btn--adjacent-tab js-adjacent-tab">
+                        <span>Maye və kosmetika</span>
+                     </button>
                   </div>
                </div>
             </div>
@@ -499,8 +494,75 @@
       </section>
    </div>
 
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="heading">
+                  <h2 class="heading__title">Kömək lazımdır?</h2>
+               </div>
+               <ul class="footer__contact">
+                  <li>
+                     <i class="icon-map-marker_two_tone icon-lg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <a href="#"><span>Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</span></a>
+                  </li>
+                  <li>
+                     <i class="icon-email_two_tone icon-lg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <a href="mailto: info@velocity.az"><span>info@velocity.az</span></a>
+                  </li>
+                  <li>
+                     <i class="icon-phone_two_tone icon-lg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <a href="tel: 050 546 7888"><span>050 546 7888</span></a>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-md-6">
+               <ul class="footer__nav">
+                  <a href="faq.html">
+                     <li>Tez-tez verilən suallar</li>
+                  </a>
+                  <a href="banned-products.html">
+                     <li>Daşınması qadağan olan məhsullar</li>
+                  </a>
+                  <a href="#">
+                     <li>Şərtlər</li>
+                  </a>
+                  <a href="privacy.html">
+                     <li>Gizlilik siyasəti</li>
+                  </a>
+                  <a href="#">
+                     <li>İstifadəçi razılaşması</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="social-icons d-md-none">
+               <a href="#" class="social-icons__link"><i class="icon-facebook"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-instagram"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-youtube"></i></a>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <div>
+               <img src="img/logo-white.svg" alt="">
+               <p class="copyright">© 2021 Velocity Cargo. Bütün hüquqlar qorunur</p>
+            </div>
+            <div class="social-icons d-none d-md-block">
+               <a href="#" class="social-icons__link"><i class="icon-facebook"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-instagram"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-youtube"></i></a>
+            </div>
+         </div>
+      </div>
+   </footer>
+
    <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- Swiper js  -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

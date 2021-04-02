@@ -19,9 +19,9 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="about">
 
-   <header class="header hdr-mb-64">
+   <header class="header">
       <div class="header__top">
          <div class="container">
             <div class="header__top-inner">
@@ -40,7 +40,6 @@
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
                      </select>
-                     <!-- <i class="icon-menu-down_two_tone"></i> -->
                   </div>
                </div>
             </div>
@@ -76,7 +75,7 @@
                         <a class="nav-link" href="tariffs.html">Tariflər</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="services.html">Xidmətlər</a>
+                        <a class="nav-link active" aria-current="page" href="services.html">Xidmətlər</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="shops.html">Mağazalar</a>
@@ -89,7 +88,7 @@
                      </li>
                   </ul>
                   <div class="side-menu__footer d-lg-none">
-                     <div>
+                     <div class="select-lang">
                         <button class="btn btn--side-menu">AZE</button>
                         <button class="btn btn--side-menu">RUS</button>
                         <button class="btn btn--side-menu">ENG</button>
@@ -107,7 +106,7 @@
                   <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="d-none d-xl-block">Hesabım</span>
                </a>
-               <a href="#" class="header__icon header__icon--cart">
+               <a href="orders.html" class="header__icon header__icon--cart">
                   <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="cart-count">0</span>
                </a>
@@ -118,60 +117,93 @@
 
    <div class="container">
 
-      <section class="forgot-password login signin section-structure vlct-section">
-         <aside class="side-colored">
-            <h2 class="heading__title">Hələdə hesabınız yoxdur?</h2>
-            <a href="registration.html" class="btn">Qeydiyyatdan keç</a>
-         </aside>
-         <div class="signin-content">
-            <div class="heading heading--center">
-               <h2 class="heading__title">Şifrəni unutmusan?</h2>
-               <p class="heading__text heading__text--home">Zəhmət olmasa qeydiyyatdan zamanı istifadə etdiyiniz emaili daxil edin</p>
-            </div>
-            <form class="needs-validation" novalidate>
-               <div class="form-floating  w-100">
-                  <input type="email" name="" id="email" class="form-control bg-input" placeholder="Email daxil edin" value="bachmanity" required>
-                  <label for="email">Email daxil edin</label>
+      <section class="services vlct-section section-structure sm-section-pdng">
+         <div class="heading heading--center">
+            <h2 class="heading__title">Xidmətlərimiz</h2>
+            <p class="heading__text text-font">Təklif etdiyimiz xidmətlərdən yararlanaraq onlayn sifariş etməyə tələsin!</p>
+         </div>
+         <div class="services__content">
+            <div class="row">
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-Package-v2_two_tone icon-lg icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Sifariş et</h4>
+                        <p class="box-text line-clamp text-font" id="line-clamp">Məhsulu siz seçirsiniz, linkini göndərirsiniz, ödəniş edirsiniz, sifariş tərəfimizdən yerinə yetrilir. Bu xidmət üçün komissiya haqqı 5% təşkil edir.</p>
+                     </div>
+                  </div>
                </div>
-               <small class="warning ms-3">Email düzgün daxil edilməyib</small>
-               <a href="#" type="submit" class="btn btn--primary" data-bs-toggle="modal" data-bs-target="#errorModal">Təsdiqlə</a>
-            </form>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-airplane_two_tone  icon-lg icon-bg"></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Bağlamaların Daşınması</h4>
+                        <p class="box-text line-clamp text-font" id="line-clamp">Velocity Cargo olaraq Türkiyədən bağlamaların sürətli şəkildə daşınmasını həyata keçiririk. Xaricdəki anbarımıza daxil olan bağlamalar, daxil olduğu gündən etibarən 5 iş günü ərzində Bakı ofisimizə çatdırılır.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-shield_two_tone  icon-lg icon-bg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Ödənişsiz Sığortalama</h4>
+                        <p class="box-text line-clamp text-font" id="line-clamp">Anbarlarımıza daxil olan bütün bağlamalar ödənişsiz olaraq sığortalanır. Həssas məhsullar olan bağlamaların ödənişsiz sığortalanma qaydalarını nəzərinizə çatdırırıq. Beynəlxalq yük daşınma qayda...</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-delivery_two_tone  icon-lg icon-bg"><span class="path1"></span><span class="path2"></span></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Online Kuryer Sifarişi</h4>
+                        <p class="box-text text-font line-clamp" id="line-clamp">Bu xidmət vasitəsilə Bakı anbarımıza daxil olan bağlamarın birbaşa evinizə çatdırılmasını həyata keçiririk. Kuryer sifarişinin online olaraq aparılması isə işinizi daha da asanlaşdıracaqdır.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-car_two_tone icon-lg  icon-bg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Online Poçt Sifarişi</h4>
+                        <p class="box-text text-font line-clamp" id="line-clamp">Azərbaycanın hansı bölgəsində olmanızdan asılı olmayaraq, bağlamarınızı sizə çatdırırıq. Online poçt şifarişi vasitəsilə vaxtınıza qənaət edə bilərsiniz.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-refund-package_two_tone  icon-lg icon-bg"></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Geriqaytarılma xidməti</h4>
+                        <p class="box-text text-font line-clamp" id="line-clamp">Yanlış və ya defektli gələn məhsulların geri qaytarılması bizimlə həm daha sərfəli, həm də asandır.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-credit-card_two_tone  icon-lg icon-bg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Qapıda Ödəmə</h4>
+                        <p class="box-text text-font line-clamp" id="line-clamp">Bu xidmət sizə Türkiyənin bank kartları ilə ödəniş etmək mümkün olmayan saytlarından alış-veriş etməyə imkan yaradır. Xidmət haqqı 10% təşkil edir.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 stretch-col col-px-16 pb-32">
+                  <div class="box">
+                     <i class="icon-support_two_tone icon-lg  icon-bg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                     <div class="box-body">
+                        <h4 class="box-title">Operativ müştəri xidmətləri</h4>
+                        <p class="box-text text-font line-clamp" id="line-clamp">Suallarınızı cavablamaq və yaranmış problemləri aradan qaldırmaq məqsədilə müştəri xidmətlərimiz operativ olaraq fəaliyyət göstərir.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
 
    </div>
 
-   <!--Validation error Modal -->
-   <div class="forgot-password-modal forgot-password-modal--err modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-            <div class="modal-body">
-               <div class="modal-body__content">
-                  <i class="icon-close_two_tone"></i>
-                  <h1>Xəta baş verdi!</h1>
-                  <p>Məlumatlara uyğun hər hansı bir hesab tapılmadı.</p>
-               </div>
-               <button class="btn" data-bs-dismiss="modal">Bağla</button>
-            </div>
-         </div>
-      </div>
-   </div>
 
-   <!--Validation Success Modal -->
-   <div class="forgot-password-modal forgot-password-modal--success modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-            <div class="modal-body">
-               <i class="icon-check_two_tone"></i>
-               <h1>Uğurla tamamlandı!</h1>
-               <p>Şifrəni dəyişmək üçün təlimat email ünvanınıza göndərildi. Emailinizi yoxlayın</p>
-               <button class="btn" data-bs-dismiss="modal">Bağla</button>
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <footer class="footer sm-section-pdng">
+   <footer class="footer">
       <div class="container">
          <div class="row">
             <div class="col-md-6 ">
@@ -198,13 +230,13 @@
                   <a href="faq.html">
                      <li>Tez-tez verilən suallar</li>
                   </a>
-                  <a href="#">
+                  <a href="banned-products.html">
                      <li>Daşınması qadağan olan məhsullar</li>
                   </a>
                   <a href="#">
                      <li>Şərtlər</li>
                   </a>
-                  <a href="#">
+                  <a href="privacy.html">
                      <li>Gizlilik siyasəti</li>
                   </a>
                   <a href="#">

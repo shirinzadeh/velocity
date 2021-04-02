@@ -30,7 +30,7 @@
 
    .order-row {
       border-top: none !important;
-      padding-top: 24px;
+      padding-top: 24px !important;
    }
    .product-link {
       .link {
@@ -44,6 +44,13 @@
             max-width: 100px;
          }
       }
+   }
+
+   input {
+      background-color: transparent;
+      color: $brand-color-light;
+      border: none;
+      width: 100%;
    }
 }
 

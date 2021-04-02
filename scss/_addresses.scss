@@ -48,5 +48,15 @@
          background-color: transparent;
          border: none;
       }
+
+      i {
+         cursor: pointer;
+      }
+
+      input {
+         background-color: transparent;
+         color: $white;
+         border: none;
+      }
    }
 }

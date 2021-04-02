@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="az">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -5,9 +8,9 @@
    <title>Velocity</title>
    <!-- Bootstrap 5 cdn -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-   <!-- Poppins font  -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <!-- Swiper css  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
@@ -19,7 +22,7 @@
 <body>
 
    <header class="header header-pages">
-      <div class=" header__top">
+      <div class="header__top">
          <div class="container">
             <div class="header__top-inner">
                <div class="d-flex align-items-center">
@@ -31,12 +34,13 @@
                      <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                      <span>*9878</span>
                   </a>
-                  <div>
+                  <div class="select-lang">
                      <select aria-label="Default select example">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
                      </select>
+                     <!-- <i class="icon-menu-down_two_tone"></i> -->
                   </div>
                </div>
             </div>
@@ -56,7 +60,7 @@
                      </div>
                   </button>
                   <!-- Mobile cart  -->
-                  <i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <a href="orders.html"><i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
                </div>
                <!-- Mobile account image  -->
                <div class="user-image-mbl js-toggle-dashboard d-md-none order-last">
@@ -159,11 +163,11 @@
                      <ul class="sidebar__unordered-bottom">
                         <li class="sidebar__list">
                            <i class="icon-settings_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                           <a href="courier.html" class="sidebar__list-link"><span>Profil ayarları</span></a>
+                           <a href="settings.html" class="sidebar__list-link"><span>Profil ayarları</span></a>
                         </li>
                         <li class="sidebar__list">
                            <i class="icon-logout_two_tone"></i>
-                           <a href="courier.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
+                           <a href="login.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
                         </li>
                      </ul>
                      <!-- END SIDEBAR LISTS -->
@@ -171,8 +175,8 @@
                   <!-- End menu links inside account image  -->
 
                </div>
-               <a href="#" class="header__icon header__icon--cart">
-                  <img src="icons/cart.svg" alt="cart">
+               <a href="orders.html" class="header__icon header__icon--cart">
+                  <i class="icon-cart "><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="cart-count">0</span>
                </a>
             </div>
@@ -235,11 +239,11 @@
             <ul class="sidebar__unordered-bottom">
                <li class="sidebar__list">
                   <i class="icon-settings_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                  <a href="courier.html" class="sidebar__list-link"><span>Profil ayarları</span></a>
+                  <a href="settings.html" class="sidebar__list-link"><span>Profil ayarları</span></a>
                </li>
                <li class="sidebar__list">
                   <i class="icon-logout_two_tone"></i>
-                  <a href="courier.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
+                  <a href="login.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
                </li>
             </ul>
             <!-- END SIDEBAR LISTS -->
@@ -308,7 +312,7 @@
             <!-- SİDEBAR USER OPTİONS  -->
             <ul class="sidebar__user-options">
                <li><a href="settings.html">Profil ayarları</a></li>
-               <li><a href="logout.html">Hesabdan çıx</a></li>
+               <li><a href="login.html">Hesabdan çıx</a></li>
             </ul>
          </div>
       </aside>
@@ -368,12 +372,12 @@
 
          <section class="newcommit section-structure p-32 vlct-section">
             <div class="input-btw pb-32">
-               <div class="form-floating">
-                  <input type="text" name="" id="" class="bg-input form-control input-width" id="namesurname" placeholder="Ad Soyad">
+               <div class="form-floating w-100">
+                  <input type="text" name="" id="" class="bg-input form-control" id="namesurname" placeholder="Ad Soyad">
                   <label for="namesurname">Ad Soyad</label>
                </div>
-               <div class="form-floating">
-                  <input type="text" name="" id="fatherName" class="bg-input form-control input-width" placeholder="Ata adı">
+               <div class="form-floating w-100">
+                  <input type="text" name="" id="fatherName" class="bg-input form-control" placeholder="Ata adı">
                   <label for="fatherName">Ata adı</label>
                </div>
             </div>
@@ -409,7 +413,6 @@
                      <option value="">TR</option>
                      <option value="">EN</option>
                   </select>
-                  <!-- <i class="icon-input-down_two_tone caret-down"></i> -->
                   <div class="form-floating">
                      <input type="phone" name="" id="phone" class="form-control input-select" placeholder="Mobil nömrə">
                      <label for="phone">Mobil nömrə</label>
@@ -492,7 +495,12 @@
    </footer>
 
    <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- Swiper js  -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

@@ -10,6 +10,10 @@
       margin-bottom: 4px;
       background-color: $black-dark-mode-v2;
       border-radius: $border-radius;
+      @include small {
+         padding: 16px;
+         align-items: flex-start;
+      }
 
       i {
          color: $brand-color-light;
@@ -19,6 +23,10 @@
 
       p {
          color: $white;
+         @include small {
+            font-size: 16px;
+            line-height: 24px;
+         }
       }
    }
 
@@ -26,6 +34,9 @@
       padding: 20px 24px 32px;
       background-color: $black-dark-mode-v2;
       border-radius: $border-radius;
+      @include small {
+         padding: 16px 16px 24px;
+      }
 
       &__title {
          color: $brand-color-light;

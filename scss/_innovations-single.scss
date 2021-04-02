@@ -1,14 +1,32 @@
 .innovations-sngl {
    padding: 48px;
 
+   .heading {
+      @include small {
+         margin-bottom: 32px;
+      }
+
+      &--line::after {
+         display: none;
+      }   
+   }
+
    &__image {
       @include box-shadow(0px 4px 14px rgba(4, 40, 68, 0.08));
       border-radius: $border-radius;
       margin-bottom: 48px;
+      @include small {
+         margin-bottom: 32px;
+      }
    }
 
    &__text {
       margin-bottom: 64px;
+      @include small {
+         font-size: 16px;
+         line-height: 24px;
+         margin-bottom: 40px;
+      }
    }
 
    &__button {

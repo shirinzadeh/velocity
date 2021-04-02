@@ -17,13 +17,27 @@
       }
    }
 
+   .btn--adjacent-tab {
+      width: 152px;
+   }
+
+   .btn--instruction {
+      padding: 0;
+      margin-right: 18px;
+      @include large {
+         margin-right: 0;
+      }
+   }
+
    .final-amount {
       padding: 24px 16px 32px !important;
 
       &__buttons {
          .btn:last-child {
-            margin-bottom: 0;
+            @include small {
+               margin-bottom: 0;
             margin-top: 16px;
+            }
          }
       }
    }
@@ -36,18 +50,63 @@
       }
 
       &-row {
-         padding: 16px 0;
-
-         &:last-child {
-            padding-bottom: 0;
-
+         // padding: 16px 0;
+         @include small {
+            flex-direction: column;
          }
+
          &:first-child {
             border-bottom: 1px solid $line-color;
-            padding-top: 0;
+            padding-bottom: 16px;
+         }
+         &:last-child {
+            padding-top: 16px;
          }
       }
 
+      &-col {
+         &:not(:last-child) {
+            margin-right: 24px;
+            @include large {
+               margin-right: 12px;
+            }
+         }
+         &:nth-child(4) {
+            margin-right: 18px;
+            @include large {
+               // margin-right: 9px;
+            }
+         } 
+
+         &.order-col1 {
+            width: 224px;
+            @include large {
+               width: 160px;
+            }
+         }
+         &.order-col2 {
+            width: 160px;
+            @include xlarge {
+               width: 114px;
+            }
+         }
+         &.order-col3 {
+            width: 120px;
+            @include xlarge {
+               width: 85px;
+            }
+         }
+         &.order-col4 {
+            width: 160px;
+            @include xlarge {
+               width: 134px;
+            }
+         }
+         &.order-col5 {
+            width: 40px;
+            max-width: 40px;
+         }
+      }
       &-bottom {
          @include flex;
          align-items: center;
@@ -77,10 +136,8 @@
 
          //select delete icon
          > .btn--icon {
-            margin-right: 12px;
             @include small {
                margin-top: 24px;
-               margin-right: 0;
                width: 100%;
                border: 1px solid $line-color;
                border-radius: $border-radius;
@@ -93,10 +150,15 @@
 
    &.carts {
       .order {
-         padding-left: 16px;
+         padding-left: 16px !important;
+
+         .form-check {
+            height: auto;
+         }
 
          &-row {
-            border-bottom: none
+            border-bottom: none;
+            padding: 0
          }
       }
 

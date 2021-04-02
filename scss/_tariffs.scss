@@ -197,4 +197,10 @@ body.tariffs-page {
          }
       }
    }
+
+   .tariff:hover i {
+      background-color: $black-dark-mode;
+      box-shadow: $shadow;
+      border-radius: $border-radius;
+   }
 }

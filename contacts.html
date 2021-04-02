@@ -19,9 +19,9 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="about">
 
-   <header class="header hdr-mb-64">
+   <header class="header">
       <div class="header__top">
          <div class="container">
             <div class="header__top-inner">
@@ -40,7 +40,6 @@
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
                      </select>
-                     <!-- <i class="icon-menu-down_two_tone"></i> -->
                   </div>
                </div>
             </div>
@@ -70,7 +69,7 @@
                   </div>
                   <ul class="navbar-nav">
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">Haqqımızda</a>
+                        <a class="nav-link " href="about.html">Haqqımızda</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="tariffs.html">Tariflər</a>
@@ -85,11 +84,11 @@
                         <a class="nav-link" href="innovations.html">Yeniliklər</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Əlaqə</a>
+                        <a class="nav-link active" aria-current="page" href="contacts.html">Əlaqə</a>
                      </li>
                   </ul>
                   <div class="side-menu__footer d-lg-none">
-                     <div>
+                     <div class="select-lang">
                         <button class="btn btn--side-menu">AZE</button>
                         <button class="btn btn--side-menu">RUS</button>
                         <button class="btn btn--side-menu">ENG</button>
@@ -107,7 +106,7 @@
                   <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="d-none d-xl-block">Hesabım</span>
                </a>
-               <a href="#" class="header__icon header__icon--cart">
+               <a href="orders.html" class="header__icon header__icon--cart">
                   <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="cart-count">0</span>
                </a>
@@ -116,62 +115,91 @@
       </div>
    </header>
 
+   <section class="contact vlct-section">
+      <div class="heading heading--center">
+         <h2 class="heading__title">Bizimlə əlaqə</h2>
+         <p class="heading__text text-font">Bizlə heç çəkinmədən əlaqə saxlayın, daim xidmətinizdəyik!</p>
+      </div>
+      <div class="container">
+         <div class="contact__content ">
+            <div class="contact__column section-structure sm-section-pdng">
+               <h4>Əlaqə məlumatlarımız</h4>
+               <ul>
+                  <li>
+                     <i class="icon-map-marker_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <div>
+                        <h5>Ünvan</h5>
+                        <p>Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</p>
+                     </div>
+                  </li>
+                  <li>
+                     <i class="icon-clock_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <div>
+                        <h5>İş saatları</h5>
+                        <p>Həftəiçi: 10:00 - 19:00</p>
+                        <p>Həftəsonu: 11:00 - 16:00</p>
+                     </div>
+                  </li>
+                  <li>
+                     <i class="icon-phone_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <div>
+                        <h5>Qaynar xətt</h5>
+                        <p>050 546 7888</p>
+                        <p>*9878</p>
+                     </div>
+                  </li>
+                  <li>
+                     <i class="icon-email_two_tone  icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <div>
+                        <h5>Elektron ünvanlar</h5>
+                        <p>Məlimat üçün: info@velocity.az</p>
+                        <p>Əməkdaşlıq üçün: start@velocity.az</p>
+                     </div>
+                  </li>
+               </ul>
+
+               <h4>Bizi izləyin</h4>
+               <div class="social-icons">
+                  <a href="#" class="social-icons__link"><i class="icon-facebook"></i></a>
+                  <a href="#" class="social-icons__link"><i class="icon-instagram"></i></a>
+                  <a href="#" class="social-icons__link"><i class="icon-youtube"></i></a>
+               </div>
+            </div>
+            <div class="contact__column contact__column--input section-structure sm-section-pdng">
+               <h4>Bizə yazın</h4>
+               <p class="text-font">İrad və təkliflərinizi bizə çəkinmədən bildirə bilərsiniz. Biz sizin sayənizdə inkişaf edirik!</p>
+               <form action="" class="contact-form">
+                  <div class="form-floating w-100">
+                     <input type="text" name="" id="name" class="form-control bg-input contact-input" placeholder="Adınız" autocomplete="off">
+                     <label for="name">Adınız</label>
+                  </div>
+                  <div class="form-floating w-100">
+                     <input type="text" name="" id="surname" class="form-control bg-input contact-input" placeholder="Soyadınız" autocomplete="off">
+                     <label for="surname">Soyadınız</label>
+                  </div>
+                  <div class="form-floating w-100">
+                     <input type="tel" name="" id="phone" class="form-control bg-input contact-input" placeholder="Telefon nömrəniz" autocomplete="off">
+                     <label for="phone">Telefon nömrəniz</label>
+                  </div>
+                  <div class="form-floating w-100">
+                     <input type="email" name="" id="email" class="form-control bg-input contact-input" placeholder="Emailiniz" autocomplete="off">
+                     <label for="email">Emailiniz</label>
+                  </div>
+                  <textarea name="" id="" cols="0" rows="6" class="form-control bg-input contact-input" placeholder="Mesajınız"></textarea>
+                  <button type="submit" class="btn btn--primary">Göndər</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
    <div class="container">
-
-      <section class="forgot-password login signin section-structure vlct-section">
-         <aside class="side-colored">
-            <h2 class="heading__title">Hələdə hesabınız yoxdur?</h2>
-            <a href="registration.html" class="btn">Qeydiyyatdan keç</a>
-         </aside>
-         <div class="signin-content">
-            <div class="heading heading--center">
-               <h2 class="heading__title">Şifrəni unutmusan?</h2>
-               <p class="heading__text heading__text--home">Zəhmət olmasa qeydiyyatdan zamanı istifadə etdiyiniz emaili daxil edin</p>
-            </div>
-            <form class="needs-validation" novalidate>
-               <div class="form-floating  w-100">
-                  <input type="email" name="" id="email" class="form-control bg-input" placeholder="Email daxil edin" value="bachmanity" required>
-                  <label for="email">Email daxil edin</label>
-               </div>
-               <small class="warning ms-3">Email düzgün daxil edilməyib</small>
-               <a href="#" type="submit" class="btn btn--primary" data-bs-toggle="modal" data-bs-target="#errorModal">Təsdiqlə</a>
-            </form>
-         </div>
+      <section class="map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.271588995667!2d49.86849091524855!3d40.40283386440864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d4ee9253a65%3A0x29160f1a81905e71!2sNariman%20Narimanov!5e0!3m2!1sen!2s!4v1574691645795!5m2!1sen!2s" width="100%" height="500vh" frameborder="0" style="border-radius:8px;" allowfullscreen=""></iframe>
       </section>
-
    </div>
 
-   <!--Validation error Modal -->
-   <div class="forgot-password-modal forgot-password-modal--err modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-            <div class="modal-body">
-               <div class="modal-body__content">
-                  <i class="icon-close_two_tone"></i>
-                  <h1>Xəta baş verdi!</h1>
-                  <p>Məlumatlara uyğun hər hansı bir hesab tapılmadı.</p>
-               </div>
-               <button class="btn" data-bs-dismiss="modal">Bağla</button>
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <!--Validation Success Modal -->
-   <div class="forgot-password-modal forgot-password-modal--success modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-            <div class="modal-body">
-               <i class="icon-check_two_tone"></i>
-               <h1>Uğurla tamamlandı!</h1>
-               <p>Şifrəni dəyişmək üçün təlimat email ünvanınıza göndərildi. Emailinizi yoxlayın</p>
-               <button class="btn" data-bs-dismiss="modal">Bağla</button>
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <footer class="footer sm-section-pdng">
+   <footer class="footer">
       <div class="container">
          <div class="row">
             <div class="col-md-6 ">
@@ -198,13 +226,13 @@
                   <a href="faq.html">
                      <li>Tez-tez verilən suallar</li>
                   </a>
-                  <a href="#">
+                  <a href="banned-products.html">
                      <li>Daşınması qadağan olan məhsullar</li>
                   </a>
                   <a href="#">
                      <li>Şərtlər</li>
                   </a>
-                  <a href="#">
+                  <a href="privacy.html">
                      <li>Gizlilik siyasəti</li>
                   </a>
                   <a href="#">

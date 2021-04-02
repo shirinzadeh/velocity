@@ -15,6 +15,12 @@
          margin-top: 32px;
       }
    }
+
+   .selectbox {
+      .current {
+         color: $white-pale;
+      }
+   }
 }
 
 .browse-file {

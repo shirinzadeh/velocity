@@ -1,5 +1,10 @@
+select option[disabled] {
+   display: none;
+}
+
 .header {
    &__top {
+      height: 56px;
       background-color: $black-dark-mode-v2;
       @include small {
          display: none;
@@ -13,7 +18,6 @@
          @include flex;
          justify-content: space-between;
          align-items: center;
-         padding: 16px 0;
 
          span {
             color: $hdr-top-text-clr;
@@ -40,6 +44,7 @@
 
       &-right {
          @include flex;
+         align-items: center;
          a {
             @include flex;
             &:hover {
@@ -54,29 +59,43 @@
             }
          }
 
-         .nice-select {
-            padding-right: 28px;
+         .select-lang {
+            margin-left: 20px;
 
-            &::after {
-               border: none;
-               border-bottom: 2px solid $white-pale !important;
-               border-right: 2px solid $white-pale !important;
-               height: 8px !important;
-               width: 8px !important;
-               @include transform(translateY(-50%) rotate(45deg));
-            }
+            .nice-select {
+               padding: 16px 40px 16px 16px;
+               border-bottom-left-radius: 0;
+               border-bottom-right-radius: 0;
+               width: 88px;
+   
+               &::after {
+                  border: none;
+                  border-bottom: 2px solid $white-pale !important;
+                  border-right: 2px solid $white-pale !important;
+                  height: 10px !important;
+                  width: 10px !important;
+                  margin-top: -2px;
+                  margin-right: 16px;
+                  @include transform(translateY(-50%) rotate(45deg));
+               }
 
-            .option {
-               padding: 6px;
+               .list {
+                  margin-top: -4px;
+                  border-top-left-radius: 0;
+                  border-top-right-radius: 0;
+               }
+               .option {
+                  padding: 8px 16px;
+               }
+
+               &:focus {
+                  background-color: $black-dark-mode;
+               }
             }
          }
 
          i {
             color: $hdr-top-text-clr;
-         }
-
-         & > * {
-            margin-left: 36px;
          }
       }
    }
@@ -86,7 +105,7 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 24px;
-      // position: relative;
+      position: relative;
       @include small {
          margin-top: 0;
          padding: 16px;
@@ -94,7 +113,7 @@
       }
 
       .navbar {
-         position: relative;
+         position: static;
          padding: 2px 0;
       }
       .logo {

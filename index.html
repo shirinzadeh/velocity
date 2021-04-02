@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 
 <head>
    <meta charset="UTF-8">
@@ -8,16 +8,12 @@
    <title>Velocity</title>
    <!-- Bootstrap 5 cdn -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-   <!-- <link rel="stylesheet" href="plugins/bs-multiselect/css/BsMultiSelect.min.css"> -->
-
-   <!-- Latest compiled and minified CSS -->
-   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"> -->
+   <!-- Swiper css  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
-
-
    <!-- Nice select  -->
    <link rel="stylesheet" href="plugins/nice-select/css/nice-select.css">
    <link rel="stylesheet" href="css/style.min.css">
@@ -37,7 +33,7 @@
                      <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                      <span>*9878</span>
                   </a>
-                  <div>
+                  <div class="select-lang">
                      <select aria-label="Default select example">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
@@ -164,7 +160,8 @@
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>En</p>
-                        <span id="rangeValue">32</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="1" max="100" value="32">
+                        <!-- <span id="rangeValue">32</span> -->
                      </div>
                      <select name="" id="" class="form-control selectpicker">
                         <option value="">sm</option>
@@ -176,7 +173,7 @@
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>Hündürlük</p>
-                        <span id="rangeValue">32</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="1" max="100" value="32">
                      </div>
                      <select name="" id="" class="form-control ">
                         <option value="">sm</option>
@@ -210,7 +207,7 @@
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>Uzunluq</p>
-                        <span id="rangeValue">0</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="0" max="100" value="0">
                      </div>
                      <select name="" id="" class="form-control ">
                         <option value="">sm</option>
@@ -218,12 +215,12 @@
                         <option value="">m</option>
                      </select>
 
-                     <input type="range" min="0" max="100" value="32" class="range" id="rangeSlider">
+                     <input type="range" min="0" max="100" value="0" class="range" id="rangeSlider">
                   </div>
                   <div class="range-content bg-input">
                      <div class="range-article">
                         <p>Bağlamanın çəkisi</p>
-                        <span id="rangeValue">5</span>
+                        <input type="number" name="" id="rangeValue" class=" text-end" min="0" max="100" value="5">
                      </div>
                      <div>
                         <select name="" id="" class="form-control ">
@@ -579,17 +576,34 @@
             <a href="shops.html" class="btn btn--secondary d-none d-md-block">Hamısına bax</a>
          </div>
       </div>
-      <div class="shop__inner">
-         <div class="shops__images">
-            <div class="shop-img"><img src="img/shop1.png" alt=""></div>
-            <div class="shop-img"><img src="img/shop2.png" alt=""></div>
-            <div class="shop-img"><img src="img/shop3.png" alt=""></div>
-            <div class="shop-img"><img src="img/shop4.png" alt=""></div>
-            <div class="shop-img"><img src="img/shop5.png" alt=""></div>
-            <div class="shop-img"><img src="img/shop6.png" alt=""></div>
-            <div class="shop-img"><img src="img/shop1.png" alt=""></div>
+
+      <!-- Slider main container -->
+      <div class="swiper-container">
+         <!-- Additional required wrapper -->
+         <div class="swiper-wrapper ">
+            <!-- Slides -->
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop1.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop2.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop3.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop4.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop5.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop6.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+               <div class="shop-img"><img src="img/shop1.png" alt=""></div>
+            </div>
          </div>
-         <a href="shops.html" class="btn btn--secondary d-md-none">Hamısına bax</a>
       </div>
    </section>
 
@@ -601,41 +615,41 @@
                   <h2 class="heading__title">Nə yenilik var?</h2>
                   <p class="heading__text heading__text--home">Ən son yeniliklər və xəbərlərlə tanış olun</p>
                </div>
-               <a href="#" class="btn btn--secondary d-none d-lg-block">Hamısına bax</a>
+               <a href="innovations.html" class="btn btn--secondary d-none d-lg-block">Hamısına bax</a>
             </div>
             <div class="news__cards">
                <div class="v-card stretch-col">
                   <img src="img/news-img1.svg" class="d-block" alt="news image">
                   <div class="v-card-body">
-                     <a href="#">
+                     <a href="innovations-single.html">
                         <h5 class="v-card-title">14 Fevrala 14 Günlük hədiyyə</h5>
                      </a>
                      <p class="v-card-text">12 Fev, 2021</p>
-                     <a href="#" class="v-card-button">Tamamını oxu</a>
+                     <a href="innovations-single.html" class="v-card-button">Tamamını oxu</a>
                   </div>
                </div>
                <div class="v-card stretch-col">
                   <img src="img/news-img2.svg" class="d-block" alt="news image">
                   <div class="v-card-body">
-                     <a href="#">
+                     <a href="innovations-single.html">
                         <h5 class="v-card-title">Evdə qal! Biz gətirək!</h5>
                      </a>
                      <p class="v-card-text">06 Yan, 2021</p>
-                     <a href="#" class="v-card-button">Tamamını oxu</a>
+                     <a href="innovations-single.html" class="v-card-button">Tamamını oxu</a>
                   </div>
                </div>
                <div class="v-card stretch-col">
                   <img src="img/news-img3.svg" class="d-block" alt="news image">
                   <div class="v-card-body">
-                     <a href="#">
+                     <a href="innovations-single.html">
                         <h5 class="v-card-title">2021də hədiyyələrin bol olsun!</h5>
                      </a>
                      <p class="v-card-text">29 Dek, 2020</p>
-                     <a href="#" class="v-card-button">Tamamını oxu</a>
+                     <a href="innovations-single.html" class="v-card-button">Tamamını oxu</a>
                   </div>
                </div>
             </div>
-            <div><a href="#" class="btn btn--secondary d-lg-none">Hamısına bax</a></div>
+            <div><a href="innovations.html" class="btn btn--secondary d-lg-none">Hamısına bax</a></div>
          </div>
       </section>
    </div>
@@ -703,10 +717,12 @@
    </footer>
 
    <script src="js/jquery-3.5.1.min.js"></script>
-   <!-- <script src="plugins/bs-multiselect/js/BsMultiSelect.min.js"></script> -->
-   <!-- Latest compiled and minified JavaScript -->
-   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script> -->
+   <!-- Swiper js  -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

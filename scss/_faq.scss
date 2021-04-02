@@ -57,6 +57,17 @@
       h6 {
          color: $brand-color-light;
          margin-bottom: 44px;
+         @include small {
+            font-size: 16px !important;
+            line-height: 24px !important;
+         }
+      }
+
+      p {
+         @include small {
+            font-size: 16px !important;
+            line-height: 28px !important;
+         }
       }
 
       ol {
@@ -67,7 +78,7 @@
 }
 
 // Disable summary tag default arrow for Chrome
-summary::-webkit-details-marker {
+summary::marker {
    display: none;
 }
 // Disable summary tag default arrow for Firefox

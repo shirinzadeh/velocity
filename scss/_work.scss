@@ -17,7 +17,7 @@
       }
 
       .box {
-         @include xsmall {
+         @include small {
             width: 280px;
             max-width: 280px;
          }

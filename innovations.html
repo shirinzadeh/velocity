@@ -8,9 +8,9 @@
    <title>Velocity</title>
    <!-- Bootstrap 5 cdn -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-   <!-- Poppins font  -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <!-- Swiper css  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
@@ -34,13 +34,13 @@
                      <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                      <span>*9878</span>
                   </a>
-                  <div>
+                  <div class="select-lang">
                      <select aria-label="Default select example">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
                      </select>
-                     <i class="icon-menu-down_two_tone"></i>
+                     <!-- <i class="icon-menu-down_two_tone"></i> -->
                   </div>
                </div>
             </div>
@@ -59,9 +59,9 @@
                         <div class="bar bar3"></div>
                      </div>
                   </button>
-                  <i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <a href="orders.html"><i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
                </div>
-               <i class="icon-user_two_tone d-md-none order-last"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+               <a href="login.html"><i class="icon-user_two_tone d-md-none order-last"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
 
                <div class="side-menu order-last">
                   <div class="side-menu__head d-lg-none">
@@ -103,11 +103,11 @@
             </nav>
             <!-- Header icons  -->
             <div class="d-none d-md-flex">
-               <a href="#" class="header__icon">
+               <a href="login.html" class="header__icon">
                   <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="d-none d-xl-block">Hesabım</span>
                </a>
-               <a href="#" class="header__icon header__icon--cart">
+               <a href="orders.html" class="header__icon header__icon--cart">
                   <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="cart-count">0</span>
                </a>
@@ -394,7 +394,12 @@
    <!-- PAGINATION END  -->
 
    <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- Swiper js  -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

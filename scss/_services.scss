@@ -1,0 +1,27 @@
+   /** SERVICES **/
+   .services {
+      padding: 48px 32px 34px;
+      
+      &__content {
+         margin-top: 56px;
+
+         .box {
+            padding-bottom: 40px;
+            border-color: $white-pale;
+
+            &-title {
+               @include xsmall {
+                  margin-bottom: 16px !important;
+               }
+            }
+
+            &-text {
+               margin-bottom: 0;           
+            }
+         }
+
+         .stretch-col {
+            flex: auto; //for bootstrap column working correctly 
+         }
+      }
+   }

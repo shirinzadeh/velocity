@@ -19,7 +19,7 @@
    }
 
    &:hover {
-      background-color: rgba($brand-color-light, .2);
+      background-color: rgba($brand-color, .2);
    }   
    &:focus {
       @extend .btn--primary:hover;
@@ -79,6 +79,20 @@
    }
 }
 
+//144px Button
+.btn-w144 {
+   padding-left: 24px !important;
+   padding-right: 24px !important;
+   max-width: 144px;
+   width: 144px;
+   margin-left: auto; //always on the right side
+
+   @include small {
+      width: 100%;
+      max-width: 100%;
+   }
+}
+
 /* ICON BUTTON */
 .btn--icon {
    padding: 0;
@@ -114,7 +128,7 @@
    }
 }
 
-/* TABS */
+/* TAB BUTTONS*/
 .tabs {
    @include flex;
    align-items: center;
@@ -148,7 +162,7 @@
    }
 }
 
-/* PAGES COUNTRY TAB */
+/* COUNTRY TAB ON PAGES */
 .tabs--pages {
    margin-bottom: 40px;
    @include small {
@@ -185,7 +199,7 @@
    border: 1px solid $line-color;
    border-radius: $border-radius;
    @include flex;
-   @include medium {
+   @include small {
       border: 0;
    }
    @include small {
@@ -193,7 +207,7 @@
    }
 
    .btn:not(:first-child) {
-      @include medium {
+      @include small {
          margin-left: 16px !important;
       }
    }
@@ -212,7 +226,7 @@
          padding-left: 28px;
          padding-right: 28px;
       }
-      @include medium {
+      @include small {
          border: 1px solid $line-color;
          border-radius: $border-radius;
       }

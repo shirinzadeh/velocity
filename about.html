@@ -8,6 +8,9 @@
    <title>Velocity</title>
    <!-- Bootstrap 5 cdn -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <!-- Swiper css  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
@@ -31,13 +34,12 @@
                      <i class="icon-phone_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                      <span>*9878</span>
                   </a>
-                  <div>
+                  <div class="select-lang">
                      <select aria-label="Default select example">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
                      </select>
-                     <i class="icon-menu-down_two_tone"></i>
                   </div>
                </div>
             </div>
@@ -56,7 +58,7 @@
                         <div class="bar bar3"></div>
                      </div>
                   </button>
-                  <i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <a href="orders.html"><i class="icon-cart d-md-none order-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
                </div>
                <a href="login.html"><i class="icon-user_two_tone d-md-none order-last"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></a>
 
@@ -67,7 +69,7 @@
                   </div>
                   <ul class="navbar-nav">
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">Haqqımızda</a>
+                        <a class="nav-link active" aria-current="page" href="about.html">Haqqımızda</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="tariffs.html">Tariflər</a>
@@ -104,7 +106,7 @@
                   <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="d-none d-xl-block">Hesabım</span>
                </a>
-               <a href="#" class="header__icon header__icon--cart">
+               <a href="orders.html" class="header__icon header__icon--cart">
                   <i class="icon-cart"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                   <span class="cart-count">0</span>
                </a>
@@ -167,164 +169,75 @@
       </div>
    </section>
 
-   <div class="container">
-      <section class="services vlct-section section-structure sm-section-pdng">
-         <div class="heading heading--center">
-            <h2 class="heading__title">Xidmətlərimiz</h2>
-            <p class="heading__text text-font">Təklif etdiyimiz xidmətlərdən yararlanaraq onlayn sifariş etməyə tələsin!</p>
-         </div>
-         <div class="services__content">
-            <div class="row">
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-Package-v2_two_tone icon-lg icon-lg icon-outline"><span class="path1"></span><span class="path2"></span></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Sifariş et</h4>
-                        <p class="box-text text-font">Məhsulu siz seçirsiniz, linkini göndərirsiniz, ödəniş edirsiniz, sifariş tərəfimizdən yerinə yetrilir. Bu xidmət üçün komissiya haqqı 5% təşkil edir.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-airplane_two_tone icon-lg icon-lg icon-outline"></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Bağlamaların Daşınması</h4>
-                        <p class="box-text text-font">Velocity Cargo olaraq Türkiyədən bağlamaların sürətli şəkildə daşınmasını həyata keçiririk. Xaricdəki anbarımıza daxil olan bağlamalar, daxil olduğu gündən etibarən 5 iş günü ərzində Bakı ofisimizə çatdırılır.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-shield_two_tone icon-lg icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Ödənişsiz Sığortalama</h4>
-                        <p class="box-text text-font line-clamp">Anbarlarımıza daxil olan bütün bağlamalar ödənişsiz olaraq sığortalanır. Həssas məhsullar olan bağlamaların ödənişsiz sığortalanma qaydalarını nəzərinizə çatdırırıq. Beynəlxalq yük daşınma qaydsdfsdfsdgsdgdfga</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-delivery_two_tone icon-lg icon-lg icon-outline"><span class="path1"></span><span class="path2"></span></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Online Kuryer Sifarişi</h4>
-                        <p class="box-text text-font line-clamp">Bu xidmət vasitəsilə Bakı anbarımıza daxil olan bağlamarın birbaşa evinizə çatdırılmasını həyata keçiririk. Kuryer sifarişinin online olaraq aparılması isə işinizi daha da asanlaşdıracaqdır.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-car_two_tone icon-lg icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Online Poçt Sifarişi</h4>
-                        <p class="box-text text-font line-clamp">Azərbaycanın hansı bölgəsində olmanızdan asılı olmayaraq, bağlamarınızı sizə çatdırırıq. Online poçt şifarişi vasitəsilə vaxtınıza qənaət edə bilərsiniz.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-refund-package_two_tone icon-lg icon-lg icon-outline"></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Geriqaytarılma xidməti</h4>
-                        <p class="box-text text-font line-clamp">Yanlış və ya defektli gələn məhsulların geri qaytarılması bizimlə həm daha sərfəli, həm də asandır.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-credit-card_two_tone icon-lg icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Qapıda Ödəmə</h4>
-                        <p class="box-text text-font line-clamp">Bu xidmət sizə Türkiyənin bank kartları ilə ödəniş etmək mümkün olmayan saytlarından alış-veriş etməyə imkan yaradır. Xidmət haqqı 10% təşkil edir.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 stretch-col col-px-16 pb-32">
-                  <div class="box">
-                     <i class="icon-support_two_tone icon-lg icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
-                     <div class="box-body">
-                        <h4 class="box-title">Operativ müştəri xidmətləri</h4>
-                        <p class="box-text text-font line-clamp">Suallarınızı cavablamaq və yaranmış problemləri aradan qaldırmaq məqsədilə müştəri xidmətlərimiz operativ olaraq fəaliyyət göstərir.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-   </div>
-
-   <section class="contact vlct-section">
-      <div class="heading heading--center">
-         <h2 class="heading__title">Bizimlə əlaqə</h2>
-         <p class="heading__text text-font">Bizlə heç çəkinmədən əlaqə saxlayın, daim xidmətinizdəyik!</p>
-      </div>
+   <footer class="footer">
       <div class="container">
-         <div class="contact__content ">
-            <div class="contact__column section-structure sm-section-pdng">
-               <h4>Əlaqə məlumatlarımız</h4>
-               <ul>
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="heading">
+                  <h2 class="heading__title">Kömək lazımdır?</h2>
+               </div>
+               <ul class="footer__contact">
                   <li>
-                     <i class="icon-map-marker_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                     <div>
-                        <h5>Ünvan</h5>
-                        <p>Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</p>
-                     </div>
+                     <i class="icon-map-marker_two_tone icon-lg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <a href="#"><span>Azərbaycan, Bakı şəh., AZ 1010, 28 May küç. 33</span></a>
                   </li>
                   <li>
-                     <i class="icon-clock_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                     <div>
-                        <h5>İş saatları</h5>
-                        <p>Həftəiçi: 10:00 - 19:00</p>
-                        <p>Həftəsonu: 11:00 - 16:00</p>
-                     </div>
+                     <i class="icon-email_two_tone icon-lg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <a href="mailto: info@velocity.az"><span>info@velocity.az</span></a>
                   </li>
                   <li>
-                     <i class="icon-phone_two_tone icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                     <div>
-                        <h5>Qaynar xətt</h5>
-                        <p>050 546 7888</p>
-                        <p>*9878</p>
-                     </div>
-                  </li>
-                  <li>
-                     <i class="icon-email_two_tone  icon-lg icon-outline"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                     <div>
-                        <h5>Elektron ünvanlar</h5>
-                        <p>Məlimat üçün: info@velocity.az</p>
-                        <p>Əməkdaşlıq üçün: start@velocity.az</p>
-                     </div>
+                     <i class="icon-phone_two_tone icon-lg"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                     <a href="tel: 050 546 7888"><span>050 546 7888</span></a>
                   </li>
                </ul>
-
-               <h4>Bizi izləyin</h4>
-               <div class="social-icons">
-                  <a href="#" class="social-icons__link"><i class="icon-facebook"></i></a>
-                  <a href="#" class="social-icons__link"><i class="icon-instagram"></i></a>
-                  <a href="#" class="social-icons__link"><i class="icon-youtube"></i></a>
-               </div>
             </div>
-            <div class="contact__column contact__column--input section-structure sm-section-pdng">
-               <h4>Bizə yazın</h4>
-               <p class="text-font">İrad və təkliflərinizi bizə çəkinmədən bildirə bilərsiniz. Biz sizin sayənizdə inkişaf edirik!</p>
-               <form action="" class="contact-form">
-                  <input type="text" name="" id="" class="contact-input" placeholder="Adınız">
-                  <input type="text" name="" id="" class="contact-input" placeholder="Soyadınız">
-                  <input type="tel" name="" id="" class="contact-input" placeholder="Telefon nömrəniz">
-                  <input type="email" name="" id="" class="contact-input" placeholder="Emailiniz">
-                  <textarea name="" id="" cols="0" rows="6" class="contact-input" placeholder="Mesajınız"></textarea>
-                  <button type="submit" class="btn btn--primary">Göndər</button>
-               </form>
+            <div class="col-md-6">
+               <ul class="footer__nav">
+                  <a href="faq.html">
+                     <li>Tez-tez verilən suallar</li>
+                  </a>
+                  <a href="banned-products.html">
+                     <li>Daşınması qadağan olan məhsullar</li>
+                  </a>
+                  <a href="#">
+                     <li>Şərtlər</li>
+                  </a>
+                  <a href="privacy.html">
+                     <li>Gizlilik siyasəti</li>
+                  </a>
+                  <a href="#">
+                     <li>İstifadəçi razılaşması</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="social-icons d-md-none">
+               <a href="#" class="social-icons__link"><i class="icon-facebook"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-instagram"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-youtube"></i></a>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <div>
+               <img src="img/logo-white.svg" alt="">
+               <p class="copyright">© 2021 Velocity Cargo. Bütün hüquqlar qorunur</p>
+            </div>
+            <div class="social-icons d-none d-md-block">
+               <a href="#" class="social-icons__link"><i class="icon-facebook"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-instagram"></i></a>
+               <a href="#" class="social-icons__link"><i class="icon-youtube"></i></a>
             </div>
          </div>
       </div>
-   </section>
-
-   <section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.271588995667!2d49.86849091524855!3d40.40283386440864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d4ee9253a65%3A0x29160f1a81905e71!2sNariman%20Narimanov!5e0!3m2!1sen!2s!4v1574691645795!5m2!1sen!2s" width="100%" height="500vh" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-   </section>
-
+   </footer>
 
    <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- Swiper js  -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
