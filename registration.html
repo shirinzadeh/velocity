@@ -14,6 +14,8 @@
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
+   <!-- Select2  css -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
    <!-- Nice select  -->
    <link rel="stylesheet" href="plugins/nice-select/css/nice-select.css">
    <link rel="stylesheet" href="css/style.min.css">
@@ -34,7 +36,7 @@
                      <span>*9878</span>
                   </a>
                   <div class="select-lang">
-                     <select aria-label="Default select example">
+                     <select aria-label="Default select example" class="js-niceselect">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
@@ -133,6 +135,7 @@
                </button>
             </div>
 
+            <!-- Registration for personal  -->
             <div class="js-tab-content  has-show">
                <div class="row">
                   <div class="col-lg-6 pb-32">
@@ -155,10 +158,10 @@
                   </div>
                   <div class="col-lg-6 pb-32">
                      <div class="newcommit-input bg-input">
-                        <select name="" id="" class="select-small">
-                           <option value="">AZE</option>
-                           <option value="">TR</option>
-                           <option value="">EN</option>
+                        <select name="" id="" class="select-small js-niceselect">
+                           <option value="">+994</option>
+                           <option value="">+990</option>
+                           <option value="">+24</option>
                         </select>
                         <div class="form-floating">
                            <input type="phone" name="" id="phone" class="form-control input-select" placeholder="Mobil nömrə">
@@ -173,8 +176,7 @@
                   </div>
                   <div class="col-lg-6 pb-32">
                      <div class="form-group bg-input">
-                        <label class="control-label" for="selectCtrl">Vətəndaşlığı seçin</label>
-                        <select type="text" class="form-control-category " id="selectCtrl">
+                        <select type="text" class="js-example-placeholder-single">
                            <option>Vətəndaşlığı seçin</option>
                            <option>Azərbaycan</option>
                            <option>Digər</option>
@@ -183,14 +185,14 @@
                   </div>
                   <div class="col-lg-6 pb-32">
                      <div class="newcommit-input bg-input">
-                        <select name="" id="" class="select-small">
+                        <select name="" id="" class="select-small js-niceselect">
                            <option value="">AZE</option>
                            <option value="">TR</option>
                            <option value="">EN</option>
                         </select>
                         <div class="form-floating">
-                           <input type="number" name="" id="number" class="form-control input-select" placeholder="ŞV-nin nömrəsi">
-                           <label for="number">ŞV-nin nömrəsi</label>
+                           <input type="phone" name="" id="phone" class="form-control input-select" placeholder="ŞV-nin nömrəsi">
+                           <label for="phone">ŞV-nin nömrəsi</label>
                         </div>
                      </div>
                   </div>
@@ -200,13 +202,13 @@
                            <input type="number" name="" id="idcard" class="form-control" placeholder="FİN kodu daxil edin">
                            <label for="idcard">FİN kodu daxil edin</label>
                         </div>
-                        <i class="icon-question-circle_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                        <i class="icon-question-circle_two_tone" data-bs-toggle="modal" data-bs-target="#finModal"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                      </div>
                   </div>
                   <div class="col-lg-6 pb-32">
                      <div class="form-group bg-input">
                         <label class="control-label" for="city">Şəhər seçin</label>
-                        <select type="text" class="form-control-category " id="city">
+                        <select type="text" class="form-control-category " id="city" class="js-niceselect">
                            <option>Şəhər seçin</option>
                            <option>Bakı</option>
                            <option>Digər</option>
@@ -260,7 +262,9 @@
                   </div>
                </div>
             </div>
+            <!-- End Registration for personal  -->
 
+            <!-- Registration for business -->
             <div class="js-tab-content">
                <div class="row">
                   <div class="col-lg-6 pb-32">
@@ -283,10 +287,10 @@
                   </div>
                   <div class="col-lg-6 pb-32">
                      <div class="newcommit-input bg-input">
-                        <select name="" id="" class="">
-                           <option value="">AZE</option>
-                           <option value="">TR</option>
-                           <option value="">EN</option>
+                        <select name="" id="" class="select-small js-niceselect">
+                           <option value="">+994</option>
+                           <option value="">+90</option>
+                           <option value="">+24</option>
                         </select>
                         <div class="form-floating">
                            <input type="phone" name="" id="phone" class="form-control input-select" placeholder="Mobil nömrə">
@@ -297,7 +301,7 @@
                   <div class="col-lg-6 pb-32">
                      <div class="form-group bg-input">
                         <label class="control-label" for="selectCtrl">Vətəndaşlığı seçin</label>
-                        <select type="text" class="form-control-category " id="selectCtrl">
+                        <select type="text" class="form-control-category " id="selectCtrl" class="js-niceselect">
                            <option>Vətəndaşlığı seçin</option>
                            <option>Azərbaycan</option>
                            <option>Digər</option>
@@ -351,14 +355,36 @@
                   </div>
                </div>
             </div>
-
+            <!-- End Registration for business -->
          </div>
          <aside class="side-colored">
             <h2 class="heading__title">Artıq hesabınız var?</h2>
-            <a href="registration.html" class="btn">Daxil ol</a>
+            <a href="registration.html" class="btn btn--transparent">Daxil ol</a>
          </aside>
          <!-- </div> -->
       </section>
+   </div>
+
+   <!-- Modal -->
+   <div class="modal fin-modal fade" id="finModal" tabindex="-1" aria-labelledby="finModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="finModalLabel">FİN kod nədir?</h5>
+               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
+            </div>
+            <div class="modal-body">
+               <div class="idcard">
+                  <h6 class="idcard__title">Köhnə Şəxsiyyət Vəsiqələrində</h6>
+                  <img src="img/id-card/idcard-old.svg" alt="Old ID card">
+               </div>
+               <div class="idcard">
+                  <h6 class="idcard__title">Yeni Şəxsiyyət Vəsiqələrində</h6>
+                  <img src="img/id-card/idcard-new.svg" alt="Old ID card">
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
 
    <footer class="footer sm-section-pdng">
@@ -429,6 +455,8 @@
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Select2 js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
    <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->

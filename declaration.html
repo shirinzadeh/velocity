@@ -14,6 +14,8 @@
    <!-- Owl carousel  -->
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
    <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
+   <!-- Select2  css -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
    <!-- Nice select  -->
    <link rel="stylesheet" href="plugins/nice-select/css/nice-select.css">
    <link rel="stylesheet" href="css/style.min.css">
@@ -35,7 +37,7 @@
                      <span>*9878</span>
                   </a>
                   <div class="select-lang">
-                     <select aria-label="Default select example">
+                     <select class="js-niceselect" aria-label="Default select example">
                         <option selected>AZE</option>
                         <option value="RUS">RUS</option>
                         <option value="EN">EN</option>
@@ -130,7 +132,7 @@
                            <i class="icon-map-outline_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></i>
                            <a href="addresses.html" class="sidebar__list-link"><span>Xaricdəki ünvanlarım</span></a>
                         </li>
-                        <li class="sidebar__list active">
+                        <li class="sidebar__list">
                            <i class="icon-Package-v2_two_tone"><span class="path1"></span><span class="path2"></span></i>
                            <a href="packages.html" class="sidebar__list-link"><span>Bağlamalarım</span></a>
                         </li>
@@ -205,7 +207,7 @@
                   <i class="icon-map-outline_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></i>
                   <a href="addresses.html" class="sidebar__list-link"><span>Xaricdəki ünvanlarım</span></a>
                </li>
-               <li class="sidebar__list active">
+               <li class="sidebar__list">
                   <i class="icon-Package-v2_two_tone"><span class="path1"></span><span class="path2"></span></i>
                   <a href="packages.html" class="sidebar__list-link"><span>Bağlamalarım</span></a>
                </li>
@@ -385,26 +387,44 @@
          <section class="declaration section-structure vlct-section">
             <div class="input-btw mb-32">
                <div class="input-flex bg-input  input-width">
-                  <div class="form-floating">
+                  <div class="form-floating w-100">
                      <input type=" number" name="" id="idtracking" class="form-control " placeholder="Tracking ID">
                      <label for="idtracking">Tracking ID</label>
                   </div>
                   <i class="icon-question-circle_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                </div>
-               <div class="selectbox input-width">
-                  <select aria-label=" Default select example">
+               <!-- <div class="multiple-select bg-input mb-32">
+                  <label for="select2-multiple">Bağlamalar</label>
+                  <select class="js-select2 w-100 " id="select2-multiple" multiple="multiple">
+                     <option value="O1" data-badge="">VLC56782134</option>
+                     <option value="O2" data-badge="">VLC56782135</option>
+                     <option value="O3" data-badge="">VLC56782136</option>
+                     <option value="O4" data-badge="">VLC56782137</option>
+                     <option value="O5" data-badge="">VLC56782138</option>
+                  </select>
+               </div> -->
+               <div class="select-search selectbox input-width">
+                  <!-- <label for="search">Mağaza adı</label> -->
+                  <select class="js-select2 js-select2-search w-100" id="search" aria-label=" Default select example">
                      <option selected>Mağaza adı</option>
-                     <option value="Bağlama 1">Mağaza 1</option>
-                     <option value="Bağlama 2">Mağaza 2</option>
+                     <option value="Bağlama 1">lenk 1</option>
+                     <option value="Bağlama 2">Addax</option>
+                     <option value="Bağlama 2">sheki 2</option>
+                     <option value="Bağlama 2">salyan 2</option>
+                     <option value="Bağlama 2">baki 2</option>
+                     <option value="Bağlama 2">tağaza 2</option>
+                     <option value="Bağlama 2">bağaza 2</option>
                   </select>
                </div>
             </div>
             <div class="input-btw mb-32">
-               <div class="selectbox input-width">
-                  <select aria-label=" Default select example">
-                     <option selected>Kateqoriya seçin</option>
-                     <option value="Bağlama 1">Sifarişlərim 1</option>
-                     <option value="Bağlama 2">Sifarişlərim 2</option>
+               <div class="multiple-select input-width bg-input">
+                  <label for="select2-multiple">Kateqoriya seçin</label>
+                  <i class="icon-input-down_two_tone input-down"></i>
+                  <select class="js-select2 js-select2-multiple w-100 " id="select2-multiple" multiple="multiple">
+                     <option value="O1" data-badge="">Bijuteriya</option>
+                     <option value="O2" data-badge="">Kəmər</option>
+                     <option value="O3" data-badge="">Aksesuar</option>
                   </select>
                </div>
                <div class="neworder-row input-width">
@@ -419,17 +439,35 @@
             </div>
             <textarea name="" id="" cols="0" rows="3" class="bg-input w-100 pb-32" placeholder="Əlavə qeydiniz varsa daxil edin"></textarea>
 
-            <div class="browse-file">
-               <label for="browseFile"><i class="icon-progress-upload_two_tone icon-bg icon-sm"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i></label>
+            <!-- Browse file  -->
+            <div class="browse-file browse-file--download">
+               <i class="icon-progress-upload_two_tone icon-bg icon-sm"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                <div class="browse-file__content">
-                  <!-- <h6>İnvoys faylını yüklə</h6> -->
-                  <input type="file" name="" id="browseFile" onchange="readURL(this);" accept=".pdf, .jpg, .png">
-                  <label for="browseFile">
-                     <h6>İnvoys faylını yüklə</h6>
-                     <p>Qəbul edilən fayllar: .pdf, .jpg, .png</p>
-                  </label>
+                  <h6>İnvoys faylını yüklə</h6>
+                  <p>Qəbul edilən fayllar: .pdf, .jpg, .png</p>
                </div>
             </div>
+            <!-- End Browse file  -->
+
+            <!-- Downloaded files  -->
+            <div class="browse-file justify-content-start">
+               <div class="file">
+                  <div class="d-flex">
+                     <i class="icon-file-document_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                     <p class="file-name">adidas-invoice.pdf</p>
+                  </div>
+                  <i class="icon-close_two_tone"></i>
+               </div>
+               <div class="file">
+                  <div class="d-flex">
+                     <i class="icon-file-document_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                     <p class="file-name">adidas-invoice.pdf</p>
+                  </div>
+                  <i class="icon-close_two_tone"></i>
+               </div>
+               <i class="icon-progress-upload_two_tone icon-bg icon-sm"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+            </div>
+            <!-- End downloaded file  -->
 
             <div class="newcommit-buttons">
                <button type="submit" class="btn btn--secondary">Ləğv et</button>
@@ -446,6 +484,8 @@
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <!-- Owl carousel js  -->
    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Select2 js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
    <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
    <!-- JavaScript Bundle with Popper -->

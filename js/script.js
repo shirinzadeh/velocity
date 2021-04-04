@@ -10,23 +10,14 @@
       loop: true,
    });   
 
-//  $("select").bsMultiSelect();
-
-   
    /* NICE-SELECT LIBRARY FOR SELECT */
-   $('select').niceSelect();
-   
-   // $('.must').selectpicker();
-   // $(".selectpicker").selectpicker();
-   // $(".bootstrap-select").click(function () {
-   //      $(this).addClass("open");
-   // });
+   $('.js-niceselect').niceSelect();
 
    // ADD CLASS TO BODY WHEN CLICK THE MENU BUTTON ON MOBILE 
    $('.navbar-toggler').click(function() {
       $('body').toggleClass('js-side-menu-open');
-      // $('body').toggleClass('js-side-dashboard-open');
    });
+
    // CLOSE SIDE MENU
    $('#closeIcon').click(function() {
       $('body').removeClass('js-side-menu-open');
@@ -38,90 +29,95 @@
    $('.js-toggle-dashboard, .dashboard-compact').click(function() {
       $('body').toggleClass('js-side-dashboard-open');
    })
+   
+   //OPEN DASHBOARD MENU ON MOBILE
+   $('.js-user').click(function() {
+      $('body').addClass('js-side-dashboard-open');
+   })
 
-   //Hide menu links when click outside account image
+   //Hide menu links when click outside element
    $(document).mouseup(function (e) {
       if ($(e.target).closest(user).length === 0) {
          $(".user-image-dsk .sidebar").hide();
-         $(".sidebar__user-options").hide();
-         $(".sidebar__user i").removeClass("js-animate-icon");
+         // $(".sidebar__user-options").hide();
+         // $(".sidebar__user i").removeClass("js-animate-icon");
          $('body').removeClass('js-side-dashboard-open');
          $('body').removeClass('js-side-menu-open');
 
       }
    });
 
-   $('.js-user').click(function() {
-      $('body').addClass('js-side-dashboard-open');
-   })
-
-
-   /* Toggle menu links when click the account image */
+   /* TOOGLE MENU LINKS CLICK THE ACCOUNT IMAGE */
    let user = $('.user-image-dsk');
    user.click(function() {
       $('.user-image-dsk .sidebar').toggle();
    })
 
    $('.sidebar__user').click(function() {
-      let userOptions = $('.sidebar__user-options');
+      let sidebarOptions = $('.sidebar__user-options');
       let iconDown =  $('.user-info .icon-menu-down_two_tone');
       //Show hide sidebar user options
-      userOptions.toggle();
+      sidebarOptions.toggle();
       //Rotate icon when user options is visible
-      iconDown.toggleClass('js-animate-icon', userOptions.css('display') == 'block')
+      iconDown.toggleClass('js-animate-icon', sidebarOptions.css('display') == 'block')
    })
+   
+   /**SELECT 2 PLUGIN */
 
-   /** Selectbox floating label */
-   $('.form-control-category').each(function(i) {
-      var $currEl = $(this);
+   //MULTIPLE SELECT
+   $(".js-select2").select2({
+      closeOnSelect : false,
+      allowClear: true,
+   });
 
-      $currEl.on('focus blur change', function (e) {
-         if($currEl.is('.form-control-category')) {
-            console.log( $("option[i]:first", $currEl).val())
-            if($currEl.val() === $("option:first", $currEl).val()) {
-               console.log('yes')
-              $('.control-label', $currEl.parent()).animate({opacity: 0, top: '50%',},140);
-              $('.form-control-category > .current').css("color", "rgba(255,255,255,0.5)");
-             $currEl.parent().removeClass('focused'); 
-           } 
-           else {
-              console.log('dfg')
-              $('.control-label', $currEl.parent()).css({top: '-1px', opacity: 1},140);
-             // $('.form-control-category > .current').css("color", "#fff");
-    
-              $currEl.parents('.form-group').toggleClass('focused', ((e.type === 'focus' || this.value.length > 0) && ($currEl.val() !== $("option:first", $currEl).val())));
-           }
-         } else {
-            $currEl.parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+   // SEARCH SELECTBOX
+   $(".js-select2-search").select2({
+      matcher: function(params, data) {
+         // If there are no search terms, return all of the data
+         if ($.trim(params.term) === '') { return data; }
+         // Do not display the item if there is no 'text' property
+         if (typeof data.text === 'undefined') { return null; }
+         // `params.term` is the user's search term
+         // `data.id` should be checked against
+         // `data.text` should be checked against
+         var q = params.term.toLowerCase();
+         if (data.text.toLowerCase().indexOf(q) > -1 || data.id.toLowerCase().indexOf(q) > -1) {
+               return $.extend({}, data, true);
          }
-      }).trigger('blur');
-   })
-   
+         // Return `null` if the term should not be displayed
+         return null;
+      }
+   });
 
-   
-   $("#checkAll").click(function () {
-      $('#debt1, #debt2, #debt3, #debt4').not(this).prop('checked', this.checked);
-      console.log(this.checked);
+   //Select 2 onclick event
+   $('.js-select2-multiple').on('select2:open', function (e) {
+      $('.multiple-select').addClass('js-label-parent')
+    });
+
+   //Select2 onclose event
+   $('.js-select2-multiple').on('select2:close', function (e) {
+      $('.multiple-select').removeClass('js-label-parent')
+    });
+
+    $(".js-example-placeholder-single").select2({
+      placeholder: "Select a state",
+      allowClear: true
   });
-
 
 })();
 
-/**
- * SWIPER JS FOR SHOP BRAND IMAGES
- */
+/** SWIPER JS FOR SHOP BRAND IMAGES */
 const swiper = new Swiper('.swiper-container', {
    slidesPerView: 6,
    spaceBetween: 42,
+   loop: true,
    pagination: {
      el: '.swiper-pagination',
      clickable: true,
    },
  });
 
-/**
- * COPY TEXT TO CLIPBOARD
- */
+/**  COPY TEXT TO CLIPBOARD */
  const copyIcon = document.querySelectorAll('.i-copy');
  const popup = document.querySelector('.popup');
 
@@ -189,15 +185,10 @@ tabFunction(tabs, tabContent);
 tabFunction(tabsModal, tabModalContent);
 changeTabActive(tabsCalcCountry) //Calculator section tabs
 changeTabActive(tabsPackage)
-
-/* Calculator section 
    
-/** 
- * RANGE SLIDER
- */
+/**  RANGE SLIDER */
 
 // CHANGE RANGE SLIDER THUMB ACCORDING TO INPUT VALUE
-
 const rangeVal = document.querySelectorAll('#rangeValue');
 //range.value is input number value
    rangeVal.forEach((range,i) => {
@@ -213,7 +204,6 @@ const rangeVal = document.querySelectorAll('#rangeValue');
    });
 
 // CHANGE RANGE VALUE AND BACKGROUND COLOR BEFORE AND AFTER THUMB 
-
 const sliders = document.querySelectorAll("#rangeSlider");
 sliders.forEach(function(slider, i) {   
    rangeVal[i].defaultValue = slider.value;
@@ -228,9 +218,7 @@ sliders.forEach(function(slider, i) {
    slider.oninput();
  });
 
-/**
- * DİSPLAY TOOLTIP
- */
+/** DİSPLAY TOOLTIP */
 const tooltipInfo = document.querySelectorAll('.tooltip--info');
 const tooltipWarning = document.querySelectorAll('.tooltip--warning');
 const tooltipInfoArrow = document.querySelectorAll('.tooltip--info + .tooltip-arrow');
@@ -246,6 +234,7 @@ function tooltipMouseover(elements, content, contentArrow) {
       })
    })
 }
+
 function tooltipMouseleave(elements, content, contentArrow) {
    elements.forEach((el, i) => {
       el.addEventListener('mouseleave', () => {
@@ -275,3 +264,4 @@ togglePassword.forEach((pw, i) => {
 
    })
 });
+
