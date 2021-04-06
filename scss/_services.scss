@@ -1,27 +1,72 @@
-   /** SERVICES **/
-   .services {
-      padding: 48px 32px 34px;
-      
-      &__content {
-         margin-top: 56px;
+/** SERVICES **/
+.services {
+   padding: 48px 32px 34px;
+   
+   &__content {
+      margin-top: 56px;
 
-         .box {
-            padding-bottom: 40px;
-            border-color: $white-pale;
+      .box {
+         padding-bottom: 40px;
+         border-color: $white-pale;
 
-            &-title {
-               @include xsmall {
-                  margin-bottom: 16px !important;
-               }
-            }
-
-            &-text {
-               margin-bottom: 0;           
+         &-title {
+            @include xsmall {
+               margin-bottom: 16px !important;
             }
          }
 
-         .stretch-col {
-            flex: auto; //for bootstrap column working correctly 
+         &-text {
+            margin-bottom: 0;           
+         }
+
+         &:hover {
+            .box-title {
+               color: $brand-color-light
+            }
+            
+            .box-text {
+               color: $white;
+            }
          }
       }
+
+      .stretch-col {
+         flex: auto; //for bootstrap column working correctly 
+      }
    }
+}
+
+
+.input-expanded {
+   opacity: 0;
+   position: absolute;
+   pointer-events: none;
+ }
+ 
+ .line-clamp {
+   /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+   display: block;
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.input-expanded ~ label {
+   color: $brand-color-light;
+}
+ 
+ .input-expanded:focus ~ label {
+   color: $white;
+ }
+ 
+ .input-expanded:checked + .line-clamp {
+   -webkit-line-clamp: unset;
+ }
+ 
+ .input-expanded:checked ~ label,
+ p:not(.truncated) ~ label{
+   display: none;
+ }

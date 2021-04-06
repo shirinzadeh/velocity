@@ -64,5 +64,9 @@
       @include xsmall {
          gap: 8px;
       }
+
+      .v-card {
+         scroll-snap-align: center;
+      }
    }
 }

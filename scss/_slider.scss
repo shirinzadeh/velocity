@@ -7,18 +7,18 @@
 
    &__inner {
       border-radius: $border-radius;
-      background-image: url(../img/bg-shape.svg), url(../img/Vector-slider.svg);
-      background-position: right, left;
+      background-image:  url(../img/Vector-slider.svg);
+      background-position: left;
       background-repeat: no-repeat;
       position: relative;
       @include large {
-         background-position: right -100px bottom, left bottom;
+         background-position: left bottom;
       }
       @include medium {
-         background-size: 350px auto;
+         background-size: auto;
       }
       @include small {
-         background-image: none , url(../img/Vector.svg);
+         background-image: url(../img/Vector-slider.svg);
          background-position: contain;
       }
 
@@ -102,8 +102,13 @@
       right: 0;
       bottom: 0;
       width: auto !important;
-      fill: blue;
-
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      @include large {
+         max-width: 500px;
+         border-top-right-radius: 0;
+         border-bottom-right-radius: 0;
+      }
       @include medium {
          width: 350px;
          max-width: 350px;

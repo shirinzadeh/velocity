@@ -244,6 +244,10 @@ textarea {
 
    i{
       color: $white-pale;
+
+      &.icon-question-circle_two_tone {
+         cursor: pointer;
+      }
    }
 }
 

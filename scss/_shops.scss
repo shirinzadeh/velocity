@@ -1,33 +1,28 @@
 .shops {
-   padding-bottom: 56px;
+   // padding-bottom: 56px;
    .heading {
       margin-bottom: 56px;
+      @include small {
+         margin-bottom: 8px !important;
+      }
    }
 
-   // &__images {
-   //    @include flex;
-   //    justify-content: center;
-   //    gap: 42px;
-   //    overflow-x: auto;
-   //    scroll-snap-type: x mandatory;
-   //    -webkit-overflow-scrolling: touch; /* Important for iOS devices */
-   //    @include medium {
-   //       gap: 32px;
-   //    } 
-   //    @include small {
-   //       margin-bottom: 24px;
-   //    }
-   //    @include xsmall {
-   //       gap: 16px;
-   //    }
-   // }
-   
+   .owl-item {
+      width: 200px !important;
+   }
+
    .swiper-container {
-      margin-left: 16px;
+      @include small {
+         margin-bottom: 24px;
+      }
    }
 
    .swiper-slide {
       width: 200px !important;
+      @include small {
+         width: 180px !important;
+         // margin-right: 16px !important;
+      }
    }
    
    .shop-img {
@@ -39,11 +34,19 @@
       @include flex;
       align-items: center;
       justify-content: center;
+      @include small {
+         width: 180px !important;
+         height: 180px !important;
+      }
 
       img {
          height: 170px;
          width: 170px;
          @include filter(grayscale(100%) opacity(60%));
+         @include small {
+            height: 110px;
+            width: 110px;
+         }
 
          &:hover {
             @include filter(grayscale(0) opacity(100%));
@@ -134,6 +137,8 @@
          }
       }
       .shop-img {
+         width: auto !important;
+         height: auto !important;
          @include medium {
             border: 0;
          }

@@ -1,24 +1,31 @@
 .faq {
-   .collaps {
+   .accordion-item {
       margin-bottom: 8px;
+  }
 
-      &[open] .collapsible {
-         .icon-menu-up_two_tone {
-            display: block;
-         }
-         .icon-menu-down_two_tone {
-            display: none;
-         }
+   .accordion-button {
+      padding: 20px 24px;
+      background-color: $black-dark-mode-v2;
+      color: $white;
+      border-radius: $border-radius !important;
+      @include flex;
+      justify-content: space-between;
+
+      &:focus {
+         border: none;
+      }
+
+      &::after {
+         display: none;
+      }
+      &::before {
+         @extend .accordion-button::after;
       }
    }
 
-   .collapsible {
-      @include flex;
-      align-items: center;
-      justify-content: space-between;
+   .accordion-body {
       border-radius: $border-radius;
       background-color: $black-dark-mode-v2;
-      color: $white;
       padding: 20px 24px;
       margin-bottom: 8px;
       outline-color: $white;
@@ -27,22 +34,6 @@
          padding-left: 24px 20px;
       }
 
-      i {
-         font-size: 24px;
-      }
-
-      .icon-menu-up_two_tone {
-         display: none;
-      }
-
-      &:hover {
-         color: $brand-color-light;
-      }
-      &:focus {
-         color: $brand-color-light;
-      }
-   }
-   .collapse-content {
       padding: 20px 24px 58px;
       line-height: 26px;
       margin-top: 8px   ;
@@ -54,6 +45,10 @@
          line-height: 28px;
       }
 
+      &__header {
+         @include flex;
+         justify-content: space-between;
+      }
       h6 {
          color: $brand-color-light;
          margin-bottom: 44px;

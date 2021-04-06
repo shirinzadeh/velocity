@@ -1,6 +1,9 @@
 .work {
    .heading {
       margin-bottom: 40px;
+      @include small {
+         margin-bottom: 16px !important;
+      }
    }
 
    &__content {

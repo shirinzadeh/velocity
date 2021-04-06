@@ -3,7 +3,7 @@
       autoplay: false,
       autoplayHoverPause: true,
       items: 1,
-      margin: 0,
+      margin: 30,
       stagePadding: 0,
       nav: false,
       dots: true,
@@ -94,10 +94,17 @@
       $('.multiple-select').addClass('js-label-parent')
     });
 
+    $('.js-select2-multiple').on('select2:closing', function (e) {
+      $('.multiple-select').addClass('js-label-parent-important')
+    });
+
    //Select2 onclose event
    $('.js-select2-multiple').on('select2:close', function (e) {
       $('.multiple-select').removeClass('js-label-parent')
     });
+
+
+
 
     $(".js-example-placeholder-single").select2({
       placeholder: "Select a state",
@@ -108,13 +115,90 @@
 
 /** SWIPER JS FOR SHOP BRAND IMAGES */
 const swiper = new Swiper('.swiper-container', {
-   slidesPerView: 6,
-   spaceBetween: 42,
-   loop: true,
+   slidesOffsetAfter: 0,
+   slidesOffsetBefore: 0,
+   slidesPerView: 1.55  ,
+   spaceBetween: 16,
    pagination: {
      el: '.swiper-pagination',
      clickable: true,
    },
+   breakpoints: {
+      360: {
+         slidesPerView: 1.65,
+      },
+      375: {
+         slidesPerView: 1.8
+      },
+      400: {
+         slidesPerView: 2
+      },
+      440: {
+         slidesPerView: 2.33
+      },
+      480: {
+         slidesPerView: 2.5
+      },
+      550: {
+         slidesPerView: 2.8
+      },
+      580: {
+         slidesPerView: 3.2,
+      },
+      640: {
+        slidesPerView: 3.4,
+        spaceBetween: 20,
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16
+      },
+      700: {
+        slidesPerView: 3.6,
+        spaceBetween: 40,
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16
+      },
+      768: {
+         slidesPerView: 3.3,
+         spaceBetween: 40,
+         slidesOffsetBefore: 16,
+         slidesOffsetAfter: 16
+      },
+      850: {
+         slidesPerView: 4.1,
+         slidesOffsetBefore: 16,
+         slidesOffsetAfter: 16
+      },
+      910: {
+         slidesPerView: 4.4,
+         slidesOffsetBefore: 16,
+         slidesOffsetAfter: 16
+      },
+      1024: {
+        slidesPerView: 4.3,
+        spaceBetween: 42,
+        slidesOffsetBefore: 16,
+        slidesOffsetAfter: 16
+      },
+
+      1200: {
+         slidesPerView: 5.1,
+         spaceBetween: 42,
+         slidesOffsetBefore: 16,
+         slidesOffsetAfter: 0,
+      },
+      1300: {
+         slidesPerView: 5.5,
+         spaceBetween: 42,
+         slidesOffsetBefore: 16,
+         slidesOffsetAfter: 0,
+      },
+      1400: {
+         slidesPerView: 6.1,
+         spaceBetween: 42,
+         slidesOffsetBefore: 16,
+         slidesOffsetAfter: 0,
+      }
+    }
  });
 
 /**  COPY TEXT TO CLIPBOARD */
@@ -265,3 +349,15 @@ togglePassword.forEach((pw, i) => {
    })
 });
 
+/** ADD READ MORE BUTTON END TO TRUNCATED TEXT */
+const ps = document.querySelectorAll('.line-clamp');
+const observer = new ResizeObserver(entries => {
+  for (let entry of entries) {
+    entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
+  }
+});
+
+ps.forEach(p => {
+   console.log(p)
+  observer.observe(p);
+});
