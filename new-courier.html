@@ -21,7 +21,7 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="newcourier-page">
 
    <header class="header header-pages">
       <div class="header__top">
@@ -377,26 +377,29 @@
          </section>
 
          <section class="newcourier section-structure p-32 vlct-section sm-pages-pdng">
-            <div class="multiple-select bg-input mb-32">
+            <div class="multiple-select bg-input mb-32  custom_multiple_select2">
                <label for="select2-multiple">Bağlamalar</label>
                <i class="icon-input-down_two_tone input-down"></i>
-               <select class="js-select2 js-select2-multiple w-100 " id="select2-multiple" multiple="multiple">
+               <select class="js-select2 w-100 multiple_select2" id="select2-multiple" multiple="multiple">
                   <option value="O1" data-badge="">VLC56782134</option>
                   <option value="O2" data-badge="">VLC56782135</option>
-                  <option value="O3" data-badge="">VLC56782136</option>
-                  <option value="O4" data-badge="">VLC56782137</option>
-                  <option value="O5" data-badge="">VLC56782138</option>
+                  <option value="O3" data-badge="">VLC56782136 </option>
+                  <option value="O4" data-badge="">VLC56782137 </option>
+                  <option value="O5" data-badge="">VLC56782138 </option>
+                  <option value="O6" data-badge="">VLC56782135</option>
+                  <option value="O7" data-badge="">VLC56782136 </option>
+                  <option value="O8" data-badge="">VLC56782137 </option>
+                  <option value="O9" data-badge="">VLC56782138 </option>
                </select>
             </div>
             <div class="input-btw pb-32">
-               <div class="form-group bg-input input-width">
-                  <!-- <label class="control-label" for="selectCtrl">Şəhər seçin</label> -->
-                  <select type="text" class="js-example-placeholder-single js-states form-control" id="selectCtrl">
-                     <option>Şəhər seçin</option>
-                     <option>Option 1</option>
-                     <option>Option 2</option>
-                     <option>Option 3</option>
-                     <option>Option 4</option>
+               <div class="custom_placeholder_select2 form-group input-width bg-input">
+                  <label for="select2-placeholder">Şəhər seçin</label>
+                  <i class="icon-input-down_two_tone input-down"></i>
+                  <select type="text" class="select2_placeholder" id="select2-placeholder">
+                     <option value=""></option>
+                     <option>Bakı</option>
+                     <option>Digər</option>
                   </select>
                </div>
                <div class="newcommit-input bg-input input-width ">

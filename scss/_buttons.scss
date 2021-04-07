@@ -9,7 +9,7 @@
    }
  }
 
- /* BUTTON - INSIDE FULL */
+ /* PRIMARY BUTTON */
 .btn--primary{
    @include main-btn;
    background-color: $brand-color-light;
@@ -19,14 +19,14 @@
    }
 
    &:hover {
-      background-color: rgba($brand-color, .2);
+      background-color: rgba($brand-color-light, .8);
    }   
    &:focus {
       @extend .btn--primary:hover;
    }
 }
 
-/* BUTTON SECONDARY*/
+/* SECONDARY BUTTON*/
 .btn--secondary {
    @include main-btn;
    background-color: transparent;
@@ -60,6 +60,8 @@
       @extend .btn--success:hover;
    }
 }
+
+/* DISABLED BUTTON */
 
 .btn--disabled {
    @include main-btn;
@@ -179,7 +181,10 @@
    padding: 15px 27px !important;
    color: $white;
    border-radius: $border-radius;
-   width: 152px;
+   min-width: 152px !important;
+   @include small {
+      min-width: auto !important;
+   }
 
    &.active {
       background-color: $black-dark-mode-v2;

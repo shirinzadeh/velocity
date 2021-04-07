@@ -21,7 +21,7 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="registration-page">
    <header class="header hdr-mb-64">
       <div class="header__top">
          <div class="container">
@@ -135,7 +135,7 @@
                </button>
             </div>
 
-            <!-- Registration for personal  -->
+            <!-- Registration for personal Tab 1 content  -->
             <div class="js-tab-content  has-show">
                <div class="row">
                   <div class="col-lg-6 pb-32">
@@ -175,9 +175,11 @@
                      </div>
                   </div>
                   <div class="col-lg-6 pb-32">
-                     <div class="form-group bg-input">
-                        <select type="text" class="js-example-placeholder-single">
-                           <option>Vətəndaşlığı seçin</option>
+                     <div class="custom_placeholder_select2 form-group bg-input">
+                        <label for="select2-placeholder">Vətəndaşlığı seçin</label>
+                        <i class="icon-input-down_two_tone input-down"></i>
+                        <select type="text" class="select2_placeholder" id="select2-placeholder">
+                           <option value=""></option>
                            <option>Azərbaycan</option>
                            <option>Digər</option>
                         </select>
@@ -191,7 +193,7 @@
                            <option value="">EN</option>
                         </select>
                         <div class="form-floating">
-                           <input type="phone" name="" id="phone" class="form-control input-select" placeholder="ŞV-nin nömrəsi">
+                           <input type="tel" name="" id="phone" class="form-control input-select" placeholder="ŞV-nin nömrəsi">
                            <label for="phone">ŞV-nin nömrəsi</label>
                         </div>
                      </div>
@@ -206,10 +208,11 @@
                      </div>
                   </div>
                   <div class="col-lg-6 pb-32">
-                     <div class="form-group bg-input">
-                        <label class="control-label" for="city">Şəhər seçin</label>
-                        <select type="text" class="form-control-category " id="city" class="js-niceselect">
-                           <option>Şəhər seçin</option>
+                     <div class="custom_placeholder_select2 form-group bg-input">
+                        <label for="select2-placeholder">Şəhər seçin</label>
+                        <i class="icon-input-down_two_tone input-down"></i>
+                        <select type="text" class="select2_placeholder" id="select2-placeholder">
+                           <option value=""></option>
                            <option>Bakı</option>
                            <option>Digər</option>
                         </select>
@@ -262,9 +265,9 @@
                   </div>
                </div>
             </div>
-            <!-- End Registration for personal  -->
+            <!-- End Registration for personal  Tab 1 content-->
 
-            <!-- Registration for business -->
+            <!-- Registration for business - Tab 2 content -->
             <div class="js-tab-content">
                <div class="row">
                   <div class="col-lg-6 pb-32">
@@ -299,10 +302,11 @@
                      </div>
                   </div>
                   <div class="col-lg-6 pb-32">
-                     <div class="form-group bg-input">
-                        <label class="control-label" for="selectCtrl">Vətəndaşlığı seçin</label>
-                        <select type="text" class="form-control-category " id="selectCtrl" class="js-niceselect">
-                           <option>Vətəndaşlığı seçin</option>
+                     <div class="custom_placeholder_select2 form-group bg-input">
+                        <label for="select2-placeholder">Vətəndaşlığı seçin</label>
+                        <i class="icon-input-down_two_tone input-down"></i>
+                        <select type="text" class="select2_placeholder" id="select2-placeholder">
+                           <option value=""></option>
                            <option>Azərbaycan</option>
                            <option>Digər</option>
                         </select>
@@ -355,7 +359,7 @@
                   </div>
                </div>
             </div>
-            <!-- End Registration for business -->
+            <!-- End Registration for business Tab 2 content-->
          </div>
          <aside class="side-colored">
             <h2 class="heading__title">Artıq hesabınız var?</h2>

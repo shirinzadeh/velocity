@@ -103,7 +103,8 @@
 
       &-tail {
          font-size: 14px;
-         line-height: 24px;
+         line-height: 24px !important;
+         align-self: flex-end;
          @include medium {
             margin-left: 32px;
          }

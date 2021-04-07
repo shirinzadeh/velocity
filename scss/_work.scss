@@ -24,6 +24,11 @@
             width: 280px;
             max-width: 280px;
          }
+
+         .btn {
+            @include inline-flex;
+            width: 200px;
+         }
       }
 
       .stretch-col {

@@ -21,7 +21,7 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="select2-selects">
 
    <header class="header header-pages">
       <div class="header__top">
@@ -388,40 +388,31 @@
             <div class="input-btw mb-32">
                <div class="input-flex bg-input  input-width">
                   <div class="form-floating w-100">
-                     <input type=" number" name="" id="idtracking" class="form-control " placeholder="Tracking ID">
+                     <input type="number" name="" id="idtracking" class="form-control " placeholder="Tracking ID">
                      <label for="idtracking">Tracking ID</label>
                   </div>
-                  <i class="icon-question-circle_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <i class="icon-question-circle_two_tone" data-bs-toggle="modal" data-bs-target="#finModal"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                </div>
-               <!-- <div class="multiple-select bg-input mb-32">
-                  <label for="select2-multiple">Bağlamalar</label>
-                  <select class="js-select2 w-100 " id="select2-multiple" multiple="multiple">
-                     <option value="O1" data-badge="">VLC56782134</option>
-                     <option value="O2" data-badge="">VLC56782135</option>
-                     <option value="O3" data-badge="">VLC56782136</option>
-                     <option value="O4" data-badge="">VLC56782137</option>
-                     <option value="O5" data-badge="">VLC56782138</option>
-                  </select>
-               </div> -->
-               <div class="select-search selectbox input-width">
-                  <!-- <label for="search">Mağaza adı</label> -->
-                  <select class="js-select2 js-select2-search w-100" id="search" aria-label=" Default select example">
-                     <option selected>Mağaza adı</option>
-                     <option value="Bağlama 1">lenk 1</option>
-                     <option value="Bağlama 2">Addax</option>
-                     <option value="Bağlama 2">sheki 2</option>
-                     <option value="Bağlama 2">salyan 2</option>
-                     <option value="Bağlama 2">baki 2</option>
-                     <option value="Bağlama 2">tağaza 2</option>
-                     <option value="Bağlama 2">bağaza 2</option>
+
+               <div class="select-search selectbox input-width custom_search_select2">
+                  <!-- js-select2-search -->
+                  <label for="search">Mağaza adı</label>
+                  <i class="icon-input-down_two_tone input-down"></i>
+                  <select class="js-select2 w-100 select_custom2" id="search" aria-label="Default select example">
+                     <!-- <option value=""></option> -->
+                     <option value="Addax">Addax</option>
+                     <option value="Adidas">Adidas</option>
+                     <option value="ADL">ADL</option>
+                     <option value="Akakçe">Akakçe</option>
+                     <option value="Aldo">Aldo</option>
                   </select>
                </div>
             </div>
             <div class="input-btw mb-32">
-               <div class="multiple-select input-width bg-input">
+               <div class="multiple-select bg-input input-width custom_multiple_select2">
                   <label for="select2-multiple">Kateqoriya seçin</label>
                   <i class="icon-input-down_two_tone input-down"></i>
-                  <select class="js-select2 js-select2-multiple w-100 " id="select2-multiple" multiple="multiple">
+                  <select class="js-select2 w-100 multiple_select2" id="select2-multiple" multiple="multiple">
                      <option value="O1" data-badge="">Bijuteriya</option>
                      <option value="O2" data-badge="">Kəmər</option>
                      <option value="O3" data-badge="">Aksesuar</option>
@@ -475,6 +466,27 @@
             </div>
          </section>
 
+      </div>
+   </div>
+   <!-- Modal -->
+   <div class="modal fin-modal fade" id="finModal" tabindex="-1" aria-labelledby="finModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="finModalLabel">FİN kod nədir?</h5>
+               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
+            </div>
+            <div class="modal-body">
+               <div class="idcard">
+                  <h6 class="idcard__title">Köhnə Şəxsiyyət Vəsiqələrində</h6>
+                  <img src="img/id-card/idcard-old.svg" alt="Old ID card">
+               </div>
+               <div class="idcard">
+                  <h6 class="idcard__title">Yeni Şəxsiyyət Vəsiqələrində</h6>
+                  <img src="img/id-card/idcard-new.svg" alt="Old ID card">
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 

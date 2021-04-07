@@ -29,6 +29,10 @@
    $('.js-toggle-dashboard, .dashboard-compact').click(function() {
       $('body').toggleClass('js-side-dashboard-open');
    })
+
+   $('.menu-compact').click(function() {
+      $('body').toggleClass('js-side-dashboard-open');
+   })
    
    //OPEN DASHBOARD MENU ON MOBILE
    $('.js-user').click(function() {
@@ -64,52 +68,80 @@
    
    /**SELECT 2 PLUGIN */
 
-   //MULTIPLE SELECT
-   $(".js-select2").select2({
+   /** Multple selectbox */
+   $(".multiple_select2").select2({
+      tags: true,
       closeOnSelect : false,
       allowClear: true,
    });
 
-   // SEARCH SELECTBOX
-   $(".js-select2-search").select2({
-      matcher: function(params, data) {
-         // If there are no search terms, return all of the data
-         if ($.trim(params.term) === '') { return data; }
-         // Do not display the item if there is no 'text' property
-         if (typeof data.text === 'undefined') { return null; }
-         // `params.term` is the user's search term
-         // `data.id` should be checked against
-         // `data.text` should be checked against
-         var q = params.term.toLowerCase();
-         if (data.text.toLowerCase().indexOf(q) > -1 || data.id.toLowerCase().indexOf(q) > -1) {
-               return $.extend({}, data, true);
-         }
-         // Return `null` if the term should not be displayed
-         return null;
+  //Select 2 onclick event
+   $('.multiple_select2').on('select2:open', function (e) {
+      $('.custom_multiple_select2').addClass('js-label-parent');
+      $('.newcourier-page #select2-select2-multiple-results').parents('.select2-dropdown').addClass('multiselect_dropdown_width');
+      $('#select2-selects #select2-select2-multiple-results').parents('.select2-dropdown').addClass('placeholder_dropdown_width');
+   });
+
+   $('.multiple_select2').on('select2:unselect', function (e) {
+   // $('.custom_multiple_select2').addClass('js-label-parent-important');
+      if($(this).select2('data').length == 0) {
+         $('.custom_multiple_select2').removeClass('js-label-parent');
+      }
+      //Disable showing dropdown when remove tag clicked
+      if (!e.params.originalEvent) {
+         return;
+      }
+      e.params.originalEvent.stopPropagation();
+   });
+
+// //Select2 onclose event
+   $('.multiple_select2').on('select2:close', function (e) {
+      let count = $(this).select2('data').length;
+      if(count==0){
+         $('.custom_multiple_select2').removeClass('js-label-parent')
       }
    });
 
-   //Select 2 onclick event
-   $('.js-select2-multiple').on('select2:open', function (e) {
-      $('.multiple-select').addClass('js-label-parent')
-    });
+/** SEARCH SELECTBOX */
 
-    $('.js-select2-multiple').on('select2:closing', function (e) {
-      $('.multiple-select').addClass('js-label-parent-important')
-    });
+   $(".select_custom2").select2({
+      placeholder: "Select a programming language",
+      allowClear: true,
+      tags: []
+   });
 
-   //Select2 onclose event
-   $('.js-select2-multiple').on('select2:close', function (e) {
-      $('.multiple-select').removeClass('js-label-parent')
-    });
+   $('.select_custom2').on('select2:open', function (e) {
+      $('#select2-search-results').parents('.select2-container').addClass('search-input-parent');
+      $('#select2-search-results').parents('.select2-dropdown').addClass('placeholder_dropdown_width')
+      $('.custom_search_select2').addClass('search-label-parent');
+      $('.select2-selection__rendered').css('opacity', "1");
+      $('.custom_search_select2 .select2-container--above').hide();
+   });
+      
+   $('.select_custom2').on('change',function(e){
+      var lastValue = e.currentTarget.value;
+      $('.select2-search__field').val(lastValue);
+   })
 
+   $('.select_custom2').on('select2:close', function (e) {
+      let count = $(this).select2('data').length
+      if(count==0){
+         $('.custom_search_select2').removeClass('search-label-parent');
+      }
+   });
+ 
+ /** SELECT 2 PLACEHOLDER */
+   $('.select2_placeholder').select2({
+      minimumResultsForSearch: -1, //remove first item from dropwdown
+   });
 
+   $('.select2_placeholder').on('select2:open', function (e) {
+      $('#select2-select2-placeholder-results').parents('.select2-dropdown').addClass('placeholder_dropdown_width')
+   });
 
-
-    $(".js-example-placeholder-single").select2({
-      placeholder: "Select a state",
-      allowClear: true
-  });
+   $('.select2_placeholder').on('select2:select', function (e) {
+      $(this).parents('.custom_placeholder_select2').addClass('js-placeholder-label-parent');
+   });
 
 })();
 

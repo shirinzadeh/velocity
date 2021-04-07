@@ -1,7 +1,7 @@
 .courier-page {
    .details-headline--buttons {
       .btn--adjacent-tab {
-         width: 175px;
+         min-width: 175px;
          @include xsmall {
             padding-left: 16px !important;
             padding-right: 16px !important;
@@ -23,7 +23,7 @@
          }
       }
       a[type="button"] {
-         width: 160px !important;
+         min-width: 160px !important;
          height: 56px;
          @include small {
             width: 100% !important;

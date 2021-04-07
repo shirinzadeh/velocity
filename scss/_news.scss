@@ -34,9 +34,17 @@
          @include xsmall {
             width: auto;
          }
+
+         .btn {
+            display: inline-flex !important;
+            @include medium {
+               display: none !important;
+            }
+         }
       }
 
       .btn--secondary {
+         min-width: 200px;
          @include medium {
             margin: 40px auto 0;
          }

@@ -45,7 +45,7 @@ $border-radius: 8px;
    @include flex-center();
    padding: 16px 32px;
    font-weight: $fw-medium;
-   width: 200px;
+   // width: 200px;
    min-width: 144px;
    height: 56px;
    border-radius: $border-radius;

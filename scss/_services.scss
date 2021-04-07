@@ -10,21 +10,25 @@
          border-color: $white-pale;
 
          &-title {
+            @include transition();    
             @include xsmall {
                margin-bottom: 16px !important;
             }
          }
 
          &-text {
-            margin-bottom: 0;           
+            margin-bottom: 0;
+            @include transition();           
          }
 
          &:hover {
             .box-title {
-               color: $brand-color-light
+               color: $brand-color-light;
+               @include transition();
             }
             
             .box-text {
+               @include transition();
                color: $white;
             }
          }

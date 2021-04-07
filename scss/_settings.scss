@@ -65,8 +65,14 @@
    .nice-select {
       color: $white-pale;
    }
+
+   input:focus {
+      color: $white;
+   }
 }
 
-input:focus {
-   color: $white;
+body.settings-page {
+   .select2-container--open .select2-dropdown--below {
+      width: calc(100% - 20px) !important;
+   }
 }

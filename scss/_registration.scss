@@ -92,3 +92,9 @@
       max-width: 672px !important;
    }
 }
+
+.registration-page {
+   .select2-container--open .select2-dropdown {
+      width: calc(100% - 52px) !important;
+   }
+}

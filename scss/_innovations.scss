@@ -39,6 +39,7 @@
       padding: 24px;
       margin-bottom: 16px;
       border: 1px solid transparent;
+      border-radius: $border-radius;
       @include medium {
          flex-direction: row;
       }

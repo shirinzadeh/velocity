@@ -6,7 +6,7 @@
 
 .tabs-adjacent--family {
   .btn--adjacent-tab {
-   width: 224px;
+   min-width: 224px;
    padding: 15px !important;
    @include small {
       width: auto ;

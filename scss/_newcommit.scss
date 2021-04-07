@@ -42,12 +42,8 @@
             }
          }
    
-         &--secondary {
-            width: 144px;
-         }
-   
          &--primary {
-            width: 194px;
+            min-width: 194px;
          }
       }
    }

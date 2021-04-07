@@ -220,8 +220,8 @@ textarea {
    width: 381px !important;
    max-width: 381px !important;
    @include medium {
-      width: 100%;
-      max-width: 100%
+      width: 100% !important;
+      max-width: 100% !important;
    }
 }
 
@@ -388,6 +388,7 @@ textarea {
 .currency-sm {
    width: 24px;
    height: 24px;
+   vertical-align: sub;
 }
 
 /********* ABOUT **********/

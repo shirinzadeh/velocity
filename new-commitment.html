@@ -400,7 +400,7 @@
                      <input type="number" name="" id="" class="form-control" placeholder="FİN kodu daxil edin">
                      <label for="idcard">FİN kodu daxil edin</label>
                   </div>
-                  <i class="icon-question-circle_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <i class="icon-question-circle_two_tone" data-bs-toggle="modal" data-bs-target="#finModal"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                </div>
             </div>
             <div class="input-btw pb-32">
@@ -430,7 +430,28 @@
             </div>
          </section>
       </div>
+   </div>
 
+   <!-- Modal -->
+   <div class="modal fin-modal fade" id="finModal" tabindex="-1" aria-labelledby="finModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="finModalLabel">FİN kod nədir?</h5>
+               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
+            </div>
+            <div class="modal-body">
+               <div class="idcard">
+                  <h6 class="idcard__title">Köhnə Şəxsiyyət Vəsiqələrində</h6>
+                  <img src="img/id-card/idcard-old.svg" alt="Old ID card">
+               </div>
+               <div class="idcard">
+                  <h6 class="idcard__title">Yeni Şəxsiyyət Vəsiqələrində</h6>
+                  <img src="img/id-card/idcard-new.svg" alt="Old ID card">
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
 
    <footer class="footer">
