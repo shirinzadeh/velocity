@@ -20,10 +20,8 @@
 
    &:hover {
       background-color: rgba($brand-color-light, .8);
+      color: $black;
    }   
-   &:focus {
-      @extend .btn--primary:hover;
-   }
 }
 
 /* SECONDARY BUTTON*/
@@ -41,15 +39,14 @@
       background-color: rgba($white, .2);
       color: $brand-color-light;
    }
-   &:focus {
-      @extend .btn--secondary:hover;
-   }
 }
 
 /* SUCCESS BUTTON */
 .btn--success {
    color: $pure-green;
    background-color: transparent;
+   min-width: 144px;
+   cursor: text;
    @include small {
       width: 100%;
    }
@@ -78,20 +75,6 @@
    }
    &:focus {
       @extend .btn--instruction:hover;
-   }
-}
-
-//144px Button
-.btn-w144 {
-   padding-left: 24px !important;
-   padding-right: 24px !important;
-   max-width: 144px;
-   width: 144px;
-   margin-left: auto; //always on the right side
-
-   @include small {
-      width: 100%;
-      max-width: 100%;
    }
 }
 
