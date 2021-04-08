@@ -24,8 +24,11 @@
    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
    <!-- Nice select  -->
    <link rel="stylesheet" href="plugins/nice-select/css/nice-select.css">
+   <!-- Datepicker css -->
+   <link rel="stylesheet" href="plugins/bootstrap-datepicker/bootstrap-datepicker.css">
    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 
 <body class="settings-page" id="select2-selects">
 
@@ -57,8 +60,8 @@
       <div class="container">
          <div class="header__bottom">
             <nav class="navbar navbar-expand-lg ">
-               <a href="index.html" class="logo order-3 d-none d-sm-block"><img src="img/logo.svg" alt="Logo" class="d-block"></a>
-               <a href="index.html" class="logo  order-3 d-sm-none"><img src="img/logo-sm.svg" alt="Logo" class="d-block"></a>
+               <a href="index.html" class="logo order-3 d-none d-sm-block"><img src="img/logo/logo.svg" alt="Logo" class="d-block"></a>
+               <a href="index.html" class="logo  order-3 d-sm-none"><img src="img/logo/logo-sm.svg" alt="Logo" class="d-block"></a>
                <div>
                   <button class="navbar-toggler order-1" type="button" aria-expanded="false" aria-label="Toggle navigation">
                      <div class="toggler-btn">
@@ -82,7 +85,7 @@
                <!-- Nav links  -->
                <div class="side-menu order-last">
                   <div class="side-menu__head d-lg-none">
-                     <a href="index.html" class="logo  order-3 d-lg-none"><img src="img/logo-sm.svg" alt="Logo"></a>
+                     <a href="index.html" class="logo  order-3 d-lg-none"><img src="img/logo/logo-sm.svg" alt="Logo"></a>
                      <i class="icon-close_two_tone close-icon" id="closeIcon"></i>
                   </div>
                   <ul class="navbar-nav">
@@ -396,7 +399,7 @@
             </div>
          </section>
 
-         <section class="settings section-structure p-32 vlct-section">
+         <section class="settings section-structure p-32 vlct-section sm-pages-pdng">
             <div class="input-btw pb-32">
                <div class="form-floating w-100">
                   <input type="phone" name="" id="phone" class="bg-input form-control" id="namesurname" value="+99455 231 4511" placeholder="Mobil nömrə">
@@ -408,16 +411,21 @@
                </div>
             </div>
             <div class="input-btw mb-32">
-               <div class="newcommit-input bg-input input-width   ">
-                  <input type="date" name="dob" class="w-100" data-placeholder="Doğum tarixi" required aria-required="true" />
-                  <!-- <i class="icon-calendar_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path4"></span></i> -->
+               <div class="input-flex input-width bg-input ps-0">
+                  <div class="form-floating w-100">
+                     <input type="text" name="" id="birthdate" class="form-control ms-3" placeholder="Doğum tarixi" required>
+                     <label for="birthdate" class="ps-3">Doğum tarixi</label>
+                  </div>
+                  <label class="add-on" for="birthdate">
+                     <i class="icon-calendar_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path4"></span></i>
+                  </label>
                </div>
                <div class="custom_placeholder_select2 form-group input-width bg-input">
                   <label for="select2-placeholder">Vətəndaşlığı seçin</label>
                   <i class="icon-input-down_two_tone input-down"></i>
                   <select type="text" class="select2_placeholder" id="select2-placeholder">
                      <option value=""></option>
-                     <option>Azərbaycan</option>
+                     <option selected>Azərbaycan</option>
                      <option>Digər</option>
                   </select>
                </div>
@@ -425,9 +433,9 @@
             <div class="input-btw pb-32">
                <div class="newcommit-input bg-input input-width ">
                   <select name="" id="" class="select-small js-niceselect">
-                     <option value="">+994</option>
-                     <option value="">+90</option>
-                     <option value="">+44</option>
+                     <option value="">AZE</option>
+                     <option value="">RUS</option>
+                     <option value="">EN</option>
                   </select>
                   <div class="form-floating w-100">
                      <input type="number" name="" id="num" class="form-control input-select w-100" value="45678212" placeholder="ŞV-nin nömrəsi">
@@ -436,7 +444,7 @@
                </div>
                <div class="input-flex bg-input  input-width">
                   <div class="form-floating w-100  ">
-                     <input type="number" name="" id="" class="form-control" value="4D78HS8" placeholder="ŞV-nin FİN kodu">
+                     <input type="text" name="" id="idcard" class="form-control" value="4D78HS8" placeholder="ŞV-nin FİN kodu">
                      <label for="idcard">ŞV-nin FİN kodu</label>
                   </div>
                   <i class="icon-question-circle_two_tone" data-bs-toggle="modal" data-bs-target="#finModal"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
@@ -448,16 +456,16 @@
                   <i class="icon-input-down_two_tone input-down"></i>
                   <select type="text" class="select2_placeholder" id="select2-placeholder">
                      <option value=""></option>
-                     <option>Azərbaycanca (AZ)</option>
+                     <option selected>Azərbaycanca (AZ)</option>
                      <option>Digər</option>
                   </select>
                </div>
-               <div class="custom_placeholder_select2  input-width bg-input">
+               <div class="custom_placeholder_select2 form-group input-width bg-input">
                   <label for="select2-placeholder">Şəhər</label>
                   <i class="icon-input-down_two_tone input-down"></i>
                   <select type="text" class="select2_placeholder" id="select2-placeholder">
                      <option value=""></option>
-                     <option>Bakı</option>
+                     <option selected>Bakı</option>
                      <option>Digər</option>
                   </select>
                </div>
@@ -548,7 +556,7 @@
 
          <div class="footer-bottom">
             <div>
-               <img src="img/logo-white.svg" alt="">
+               <img src="img/logo/logo-white.svg" alt="">
                <p class="copyright">© 2021 Velocity Cargo. Bütün hüquqlar qorunur</p>
             </div>
             <div class="social-icons d-none d-md-block">
@@ -570,6 +578,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
    <!-- Nice select js  -->
    <script src="plugins/nice-select/js/jquery.nice-select.min.js"></script>
+   <!-- Datepicker js  -->
+   <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
    <!-- JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
    <script src="js/script.js"></script>

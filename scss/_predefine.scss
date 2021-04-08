@@ -15,6 +15,10 @@
    color: $pink !important;
 }
 
+.white {
+   color: $white !important;
+}
+
 .border-warning {
    border: 1px solid $warning;
 }
@@ -208,6 +212,8 @@ textarea,
   caret-color: $brand-color-light;
 }
 
+input:focus i { color: $white !important; }
+
 textarea {
    height: 96px !important;
    color: $white !important;
@@ -244,6 +250,7 @@ textarea {
 
    i{
       color: $white-pale;
+      vertical-align: middle;
 
       &.icon-question-circle_two_tone {
          cursor: pointer;

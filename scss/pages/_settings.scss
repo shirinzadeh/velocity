@@ -74,5 +74,9 @@
 body.settings-page {
    .select2-container--open .select2-dropdown--below {
       width: calc(100% - 20px) !important;
+
+      @include large {
+         width: 286px !important;
+      }
    }
 }

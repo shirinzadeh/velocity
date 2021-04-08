@@ -132,6 +132,11 @@
 }
 
 /* Large desktops Layout: 1280px */
+@mixin extra-xlarge {
+  @media (min-width: 1399.98px) {
+    @content;
+  }
+}
 @mixin xlarge {
   @media (max-width: 1399.98px) {
     @content;

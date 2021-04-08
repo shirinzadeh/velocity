@@ -65,25 +65,50 @@
       //Rotate icon when user options is visible
       iconDown.toggleClass('js-animate-icon', sidebarOptions.css('display') == 'block')
    })
-   
+
+   //Change icon color on inputs when focus
+   $('.input-flex input').on('focus', function() {
+      $(this).parents('.input-flex').children('i').css('color','white');
+  });
+
+  //Change icon color to default color
+   $('.input-flex input').on('focusout', function() {
+      $(this).parents('.input-flex').children('i').css('color','#FFFFFF80');
+  });
+
+   //placeholder selectboxes with default value
+   if($('body').is('.settings-page')){
+      //Change position of label on filled inputs
+      setTimeout(() => {
+         if($('#select2-select2-placeholder-container').text().length > 0) {
+            $('.custom_placeholder_select2').addClass('js-placeholder-label-parent');
+         }
+      }, 0);
+
+      //Change icon color on filled inputs
+      if($('input').val().length > 0) {
+         $('input').parents('.input-flex').children('i').css('color','white');
+      }
+    }
+
    /**SELECT 2 PLUGIN */
 
-   /** Multple selectbox */
+   /** Multiple selectbox */
    $(".multiple_select2").select2({
       tags: true,
       closeOnSelect : false,
       allowClear: true,
    });
 
-  //Select 2 onclick event
+  //Multiple Select 2 onclick event
    $('.multiple_select2').on('select2:open', function (e) {
       $('.custom_multiple_select2').addClass('js-label-parent');
       $('.newcourier-page #select2-select2-multiple-results').parents('.select2-dropdown').addClass('multiselect_dropdown_width');
       $('#select2-selects #select2-select2-multiple-results').parents('.select2-dropdown').addClass('placeholder_dropdown_width');
    });
 
+   //Multipleselect unselect event
    $('.multiple_select2').on('select2:unselect', function (e) {
-   // $('.custom_multiple_select2').addClass('js-label-parent-important');
       if($(this).select2('data').length == 0) {
          $('.custom_multiple_select2').removeClass('js-label-parent');
       }
@@ -94,7 +119,7 @@
       e.params.originalEvent.stopPropagation();
    });
 
-// //Select2 onclose event
+    //Multipleselect  onclose event
    $('.multiple_select2').on('select2:close', function (e) {
       let count = $(this).select2('data').length;
       if(count==0){
@@ -102,14 +127,15 @@
       }
    });
 
-/** SEARCH SELECTBOX */
 
+   /** SEARCH SELECTBOX */
    $(".select_custom2").select2({
       placeholder: "Select a programming language",
       allowClear: true,
       tags: []
    });
 
+   //Search select2 open event
    $('.select_custom2').on('select2:open', function (e) {
       $('#select2-search-results').parents('.select2-container').addClass('search-input-parent');
       $('#select2-search-results').parents('.select2-dropdown').addClass('placeholder_dropdown_width')
@@ -118,11 +144,13 @@
       $('.custom_search_select2 .select2-container--above').hide();
    });
       
+   //Search select2 change event
    $('.select_custom2').on('change',function(e){
       var lastValue = e.currentTarget.value;
       $('.select2-search__field').val(lastValue);
    })
 
+   //Search select2 close event
    $('.select_custom2').on('select2:close', function (e) {
       let count = $(this).select2('data').length
       if(count==0){
@@ -130,20 +158,48 @@
       }
    });
  
- /** SELECT 2 PLACEHOLDER */
+
+   /** SELECT 2 PLACEHOLDER */
    $('.select2_placeholder').select2({
       minimumResultsForSearch: -1, //remove first item from dropwdown
    });
 
+   //Placeholder select2 open event
    $('.select2_placeholder').on('select2:open', function (e) {
       $('#select2-select2-placeholder-results').parents('.select2-dropdown').addClass('placeholder_dropdown_width')
    });
 
+   //Placeholder select2 open event
    $('.select2_placeholder').on('select2:select', function (e) {
       $(this).parents('.custom_placeholder_select2').addClass('js-placeholder-label-parent');
    });
 
+   /** BOOTSTRAP DATEPICKER */
+
+   //Datepicker language
+   $.fn.datepicker.dates['az'] = {
+      days: ["Bazar", "Bazar ertəsi", "Çərşənbə axşamı", "Çərşənbə", "Cümə axşamı", "Cümə", "Şənbə"],
+      daysShort: ["Baz", "Baz.e", "Çər.a", "Çər", "Cüm.a", "Cüm", "Şən"],
+      daysMin: ["B", "B.e", "Ç.a", "Ç", "C.a", "C", "Ş"],
+      months: ["Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"],
+      monthsShort: ["Yan", "Fev", "Mar", "Apr", "May", "İyn", "İyl", "Avg", "Sen", "Okt", "Noy", "Dek"],
+      today: "Today",
+      clear: "Clear",
+      format: "mm/dd/yyyy",
+      titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+      weekStart: 0
+  };
+
+   $('#birthdate').datepicker({
+      pickTime: true,
+      // format: "dd/MM/yyyy",
+      autoclose: true,
+      weekStart: 1, //start week from Monday,
+      language: 'az'
+   });
+
 })();
+
 
 /** SWIPER JS FOR SHOP BRAND IMAGES */
 const swiper = new Swiper('.swiper-container', {

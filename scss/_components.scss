@@ -421,6 +421,9 @@
       border-right: 1px solid $line-color;
       border-radius: 0;
       width: 94px !important;
+      @include large {
+         padding-right: 22px;
+      }
 
       &::after {
          right: 23px;
@@ -509,9 +512,6 @@
    font-weight: $fw-medium;
 }
 
-.select2-container--open .select2-dropdown{
-   // width:calc(100% - 20px) !important;
-}
 // //selected li
  .select2-container--default .select2-results__option[aria-selected=true] {
    background-color: transparent !important;
@@ -527,6 +527,9 @@
 
  .select2-container {
    min-width: 400px;
+   @include large {
+      min-width: 286px !important
+   }
 }
 
  .select2-results__option {
@@ -571,10 +574,6 @@
 // /* select with icons badges single*/
  .select-icon .select2-selection__placeholder .badge {
    display: none;
-}
-
-.select-icon .placeholder {
-   /* 	display: none; */
 }
 
 .select-icon .select2-results__option:before,
@@ -819,6 +818,13 @@
    color: $white;
 }
 
+.select2-selection__rendered {
+   width: 335px !important;
+   @include large {
+      width: 250px !important;
+   }   
+}
+
 #select2-select2-placeholder-results {
    .select2-results__option:first-child {
       display: none;
@@ -875,6 +881,105 @@
 
 .nice-select:active, .nice-select.open, .nice-select:focus {
    border: none;
+}
+
+.datepicker.dropdown-menu {
+   min-width: 381px;
+   background-color: $black-dark-mode;
+   color: $white;
+   font-weight: $fw-medium !important;
+   font-size: 16px;
+   line-height: 24px;
+   padding: 20px ;
+   margin-top: 2px;
+   border: none;
+   box-shadow: $shadow;
+   font-family: "Yolk";
+   @include small {
+      min-width: 310px;
+   }
+
+   &::before, &::after {
+      display: none;
+   }
+
+   .table-condensed {
+      width: 100%;
+
+      thead  {
+         > :first-child {
+            height: 56px;
+
+            th {
+               padding-top: 16px;
+               &:hover {
+                  background-color: $black-dark-mode-v2;
+               }
+            }
+         }
+       }
+
+       .prev,
+       .next {
+          width: 55px;
+       }
+   }
+
+   .datepicker-days {
+      table tr td {
+         &:hover {
+            background-color: $black-dark-mode-v2;
+         }
+      }
+   }
+
+   table tr td.active.active {
+      background-color: $black-dark-mode-v2 !important;
+      color: $brand-color-light;
+   }
+   table tr td.active {
+      background-image: none !important;
+   }
+
+   table tr td.old, 
+   table tr td.new {
+      visibility: hidden;
+   }
+
+   .datepicker-months {
+      td:hover {
+         background-color: transparent;
+      }
+
+      tbody {
+         margin-top: 48px;
+      }
+   }
+
+   table tr td span {
+      height: 32px;
+      line-height: 32px;
+      width: 31%;
+      margin: 0;
+      &:not(:last-child) {
+         margin-bottom: 16px;
+      }
+
+      &.active {
+         background-image: none;
+
+         &.active {
+            background-color: $black-dark-mode-v2;
+            color: $brand-color-light;
+         }
+      }
+
+      &:hover {
+         background-color: $black-dark-mode-v2;
+      }
+   }
+
+
 }
 
 //LOGIN REGISTER COMMON ELEMENT
@@ -1369,7 +1474,7 @@
    &--warning {
       left: auto;
       right: -100%;
-      @include medium {
+      @include small {
          right: 0;
          left: -100%;
       }
