@@ -76,7 +76,7 @@
                <!-- Mobile account image  -->
                <div class="user-image-mbl js-toggle-dashboard d-md-none order-last">
                   <div class="user-image">
-                     <img src="img/user-image-mobile.svg" alt="user">
+                     <img src="img/account/user-image-mobile.svg" alt="user">
                   </div>
                   <i class="icon-menu-down_two_tone"></i>
                </div>
@@ -126,7 +126,7 @@
             <div class="d-none d-md-flex">
                <div class="user-image-dsk">
                   <div class="user-image ">
-                     <img src="img/user-image.svg" alt="user">
+                     <img src="img/account/user-image.svg" alt="user">
                   </div>
                   <i class="icon-menu-down_two_tone"></i>
 
@@ -199,7 +199,7 @@
             <div>
                <div class="user-image-dsk d-md-none">
                   <div class="user-image">
-                     <img src="img/user-image.svg" alt="user">
+                     <img src="img/account/user-image.svg" alt="user">
                   </div>
                </div>
                <h6 class="name">Erlich Bachman</h6>
@@ -309,7 +309,7 @@
          <div class="sidebar__user">
             <div class="user-image-dsk">
                <div class="user-image">
-                  <img src="img/user-image.svg" alt="user">
+                  <img src="img/account/user-image.svg" alt="user">
                </div>
             </div>
             <div class="user-info">
@@ -336,7 +336,7 @@
             <div class="sidebar__user   section-structure">
                <div class="user-image-dsk">
                   <div class="user-image">
-                     <img src="img/user-image.svg" alt="user">
+                     <img src="img/account/user-image.svg" alt="user">
                   </div>
                </div>
                <div class="user-info">
@@ -413,9 +413,14 @@
                </div>
             </div>
             <div class="input-btw pb-32">
-               <div class="newcommit-input bg-input input-width   ">
-                  <input type="date" name="dob" class="w-100" data-placeholder="Doğum tarixi" required aria-required="true" />
-                  <!-- <i class="icon-calendar_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path4"></span></i> -->
+               <div class="input-flex input-width bg-input">
+                  <div class="form-floating w-100">
+                     <input type="text" name="" id="birthdate" class="form-control" placeholder="Doğum tarixi" required>
+                     <label for="birthdate">Doğum tarixi</label>
+                  </div>
+                  <label class="add-on" for="birthdate">
+                     <i class="icon-calendar_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path4"></span></i>
+                  </label>
                </div>
                <div class="newcommit-input bg-input input-width">
                   <select name="" id="" class="select-small js-niceselect">
