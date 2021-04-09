@@ -885,22 +885,45 @@
 
 .datepicker.dropdown-menu {
    min-width: 381px;
+   min-height: 336px;
    background-color: $black-dark-mode;
    color: $white;
    font-weight: $fw-medium !important;
    font-size: 16px;
    line-height: 24px;
-   padding: 20px ;
+   padding: 0px 20px 10px;
    margin-top: 2px;
    border: none;
    box-shadow: $shadow;
+   border-radius: $border-radius;
    font-family: "Yolk";
    @include small {
-      min-width: 310px;
+      min-width: 300px !important;
+      min-height: auto;
+      padding: 0 5px 10px;
    }
 
+   //Hide datepicker top arrow
    &::before, &::after {
       display: none;
+   }
+
+   table {
+      border-collapse: separate;
+      border-spacing: 8px 16px !important;
+      @include small {
+         border-spacing: 0px 8px !important;
+      }
+   }
+
+   tfoot {
+      display: none !important;
+   }
+
+   th,
+   td {
+      padding: 0;
+      width: 40px !important;
    }
 
    .table-condensed {
@@ -922,6 +945,28 @@
        .prev,
        .next {
           width: 55px;
+
+          &:hover {
+             background-color: $black-dark-mode !important;
+          }
+       }
+
+       //Change next and prev icons
+       .prev {
+          font-size: 0;
+          background: url(../icons/chevron-left_two_tone.svg) left no-repeat;
+       }
+       .next {
+          font-size: 0;
+          background: url(../icons/chevron-right_two_tone.svg) right no-repeat;
+       }
+
+       .datepicker-switch {
+          font-weight: $fw-medium;
+       }
+
+       .dow {
+          font-weight: $fw-medium;
        }
    }
 
@@ -931,8 +976,16 @@
             background-color: $black-dark-mode-v2;
          }
       }
+
+      .day {
+         padding: 0px !important;
+         // width: 40px;
+         height: 24px !important;
+         line-height: 24px !important;
+      }
    }
 
+   //Change default active background color
    table tr td.active.active {
       background-color: $black-dark-mode-v2 !important;
       color: $brand-color-light;
@@ -956,6 +1009,7 @@
       }
    }
 
+   //Month
    table tr td span {
       height: 32px;
       line-height: 32px;
@@ -963,6 +1017,11 @@
       margin: 0;
       &:not(:last-child) {
          margin-bottom: 16px;
+         margin-right: 7px;
+      }
+
+      &:nth-child(-n+3) {
+         margin-top: 48px;
       }
 
       &.active {

@@ -5,3 +5,11 @@
       }
    }
 }
+
+.newcommit-page {
+   .datepicker {
+      @include extra-xlarge {
+         left: 500.6px !important;
+      }
+   }
+}

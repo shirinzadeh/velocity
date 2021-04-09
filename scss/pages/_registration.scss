@@ -97,4 +97,10 @@
    .select2-container--open .select2-dropdown {
       width: calc(100% - 52px) !important;
    }
+
+   .datepicker {
+      @include extra-xlarge {
+         left: 204.6px !important;
+      }
+   }
 }
