@@ -26,6 +26,7 @@
       $('body').removeClass('js-side-dashboard-open');
    });
 
+   //OPEN SIDE MENU
    $('.js-toggle-dashboard, .dashboard-compact').click(function() {
       $('body').toggleClass('js-side-dashboard-open');
    })
@@ -47,7 +48,6 @@
          // $(".sidebar__user i").removeClass("js-animate-icon");
          $('body').removeClass('js-side-dashboard-open');
          $('body').removeClass('js-side-menu-open');
-
       }
    });
 
@@ -66,14 +66,19 @@
       iconDown.toggleClass('js-animate-icon', sidebarOptions.css('display') == 'block')
    })
 
-   //Change icon color on inputs when focus
-   $('.input-flex input').on('focus', function() {
-      $(this).parents('.input-flex').children('i').css('color','white');
+   //Change icon color when content changes
+   $('.input-flex input').on('change', function() {
+      $(this).parents('.input-flex').find('i').css('color','white');
   });
 
-  //Change icon color to default color
+  //Input focusout event
    $('.input-flex input').on('focusout', function() {
-      $(this).parents('.input-flex').children('i').css('color','#FFFFFF80');
+      //Change icon color if input is empty
+      if($(this).val().length > 0) {
+         $(this).parents('.input-flex').find('i').css('color','white');
+      } else {
+         $(this).parents('.input-flex').find('i').css('color','#FFFFFF80');
+      }
   });
 
    //placeholder selectboxes with default value
@@ -86,8 +91,8 @@
       }, 0);
 
       //Change icon color on filled inputs
-      if($('input').val().length > 0) {
-         $('input').parents('.input-flex').children('i').css('color','white');
+      if($('.input-flex input').val().length > 0) {
+         $('.input-flex input').parents('.input-flex').find('i').css('color','white');
       }
     }
 

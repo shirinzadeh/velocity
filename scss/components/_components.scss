@@ -1018,6 +1018,11 @@
       &:not(:last-child) {
          margin-bottom: 16px;
          margin-right: 7px;
+
+         @include small {
+            margin-bottom: 8px;
+            margin-right: 0;
+         }
       }
 
       &:nth-child(-n+3) {

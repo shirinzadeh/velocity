@@ -79,4 +79,10 @@ body.settings-page {
          width: 286px !important;
       }
    }
+
+   .datepicker {
+      @include extra-xlarge {
+         left: 500.6px !important;
+      }
+   }
 }
