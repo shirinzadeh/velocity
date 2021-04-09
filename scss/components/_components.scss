@@ -1025,6 +1025,7 @@
          }
       }
 
+      //Select 3 child from top
       &:nth-child(-n+3) {
          margin-top: 48px;
       }
@@ -1221,12 +1222,18 @@
    margin-bottom: 16px;
    @include xlarge {
       overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
    }
 
    &__number {
       padding: 16px 24px;
       height: 152px;
       min-width: 204px;
+      @include medium {
+         scroll-snap-align: center;
+         scroll-snap-stop: always;
+      }
       
       > :first-child {
          margin-bottom: 8px;
@@ -1906,6 +1913,13 @@
       @include xsmall {
          padding-right: 8px;
       }
+
+      input[type="number"] {
+         width: 55px;
+         @include xsmall {
+            width: 45px;
+         }
+      }
    }
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -1953,10 +1967,10 @@
  }
  /* IE*/
  .range::-ms-fill-lower {
-   background-color: #43e5f7; 
+   background-color: $brand-color-light; 
  }
  .range::-ms-fill-upper {  
-   background-color: #9a905d;
+   background-color: $black;
  }
 
 /******* SIDE MENU ********/
@@ -2062,7 +2076,7 @@
    padding:20px 16px 16px;
    overflow-y: scroll;
    @include transition(.5s);
-   z-index: 1111;
+   z-index: 2222;
 
    &__top {
       @include flex;

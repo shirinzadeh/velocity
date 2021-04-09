@@ -6,7 +6,7 @@
    width: 280px;
    min-width: 280px;
    margin-right: 32px;
-   // display: table;
+   height: -moz-fit-content;
    @include large {
       margin-right: 16px;
    }
