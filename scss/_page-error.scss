@@ -1,0 +1,54 @@
+.page-error {
+   @include flex-center;
+   flex-direction: column;
+   padding-top: 90px;
+   padding-bottom: 100px;
+
+   .emoji {
+      padding: 10px 44px;
+      background-color: $black-dark-mode-v2;
+      @include box-shadow($shadow);
+      border-radius: $border-radius;
+      position: relative;
+      margin-bottom: 18px;
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 50%;
+         @include transform(translateX(-50%));
+         width: 0; 
+         height: 0; 
+         border-left: 20px solid transparent;
+         border-right: 20px solid transparent;
+         border-top: 10px solid $black-dark-mode-v2;
+      }
+      img {
+         width: 80px;
+         height: 80px;
+      }
+   }
+
+   h1 {
+      font-weight: $fw-bold;
+      font-size: 104px;
+      line-height: 140px;
+      color: $brand-color-light;
+   }
+
+   p {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 56px;
+   }
+
+   .btn {
+      min-width: 200px;
+      padding: 12px 32px;
+      height: 48px;
+      @include small {
+         width: auto;
+      }
+   }
+}
