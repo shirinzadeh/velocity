@@ -703,7 +703,12 @@
       display: inline-block;
       padding-left: 4px;
    }
+ }
 
+ .custom_multiple_select2 {
+    .select2-search--inline {
+       display: none;
+    }
  }
 
  .custom_search_select2  {

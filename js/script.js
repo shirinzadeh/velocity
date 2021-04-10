@@ -137,6 +137,9 @@
    //Multipleselect unselect event
    $('.multiple_select2').on('select2:unselect', function (e) {
       if($(this).select2('data').length == 0) {
+         //Close dropdown
+         $('.multiple_select2').select2('close');
+         //Center the label
          $('.custom_multiple_select2').removeClass('js-label-parent');
       }
       //Disable showing dropdown when remove tag clicked
