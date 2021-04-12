@@ -36,6 +36,10 @@
          background-color: rgba($brand-color-light, .1);
          border-color: $brand-color-light;
          @include transition;
+
+         i {
+            color: $brand-color-light;
+         }
       }
 
       &__title {

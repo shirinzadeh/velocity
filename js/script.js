@@ -51,6 +51,13 @@
       }
    });
 
+   //Shop category
+   var shopList = $('.shops-page .sidebar__list')
+   shopList.click(function() {
+      shopList.removeClass('active');
+      $(this).addClass('active');
+   })
+
    /* TOOGLE MENU LINKS CLICK THE ACCOUNT IMAGE */
    let user = $('.user-image-dsk');
    user.click(function() {
@@ -346,6 +353,7 @@ const swiper = new Swiper('.swiper-container', {
 /** CHANGE TAB CONTENT WHEN CLICK THE TAB */
 
 const tabs = document.querySelectorAll(".js-tab");
+const categories = document.querySelectorAll(".js-category");
 const tabContent = document.querySelectorAll(".js-tab-content");
 
 const tabsModal = document.querySelectorAll(".js-modal-tab");
@@ -387,6 +395,7 @@ tabFunction(tabs, tabContent);
 tabFunction(tabsModal, tabModalContent);
 changeTabActive(tabsCalcCountry) //Calculator section tabs
 changeTabActive(tabsPackage)
+changeTabActive(categories)
    
 /**  RANGE SLIDER */
 

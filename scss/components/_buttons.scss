@@ -52,6 +52,7 @@
    }
    &:hover {
       color: $brand-color-light;
+      background-color: transparent;
    }
    &:focus {
       @extend .btn--success:hover;
@@ -66,7 +67,7 @@
    color: rgba($white, .4);
 }
 
-.btn--instruction {
+.btn--video {
    @include flex;
    align-items: center;
    color: $white;
@@ -74,7 +75,7 @@
       color: $brand-color-light !important;
    }
    &:focus {
-      @extend .btn--instruction:hover;
+      @extend .btn--video:hover;
    }
 }
 

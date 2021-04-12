@@ -5,6 +5,12 @@
       h4 {
          margin-bottom: 0;
       }
+
+      .selectbox {
+         @include small {
+            width: 100%;
+         }
+      }
    }
 
    .details-headline--buttons .details-headline__row:not(:last-child) {
@@ -19,9 +25,12 @@
 
    .btn--adjacent-tab {
       min-width: 152px;
+      @include small {
+         min-width: 136px;
+      }
    }
 
-   .btn--instruction {
+   .btn--video {
       padding: 0;
       margin-right: 18px;
       @include large {
@@ -129,7 +138,7 @@
                   max-width: 200px;
                }
                @include xsmall {
-                  max-width: 100px;
+                  max-width: 110px;
                }
             }
          }

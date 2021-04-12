@@ -77,7 +77,8 @@
          &__tail {
             @include flex;
             @include medium {
-               flex-direction: column;
+               display: block;
+               // flex-direction: column;
             }
          }
       }
@@ -88,7 +89,7 @@
          margin-right: 14px;
          font-weight: $fw-semibold  ;
          color: $white;
-         @include small {
+         @include medium {
             font-size: 18px;
             margin-left: 16px;
             margin-right: 0;
@@ -106,9 +107,6 @@
          line-height: 24px !important;
          align-self: flex-end;
          @include medium {
-            margin-left: 32px;
-         }
-         @include small {
             margin-left: 16px;
          }
          @include xsmall {

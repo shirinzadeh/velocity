@@ -42,14 +42,13 @@
       img {
          height: 170px;
          width: 170px;
-         @include filter(grayscale(100%) opacity(60%));
          @include small {
             height: 110px;
             width: 110px;
          }
 
          &:hover {
-            @include filter(grayscale(0) opacity(100%));
+            @include filter(grayscale(50%) opacity(80%));
          }
       }
    }
@@ -179,14 +178,13 @@
       img {
          width: 176px;
          height: 176px;
-         @include filter(grayscale(100%) opacity(60%));
          @include medium{
             height: 136px;
             width: 136px;
          }
          
          &:hover {
-            @include filter(grayscale(0) opacity(100%));
+            @include filter(grayscale(50%) opacity(60%));
          }
       }
    }

@@ -177,7 +177,7 @@
                         </li>
                         <li class="sidebar__list">
                            <i class="icon-logout_two_tone"></i>
-                           <a href="login.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
+                           <a href="index.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
                         </li>
                      </ul>
                   </aside>
@@ -252,7 +252,7 @@
                </li>
                <li class="sidebar__list">
                   <i class="icon-logout_two_tone"></i>
-                  <a href="login.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
+                  <a href="index.html" class="sidebar__list-link"><span>Hesabdan çıxış</span></a>
                </li>
             </ul>
             <!--DASHBOARD SIDE MENU LISTS -->
@@ -378,13 +378,13 @@
          <section class="details-headline section-structure sm-pages-pdng">
             <div class="d-flex justify-content-between align-items-center w-100">
                <h4 class="mb-0">Yeni sifariş</h4>
-               <div class="icon-bg icon-sm d-sm-none">
+               <button class="icon-bg icon-sm d-sm-none" data-bs-toggle="modal" data-bs-target="#videoModal">
                   <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-               </div>
-               <a href="#" class="btn btn--instruction d-none d-sm-flex">
+               </button>
+               <button class="btn btn--video d-none d-sm-flex" data-bs-toggle="modal" data-bs-target="#videoModal">
                   <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                   <span class="ms-2">Video təlimat</span>
-               </a>
+               </button>
             </div>
          </section>
 
@@ -537,6 +537,26 @@
 
       </div>
    </div>
+
+   <!-- Video Modal -->
+   <div class="modal video-modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content sm-pages-pdng">
+            <div class="modal-header">
+               <h5 class="modal-title" id="videoModalLabel">Video təlimat</h5>
+               <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
+            </div>
+            <div class="modal-body">
+               <div class="video-hero">
+                  <a class="icon-play">
+                     <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End Video modal -->
 
    <footer class="footer">
       <div class="container">

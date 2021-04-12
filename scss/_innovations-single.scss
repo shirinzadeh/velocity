@@ -41,9 +41,14 @@
 
       &:hover {
          span {
-            text-decoration: underline;
+            color: $white;
          }
-         
+         i {
+            color: $white;
+         }
+      }
+      &:focus {
+         @extend .innovations-sngl__button:hover;
       }
    }
 }

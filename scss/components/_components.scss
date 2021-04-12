@@ -1301,11 +1301,61 @@
          line-height: 28px;
       }
    }
+
+   i {
+      vertical-align: sub;
+   }
    
    .btn {
       width: auto;
          @include xsmall {
          width: 100%;
+      }
+   }
+
+   &__warning {
+      padding: 16px 24px;
+      background-color: rgba($warning, .1);
+      border-radius: $border-radius;
+      @include flex;
+      align-items: center;
+      @include xsmall {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+
+      > p {
+         margin-left: 24px;
+         @include xsmall {
+            margin-left: 0;
+            margin-top: 16px;
+         }
+      }
+   }
+
+   .product-link {
+      .link {
+         width: 242px;
+
+         @include small {
+            max-width: 300px;
+            width: 300px;
+         }
+         @include xsmall {
+            max-width: 180px;
+            width: 180px;
+         }
+         @include extra-xsmall {
+            max-width: 120px;
+            width: 120px;
+         }
+      }
+      i {
+         color: $brand-color-light;
+         margin-left: 32px;
+         @include xsmall {
+            margin-left: 16px;
+         }
       }
    }
 
@@ -1353,56 +1403,9 @@
             justify-content: space-between;
             margin-top: 24px;
          }
-      }
 
-      .nice-select {
-         padding-right: 80px;
-         color: $white !important;
-      }
-   }
-
-   &__warning {
-      padding: 16px 24px;
-      background-color: rgba($warning, .1);
-      border-radius: $border-radius;
-      @include flex;
-      align-items: center;
-      @include xsmall {
-         flex-direction: column;
-         align-items: flex-start;
-      }
-
-      > p {
-         margin-left: 24px;
-         @include xsmall {
-            margin-left: 0;
-            margin-top: 16px;
-         }
-      }
-   }
-
-   .product-link {
-      .link {
-         width: 242px;
-
-         @include small {
-            max-width: 300px;
-            width: 300px;
-         }
-         @include xsmall {
-            max-width: 180px;
-            width: 180px;
-         }
-         @include extra-xsmall {
-            max-width: 120px;
-            width: 120px;
-         }
-      }
-      i {
-         color: $brand-color-light;
-         margin-left: 32px;
-         @include xsmall {
-            margin-left: 16px;
+         .select2-container {
+            width: 268px !important;
          }
       }
    }
@@ -1490,10 +1493,13 @@
    background-color: $black-dark-mode;
    border-radius: $border-radius;
    position: relative;
-   width: 268px;
+   min-width: 268px;
    height: 56px;
    @include large {
       width: 200px;
+   }
+   @include small {
+      width: 100%;
    }
 
    .nice-select {
@@ -1503,6 +1509,7 @@
       left: 0;
       width: 100%;
       padding: 16px;
+      z-index: 1;
       @include transform(translateY(-50%));
 
       &::after {
@@ -1600,12 +1607,22 @@
 .modal {
    z-index: 1111;
 
+   &-dialog {
+      @include xsmall {
+         margin: 0;
+         height: 100%;
+      }
+   }
+
    &-content {
       padding: 24px 8px 40px 42px;
       background-color: $black-dark-mode-v2;
       @include small {
          padding-left: 16px;
          padding-bottom: 24px;
+      }
+      @include xsmall {
+         height: 100%;
       }
    }
 
@@ -1661,8 +1678,7 @@
             scroll-snap-align: center;
             scroll-snap-stop: always;
             @include medium {
-               width: 192px;
-               max-width: 192px;
+               min-width: 192px;
                padding: 15px;
             }
 
@@ -1756,6 +1772,7 @@
          max-width: 472px !important;
       }
    }
+   
    .modal-content {
       padding: 24px 40px;
       width: 672px;
@@ -1774,6 +1791,7 @@
          flex-direction: column;
          align-items: center;
          gap: 24px;
+         padding-right: 0;
       }
 
       .idcard {
@@ -1782,6 +1800,55 @@
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 8px;
+            color: $white;
+         }
+      }
+   }
+}
+
+/* Video Modal */
+.video-modal {
+   .modal-content {
+      padding: 24px 40px 40px;
+   }
+
+   .modal-body {
+      padding-right: 0;
+      @include small {
+         @include flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+   }
+
+   .video-hero {
+      max-height: 448px;
+      height: 448px;
+      background-color: #000;
+      border-radius: $border-radius;
+      position: relative;
+      @include medium {
+         max-height: 348px;
+      }
+      @include xsmall {
+         max-height: 288px;
+      }
+
+      .icon-play {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         @include transform(translate(-50%, -50%));
+
+         &:hover {
+            cursor: pointer;
+         }
+
+         i {
+            font-size: 64px;
+            >span:before {
+               color: $white;
+            }
          }
       }
    }
@@ -1844,8 +1911,8 @@
          width: 200px;
       }
       @include xsmall {
-         max-width: 100px;
-         width: 100px;
+         max-width: 110px;
+         width: 110px;
       }
    }
 

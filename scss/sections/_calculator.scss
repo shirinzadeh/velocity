@@ -67,7 +67,7 @@
       margin: 56px auto 0;
       min-width: 320px;
       @include small {
-         width: 100%;
+         min-width: 100%;
       }
       @include xsmall {
          margin-top: 40px;

@@ -267,10 +267,10 @@
                            </div>
                         </div>
                         <div class="col-md-6 ">
-                           <a href="#" class="btn btn--instruction">
+                           <button type="button" class="btn btn--video" data-bs-toggle="modal" data-bs-target="#videoModal">
                               <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                               <span class="ms-2">Video təlimat</span>
-                           </a>
+                           </button>
                         </div>
                         <div class="col-12 pb-32 pb-md-0 order-first order-md-last">
                            <a href="#" type="button" class="btn btn--primary btn--registration ">Daxil ol</a>
@@ -361,10 +361,10 @@
                            </div>
                         </div>
                         <div class="col-md-6 ">
-                           <a href="#" class="btn btn--instruction">
+                           <button type="button" class="btn btn--video" data-bs-toggle="modal" data-bs-target="#videoModal">
                               <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                               <span class="ms-2">Video təlimat</span>
-                           </a>
+                           </button>
                         </div>
                         <div class="col-12 col-px-16 pb-32 pb-md-0 order-first order-md-last">
                            <a href="#" type="button" class="btn btn--primary btn--registration ">Daxil ol</a>
@@ -383,13 +383,13 @@
       </section>
    </div>
 
-   <!-- Modal -->
+   <!-- Fin Modal -->
    <div class="modal fin-modal fade" id="finModal" tabindex="-1" aria-labelledby="finModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
+         <div class="modal-content sm-pages-pdng">
             <div class="modal-header">
                <h5 class="modal-title" id="finModalLabel">FİN kod nədir?</h5>
-               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
+               <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
             </div>
             <div class="modal-body">
                <div class="idcard">
@@ -404,6 +404,27 @@
          </div>
       </div>
    </div>
+   <!-- End Fin modal -->
+
+   <!-- Video Modal -->
+   <div class="modal video-modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content sm-pages-pdng">
+            <div class="modal-header">
+               <h5 class="modal-title" id="videoModalLabel">Video təlimat</h5>
+               <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="icon-close_two_tone close-icon"></i></button>
+            </div>
+            <div class="modal-body">
+               <div class="video-hero">
+                  <a class="icon-play">
+                     <i class="icon-play_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End Video modal -->
 
    <footer class="footer sm-section-pdng">
       <div class="container">
