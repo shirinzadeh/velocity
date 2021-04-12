@@ -3,5 +3,11 @@
       background: url(../img/vector/Vector-about.svg) center no-repeat ;
       // white-space: pre-line;
       padding: 47px 48px 49px;
+
+      @include small {
+         font-size: 16px !important;
+         line-height: 24px !important;
+         padding-top: 24px !important;
+      }
    }
 }

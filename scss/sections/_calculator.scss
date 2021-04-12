@@ -32,6 +32,19 @@
          padding-left: 8px;
          width: 50px;
       }
+
+      .list{
+         margin-top: 12px;
+         padding: 0;
+         border-top-left-radius: 0;
+         border-top-right-radius: 0;
+
+         .option {
+            @include xsmall {
+               padding: 6px;
+            }
+         }
+      }
    }
 
    .tabs {
