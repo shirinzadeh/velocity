@@ -2,6 +2,12 @@
    .details-headline {
       padding-top: 22px;
       padding-bottom: 22px;
+
+      .tabs-adjacent {
+         @include small {
+            margin-bottom: 24px;
+         }
+      }
    }
 }
 

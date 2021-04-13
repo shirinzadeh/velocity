@@ -144,8 +144,8 @@
       font-size: 18px;
       line-height: 32px;
       @include xsmall {
-         font-size: 14px;
-         line-height: 24px;
+         font-size: 14px !important;
+         line-height: 24px !important;
          max-width: none;
       }
 

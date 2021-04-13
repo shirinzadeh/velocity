@@ -4,13 +4,28 @@
    
    &__content {
       margin-top: 56px;
+      @include small {
+         margin-top: 40px;
+      }
 
       .box {
          padding-bottom: 40px;
          border-color: $white-pale;
+         @include small {
+            padding-top: 23px;
+            padding-bottom: 23px;
+         }
+
+         i {
+            margin-bottom: 24px;
+         }
 
          &-title {
-            @include transition();    
+            @include transition();   
+            @include small {
+               font-size: 20px;
+               line-height: 32px;
+            } 
             @include xsmall {
                margin-bottom: 16px !important;
             }

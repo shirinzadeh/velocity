@@ -129,6 +129,10 @@ input:-webkit-autofill:active  {
 .text-font {
    font-size: 18px !important;
    line-height: 32px !important;
+   @include small {
+      font-size: 16px !important;
+      line-height: 24px !important;
+   }
 }
 
 //SPACE B/W SECTIONS
@@ -353,7 +357,7 @@ textarea {
    display: inline-block;
    @include transition;
    @include medium {
-      padding: 10px;
+      padding: 9px;
    }
 }
 

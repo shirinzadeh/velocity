@@ -2,6 +2,12 @@
    .details-headline {
       padding-bottom: 24px;
    }
+
+   .order-row .btn {
+      @include small {
+         margin-top: 32px;
+      }
+   }
 }
 
 .tabs-adjacent--family {

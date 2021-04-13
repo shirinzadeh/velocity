@@ -113,7 +113,9 @@
       }
    }
    .placeholder_dropdown_width {
-      width: 100% !important;
+      @include extra-xlarge {
+         width: 100% !important;
+      }
    }
 
    .datepicker {

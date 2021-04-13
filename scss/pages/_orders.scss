@@ -73,6 +73,13 @@
          }
       }
 
+      .tooltip--warning {
+        @include xsmall {
+            right: auto;
+            left: -12px;
+        }
+     }
+
       &-col {
          &:not(:last-child) {
             margin-right: 24px;

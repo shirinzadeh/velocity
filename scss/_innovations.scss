@@ -2,19 +2,21 @@
    &__tabs {
       @include flex;
       justify-content: center;
-      margin: 0 auto 40px;
+      margin-bottom: 40px;
       overflow-x: auto;
+      @include small {
+         margin: 0;
+         justify-content: flex-start;
+      }
 
       ul.tabs {
          border: 1px solid $line-color;
          border-radius: $border-radius;
-         overflow-x: auto;
-         flex-wrap: nowrap;
          @include small {
             border: none;
          }
 
-         li {
+         .btn {
             @include box-shadow($shadow);
             @include small {
                &:not(:first-child) {
@@ -29,6 +31,7 @@
             width: 112px;
             border: 1px solid $line-color;
             border-radius: $border-radius;
+            padding: 15px;
          }
       }
    }

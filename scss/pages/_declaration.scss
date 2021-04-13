@@ -1,3 +1,16 @@
+.declaration-page {
+   .custom_search_select2 .select2-selection {
+      @include large {
+         width: 324px !important;
+      }
+   }
+   .custom_search_select2 .select2-selection__rendered {
+      @include small {
+         width: 100% !important;
+      }
+   }
+}
+
 .declaration {
    padding: 32px 32px 24px;
    @include small {
@@ -31,14 +44,12 @@
    border: 1px dashed $line-color ;
    margin-top: 32px;
    padding: 27px 16px;
-   @include flex-center;
    // background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23333' stroke-width='3' stroke-dasharray='10%2c 10%2c 10' stroke-dashoffset='12' stroke-linecap='square'/%3e%3c/svg%3e");
    border-radius: 8px;
    @include xsmall {
       flex-direction: column;
       text-align: center;
-      padding-top: 43px;
-      padding-bottom: 43px;
+      padding: 16px;
    }
 
    i {
@@ -65,9 +76,29 @@
    }
 
    &--download {
+      @include flex-center;
       padding-top: 23px;
+      padding-bottom: 23px;
+      @include small {
+         padding-top: 43px !important;
+         padding-bottom: 43px !important;
+      }
       &:hover {
          cursor: pointer;
+      }
+   }
+
+   &--items {
+      @include flex;
+      justify-content: space-between;
+      @include large {
+         flex-direction: column
+      }
+
+      > i {
+         @include large{
+            margin: auto
+         }
       }
    }
 
@@ -78,10 +109,23 @@
       background-color: rgba($white, .1);
       padding: 8px 16px;
       border-radius: 4px;
-      width: 329px;
+      min-width: 329px;
+      @include small {
+         min-width: 100%;
+      }
 
-      &:not(:last-child) {
+      &:not(:last-of-type) {
          margin-right: 24px;
+         @include large {
+            margin-right: 0;
+            margin-bottom: 8px;
+         }
+      }
+
+      &:last-of-type {
+         @include large {
+            margin-bottom: 16px;
+         }
       }
 
       i {
