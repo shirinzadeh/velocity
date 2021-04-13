@@ -220,8 +220,8 @@
       daysMin: ["B", "B.e", "Ç.a", "Ç", "C.a", "C", "Ş"],
       months: ["Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"],
       monthsShort: ["Yan", "Fev", "Mar", "Apr", "May", "İyn", "İyl", "Avg", "Sen", "Okt", "Noy", "Dek"],
-      today: "Today",
-      clear: "Clear",
+      today: "Bu gün",
+      clear: "Təmizlə",
       format: "mm/dd/yyyy",
       titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
       weekStart: 0

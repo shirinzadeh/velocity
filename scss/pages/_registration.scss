@@ -94,8 +94,26 @@
 }
 
 .registration-page {
-   .select2-container--open .select2-dropdown {
-      width: calc(100% - 52px) !important;
+   .select2-container {
+      width: 349px !important;
+      @include large {
+         width: 256px !important;
+      }
+      @include medium {
+         width: 648px !important;
+      }
+      @include small {
+         width: 484px !important;
+      }
+      @include xsmall {
+         width: 343px !important;
+      }
+      @include extra-xsmall {
+         width: 288px !important;
+      }
+   }
+   .placeholder_dropdown_width {
+      width: 100% !important;
    }
 
    .datepicker {
