@@ -23,6 +23,10 @@
       }
    }
 
+   .accordion-collapse {
+      border: none;
+   }
+
    .accordion-body {
       border-radius: $border-radius;
       background-color: $black-dark-mode-v2;

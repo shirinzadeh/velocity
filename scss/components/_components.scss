@@ -361,6 +361,156 @@
    }
 }
 
+// .select-lang ul li.option {
+//    background-color: #DEDEDE;
+//    box-shadow: 0px 1px 0 #DEDEDE, 0px -1px 0 #DEDEDE;
+//    -webkit-box-shadow: 0px 1px 0 #DEDEDE, 0px -1px 0 #DEDEDE;
+//    -moz-box-shadow: 0px 1px 0 #DEDEDE, 0px -1px 0 #DEDEDE;
+//  }
+ 
+//  .select-lang ul li.option:hover {
+//    background-color: #B8B8B8;
+//  }
+ 
+//  .select-lang ul li.option {
+//    z-index: 1;
+//    padding: 5px;
+//    display: none;
+//    list-style: none;
+//  }
+ 
+//  .select-lang ul li:first-child {
+//    display: block;
+//  }
+ 
+//  .select-lang ul li {
+//    cursor: default;
+//  }
+
+.opened-lang {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   background-color: $black-dark-mode;
+}
+
+.select-lang {  
+   // border-bottom-left-radius: 0;
+   // border-bottom-right-radius: 0;
+   width: 88px;
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border: none;
+      border-bottom: 2px solid $white-pale !important;
+      border-right: 2px solid $white-pale !important;
+      height: 10px !important;
+      width: 10px !important;
+      margin-top: -2px;
+      margin-right: 16px;
+      @include transform(translateY(-50%) rotate(45deg));
+   }
+
+   .langtitle {
+      color: $hdr-top-text-clr;
+      padding: 16px 40px 16px 16px;
+   }  
+
+   .list {
+      margin-top: -4px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      background-color: #22252C;
+      border-radius: 8px;
+      padding: 8px 0;
+      position: absolute;
+      width: 100%;
+      z-index:100;
+   }
+
+   .option {
+      padding: 8px 16px;
+      @include transition;
+      z-index:100;
+
+      a {
+         color: $white;
+      }
+
+      &:hover {
+         background-color: $black-dark-mode-v2;
+
+         a {
+            color: $white;
+         }
+      }
+   }
+
+   &:focus {
+      background-color: $black-dark-mode;
+   }
+}
+
+#lang_dropdown ul a
+{
+//   display:block;
+  text-decoration:none;
+  z-index:100;
+}
+
+#lang_dropdown ul li
+{
+  position:relative;
+  z-index:100;
+}
+
+#lang_dropdown ul li.current-menu-item
+{
+  z-index:100;
+}
+
+#lang_dropdown ul li:hover
+{
+  cursor: pointer;
+  z-index:100;
+}
+
+#lang_dropdown ul ul
+{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+//   padding:0;
+  z-index:100;
+}
+
+#lang_dropdown ul ul li
+{
+  float:none;
+  z-index:100;
+}
+
+// #lang_dropdown ul ul a
+// {
+//   line-height:120%;
+// //   padding:10px 10px;
+//   text-align: left;
+//   left: 100px;
+//   z-index:100;
+// }
+
+#lang_dropdown ul ul ul
+{
+  top:0;
+  z-index:100;
+  left:100%
+}
+ 
+
 /****** NICE SELECT PLUGIN CLASSES *******/
 .nice-select {
    background-color: transparent;

@@ -13,6 +13,34 @@
    /* NICE-SELECT LIBRARY FOR SELECT */
    $('.js-niceselect').niceSelect();
 
+   //LANGUAGE DROPDOWN
+   $(".option").click(function() {
+      $(".langtitle").text($(this).text()); 
+      $(".list").hide();
+   });
+
+   $(".option").click(function() {
+      $(".langtitle").text($(this).text()); 
+   });
+   
+   $(".langtitle").click(function() {
+      $(this).addClass('opened-lang')
+      $("#lang_dropdown ul").show();
+   });
+
+   //Hide selected language in dropdown
+   var hideLang = function() {
+      $('.list a').each(function(i, li) {
+         var title =  $('.langtitle');
+         if(li.innerText === title.text()) {
+            li.parentElement.style.display = "none";
+         } else {
+            li.parentElement.style.display = "block";
+         }
+      })
+   };
+   setInterval(hideLang, 0);
+
    // ADD CLASS TO BODY WHEN CLICK THE MENU BUTTON ON MOBILE 
    $('.navbar-toggler').click(function() {
       $('body').toggleClass('js-side-menu-open');
@@ -42,6 +70,9 @@
 
    //Hide menu links when click outside element
    $(document).mouseup(function (e) {
+      $(".list").hide(); //hide language dropdown
+      $('.langtitle').removeClass('opened-lang')
+
       if ($(e.target).closest(user).length === 0) {
          $(".user-image-dsk .sidebar").hide();
          // $(".sidebar__user-options").hide();
